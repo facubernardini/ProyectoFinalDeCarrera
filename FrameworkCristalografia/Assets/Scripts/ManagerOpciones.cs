@@ -7,6 +7,7 @@ public class ManagerOpciones : MonoBehaviour
     public GameObject panelInferior, panelOpciones;
     public GameObject CeldaCentradaCuerpo, CeldaCentradaCaras, CeldaHexagonalCompacta;
     public GameObject CeldaCentradaCuerpoExpandida, CeldaCentradaCarasExpandida;
+    public Camera camaraPrincipal;
     private bool MenuOpcionesAbierto;
 
     void Start()
@@ -96,5 +97,14 @@ public class ManagerOpciones : MonoBehaviour
 
     }
 
+    public void MostrarPlanoCorte()
+    {
+        camaraPrincipal.cullingMask ^= 1 << LayerMask.NameToLayer("PlanoCorte");
+    }
+
+    public void MostrarEjes()
+    {
+        camaraPrincipal.cullingMask ^= 1 << LayerMask.NameToLayer("Ejes");
+    }
 
 }
