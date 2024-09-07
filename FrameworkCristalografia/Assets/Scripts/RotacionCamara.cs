@@ -14,7 +14,7 @@ public class RotacionCamara : MonoBehaviour
 
     private void SetPastFingerPosition()
     {
-        if (Input.touchCount > 0)
+        if (Input.touchCount == 1)
         {
             foreach (Touch t in Input.touches)
             {
@@ -25,7 +25,7 @@ public class RotacionCamara : MonoBehaviour
 
     private void SetCurrentFingerPosition()
     {
-        if (Input.touchCount > 0)
+        if (Input.touchCount == 1)
         {
             foreach (Touch t in Input.touches)
             {
@@ -40,12 +40,12 @@ public class RotacionCamara : MonoBehaviour
 
     private void RotateElement()
     {
-        if (Input.touchCount > 0)
+        if (Input.touchCount == 1)
         {
             rotation.y += currentFingerPosition.x;
             rotation.x += -currentFingerPosition.y;
 
-            transform.localEulerAngles = (Vector2)rotation * speed;
+            transform.localEulerAngles = (Vector2) rotation * speed;
         }
         
     }

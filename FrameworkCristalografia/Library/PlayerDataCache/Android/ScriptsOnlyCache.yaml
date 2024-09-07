@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - ManagerInicio
+    - ManagerModuloCuboCortado
     - ManagerOpciones
     - ManagerPlanoCorte
     - RotacionCamara
@@ -411,6 +412,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 23702}
     - Class: 114
       Script: {instanceID: 23810}
+    - Class: 114
+      Script: {instanceID: 28190}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1778,6 +1781,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 1f5331a656c0cab2cd3140fe3258efe7
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ManagerModuloCuboCortado
   platform: 13
   scenePathNames:
   - Assets/Scenes/InicioApp.unity
