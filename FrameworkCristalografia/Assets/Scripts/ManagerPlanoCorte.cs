@@ -10,10 +10,6 @@ public class ManagerPlanoCorte : MonoBehaviour
 
     void Update()
     {
-        //pointOnXAxis.x = sliderX.value;
-        //pointOnYAxis.y = sliderY.value;
-        //pointOnZAxis.z = sliderZ.value;
-
         if (sliderX.value == 0)
         {
             pointOnXAxis.x = 9999;
@@ -84,12 +80,6 @@ public class ManagerPlanoCorte : MonoBehaviour
 
         float distance = p.distance;
         transform.localPosition = (n * -distance) + new Vector3(-0.5f, -0.5f, -0.5f);
-    }
-
-    private Vector3 CalcularCentro(Vector3 point1, Vector3 point2, Vector3 point3)
-    {
-        // Calcular el punto medio entre los tres puntos
-        return (point1 + point2 + point3) / 3.0f;
     }
     
 }

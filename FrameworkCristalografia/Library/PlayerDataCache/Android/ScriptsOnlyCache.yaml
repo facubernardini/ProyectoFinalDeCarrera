@@ -6,6 +6,7 @@ ScriptsOnlyBuild:
     - ManagerOpciones
     - ManagerPlanoCorte
     - RotacionCamara
+    - RotacionCeldas
     - ZoomCamara
     Unity.RenderPipelines.Core.Runtime:
     - UnityEngine.Rendering.UI.DebugUIHandlerBitField
@@ -224,115 +225,115 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 16698}
+      Script: {instanceID: 16768}
     - Class: 114
-      Script: {instanceID: 16700}
+      Script: {instanceID: 16770}
     - Class: 114
-      Script: {instanceID: 16702}
+      Script: {instanceID: 16772}
     - Class: 114
-      Script: {instanceID: 16704}
+      Script: {instanceID: 16774}
     - Class: 114
-      Script: {instanceID: 16706}
+      Script: {instanceID: 16776}
     - Class: 114
-      Script: {instanceID: 16712}
+      Script: {instanceID: 16782}
     - Class: 114
-      Script: {instanceID: 16764}
+      Script: {instanceID: 16834}
     - Class: 114
-      Script: {instanceID: 16926}
+      Script: {instanceID: 16996}
     - Class: 114
-      Script: {instanceID: 17408}
+      Script: {instanceID: 17478}
     - Class: 114
-      Script: {instanceID: 17524}
+      Script: {instanceID: 17594}
     - Class: 114
-      Script: {instanceID: 17604}
+      Script: {instanceID: 17674}
     - Class: 114
-      Script: {instanceID: 17712}
+      Script: {instanceID: 17782}
     - Class: 114
-      Script: {instanceID: 17824}
+      Script: {instanceID: 17894}
     - Class: 114
-      Script: {instanceID: 18106}
+      Script: {instanceID: 18176}
     - Class: 114
-      Script: {instanceID: 18250}
+      Script: {instanceID: 18320}
     - Class: 114
-      Script: {instanceID: 18382}
+      Script: {instanceID: 18452}
     - Class: 114
-      Script: {instanceID: 18982}
+      Script: {instanceID: 19052}
     - Class: 114
-      Script: {instanceID: 19078}
+      Script: {instanceID: 19148}
     - Class: 114
-      Script: {instanceID: 19268}
+      Script: {instanceID: 19338}
     - Class: 114
-      Script: {instanceID: 19322}
+      Script: {instanceID: 19392}
     - Class: 114
-      Script: {instanceID: 19410}
+      Script: {instanceID: 19480}
     - Class: 114
-      Script: {instanceID: 19792}
+      Script: {instanceID: 19862}
     - Class: 114
-      Script: {instanceID: 19926}
+      Script: {instanceID: 19996}
     - Class: 114
-      Script: {instanceID: 19960}
+      Script: {instanceID: 20030}
     - Class: 114
-      Script: {instanceID: 20096}
+      Script: {instanceID: 20166}
     - Class: 114
-      Script: {instanceID: 20304}
+      Script: {instanceID: 20374}
     - Class: 114
-      Script: {instanceID: 20428}
+      Script: {instanceID: 20498}
     - Class: 114
-      Script: {instanceID: 21172}
+      Script: {instanceID: 21242}
     - Class: 114
-      Script: {instanceID: 21234}
+      Script: {instanceID: 21304}
     - Class: 114
-      Script: {instanceID: 21318}
-    - Class: 114
-      Script: {instanceID: 21338}
+      Script: {instanceID: 21388}
     - Class: 114
       Script: {instanceID: 21406}
     - Class: 114
-      Script: {instanceID: 21414}
+      Script: {instanceID: 21474}
     - Class: 114
-      Script: {instanceID: 21670}
+      Script: {instanceID: 21482}
     - Class: 114
-      Script: {instanceID: 21674}
+      Script: {instanceID: 21738}
     - Class: 114
-      Script: {instanceID: 21694}
+      Script: {instanceID: 21742}
     - Class: 114
-      Script: {instanceID: 22014}
+      Script: {instanceID: 21762}
     - Class: 114
-      Script: {instanceID: 22350}
+      Script: {instanceID: 22082}
     - Class: 114
-      Script: {instanceID: 22364}
+      Script: {instanceID: 22418}
     - Class: 114
-      Script: {instanceID: 22446}
+      Script: {instanceID: 22432}
     - Class: 114
-      Script: {instanceID: 22452}
+      Script: {instanceID: 22514}
     - Class: 114
-      Script: {instanceID: 22600}
+      Script: {instanceID: 22520}
     - Class: 114
-      Script: {instanceID: 22644}
+      Script: {instanceID: 22668}
     - Class: 114
-      Script: {instanceID: 22702}
+      Script: {instanceID: 22712}
     - Class: 114
-      Script: {instanceID: 22786}
+      Script: {instanceID: 22770}
     - Class: 114
-      Script: {instanceID: 22802}
+      Script: {instanceID: 22854}
     - Class: 114
-      Script: {instanceID: 22928}
+      Script: {instanceID: 22870}
     - Class: 114
-      Script: {instanceID: 23098}
+      Script: {instanceID: 22996}
     - Class: 114
-      Script: {instanceID: 23184}
+      Script: {instanceID: 23166}
     - Class: 114
-      Script: {instanceID: 23238}
+      Script: {instanceID: 23252}
     - Class: 114
-      Script: {instanceID: 23284}
+      Script: {instanceID: 23306}
     - Class: 114
-      Script: {instanceID: 23316}
+      Script: {instanceID: 23352}
     - Class: 114
-      Script: {instanceID: 23702}
+      Script: {instanceID: 23384}
     - Class: 114
-      Script: {instanceID: 24500}
+      Script: {instanceID: 23770}
     - Class: 114
-      Script: {instanceID: 24836}
+      Script: {instanceID: 24570}
+    - Class: 114
+      Script: {instanceID: 24906}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -381,39 +382,41 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 16702}
+      Script: {instanceID: 16772}
     - Class: 114
-      Script: {instanceID: 16704}
+      Script: {instanceID: 16774}
     - Class: 114
-      Script: {instanceID: 16764}
+      Script: {instanceID: 16834}
     - Class: 114
-      Script: {instanceID: 17692}
+      Script: {instanceID: 17762}
     - Class: 114
-      Script: {instanceID: 17786}
+      Script: {instanceID: 17856}
     - Class: 114
-      Script: {instanceID: 18106}
+      Script: {instanceID: 18176}
     - Class: 114
-      Script: {instanceID: 18382}
+      Script: {instanceID: 18452}
     - Class: 114
-      Script: {instanceID: 21002}
+      Script: {instanceID: 21072}
     - Class: 114
-      Script: {instanceID: 21234}
+      Script: {instanceID: 21304}
     - Class: 114
-      Script: {instanceID: 21308}
+      Script: {instanceID: 21378}
     - Class: 114
-      Script: {instanceID: 21406}
+      Script: {instanceID: 21474}
     - Class: 114
-      Script: {instanceID: 22364}
+      Script: {instanceID: 22432}
     - Class: 114
-      Script: {instanceID: 22564}
+      Script: {instanceID: 22632}
     - Class: 114
-      Script: {instanceID: 22786}
+      Script: {instanceID: 22854}
     - Class: 114
-      Script: {instanceID: 23702}
+      Script: {instanceID: 23770}
     - Class: 114
-      Script: {instanceID: 23810}
+      Script: {instanceID: 23878}
     - Class: 114
-      Script: {instanceID: 28190}
+      Script: {instanceID: 24436}
+    - Class: 114
+      Script: {instanceID: 28150}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1117,10 +1120,10 @@ ScriptsOnlyBuild:
     className: TMP_TextEventCheck
   - hash:
       serializedVersion: 2
-      Hash: bfec51c7a2d34503a862d86599febacf
+      Hash: 9432c8e36e492d43c7e3ce14fffc7c9b
     assemblyName: Assembly-CSharp
     namespaceName: 
-    className: RotacionCamara
+    className: RotacionCeldas
   - hash:
       serializedVersion: 2
       Hash: f2098fcd8ee983a05ec192f63904298f
@@ -1199,12 +1202,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: HorizontalLayoutGroup
-  - hash:
-      serializedVersion: 2
-      Hash: 27671e7df3cc75bbc80c2af5a9cfb2b2
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: PruebaPlano
   - hash:
       serializedVersion: 2
       Hash: 7d026ae582dc02c5edc3fc23b8c03ff7
@@ -1657,6 +1654,12 @@ ScriptsOnlyBuild:
     className: ControlTrack
   - hash:
       serializedVersion: 2
+      Hash: 1f5331a656c0cab2cd3140fe3258efe7
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ManagerModuloCuboCortado
+  - hash:
+      serializedVersion: 2
       Hash: 9a174471d4db2c0c6d3ac47d2f818db1
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1783,10 +1786,10 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 1f5331a656c0cab2cd3140fe3258efe7
+      Hash: cc294dc5ba032d11623faa15d650432f
     assemblyName: Assembly-CSharp
     namespaceName: 
-    className: ManagerModuloCuboCortado
+    className: RotacionCamara
   platform: 13
   scenePathNames:
   - Assets/Scenes/InicioApp.unity

@@ -1,74 +1,64 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 public class RotacionCamara : MonoBehaviour
 {
-    private Vector2 pastFingerPosition = Vector2.zero;
-    private Vector2 currentFingerPosition = Vector2.zero;
-    private Vector2 rotation = Vector2.zero;
-    public float speed;
-    private bool permitirRotacionCamara;
-
-    private void SetPastFingerPosition()
-    {
-        if (Input.touchCount == 1)
-        {
-            foreach (Touch t in Input.touches)
-            {
-                pastFingerPosition = t.position;
-            }
-        }
-    }
-
-    private void SetCurrentFingerPosition()
-    {
-        if (Input.touchCount == 1)
-        {
-            foreach (Touch t in Input.touches)
-            {
-                if (t.phase == TouchPhase.Moved)
-                {
-                    currentFingerPosition.x = pastFingerPosition.x - t.position.x;
-                    currentFingerPosition.y = pastFingerPosition.y - t.position.y;
-                }
-            }
-        }
-    }
-
-    private void RotateElement()
-    {
-        if (Input.touchCount == 1)
-        {
-            rotation.y += currentFingerPosition.x;
-            rotation.x += -currentFingerPosition.y;
-
-            transform.localEulerAngles = (Vector2) rotation * speed;
-        }
-        
-    }
+    public Transform target; // Objeto al cual la cámara orbitará, en nuestro caso el centro de la celda unitaria
+    private float speed, currentYAngle, distance;
+    private bool isRotating, permitirRotacionCamara;
+    private Vector3 lastMousePosition;
+    
 
     void Start()
     {
+        isRotating = false;
         permitirRotacionCamara = false;
+        speed = 25f; // Velocidad de rotacion de la camara
+        currentYAngle = 0f;
+        distance = 5.5f; // Distancia entre la camara y el centro de la celda unitaria
+        transform.LookAt(target);
     }
 
     void Update()
     {
-        if (permitirRotacionCamara)
+        if (permitirRotacionCamara && Input.touchCount == 1) // Verifica que el usuario esté presionando en el area correcta para rotar la cámara
         {
-            SetPastFingerPosition();
-            RotateElement();
-        }
-    }
+            if (Input.GetMouseButtonDown(0))
+            {
+                isRotating = true;
+                lastMousePosition = Input.mousePosition;
+            }
+            else if (Input.GetMouseButtonUp(0))
+            {
+                isRotating = false;
+            }
 
-    void FixedUpdate()
-    {
-        if (permitirRotacionCamara)
-        {
-            SetCurrentFingerPosition();
+            // Rotate the camera only when the left mouse button is held down and dragged
+            if (isRotating)
+            {
+                // Calculate the mouse movement
+                Vector2 deltaMouse = Input.mousePosition - lastMousePosition;
+
+                // Rotate the camera around the Y-axis (horizontal rotation)
+                float horizontalRotation = deltaMouse.x * speed * Time.deltaTime;
+                transform.RotateAround(target.position, Vector3.up, horizontalRotation);
+
+                // Calculate the vertical rotation
+                float verticalRotation = deltaMouse.y * speed * Time.deltaTime;
+
+                // Apply and clamp the vertical rotation angle (Y-axis)
+                currentYAngle = Mathf.Clamp(currentYAngle - verticalRotation, -89f, 89f);
+
+                // Create a new direction based on clamped vertical rotation
+                Quaternion rotation = Quaternion.Euler(currentYAngle, transform.eulerAngles.y, 0f);
+                Vector3 direction = rotation * Vector3.forward * distance;
+
+                // Set the new position and orientation of the camera
+                transform.position = target.position - direction;
+                transform.LookAt(target);
+
+                // Update the start position for the next frame
+                lastMousePosition = Input.mousePosition;
+            }
         }
     }
 
@@ -81,5 +71,4 @@ public class RotacionCamara : MonoBehaviour
     {
         permitirRotacionCamara = false;
     }
-
 }

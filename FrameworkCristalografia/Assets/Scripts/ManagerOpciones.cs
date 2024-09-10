@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ManagerOpciones : MonoBehaviour
 {
@@ -30,17 +31,13 @@ public class ManagerOpciones : MonoBehaviour
         {
             panelOpciones.SetActive(true);
             panelInferior.SetActive(false);
-
-            MenuOpcionesAbierto = true;
         }
         else
         {
             panelOpciones.SetActive(false);
             panelInferior.SetActive(true);
-
-            MenuOpcionesAbierto = false;
         }
-        
+        MenuOpcionesAbierto = !MenuOpcionesAbierto;
     }
 
     public void SeleccionarCeldaCentradaCuerpo()
