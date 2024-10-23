@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,8 +5,11 @@ public class ManagerOpciones : MonoBehaviour
 {
     public GameObject panelInferior, panelOpciones;
     public GameObject CeldaCentradaCuerpo, CeldaCentradaCaras, CeldaHexagonalCompacta;
-    public GameObject CeldaCentradaCuerpoExpandida, CeldaCentradaCarasExpandida;
+    public GameObject CeldaCentradaCuerpoExpandida, CeldaCentradaCarasExpandida, CeldaHexagonalExpandida;
     public Camera camaraPrincipal;
+    public Toggle toggleExpandirEstructura;
+    public Slider sliderTransparencia;
+    public Material[] materialesTransparentes;
     private bool MenuOpcionesAbierto;
 
     void Start()
@@ -21,8 +22,9 @@ public class ManagerOpciones : MonoBehaviour
         CeldaCentradaCaras.SetActive(false);
         CeldaHexagonalCompacta.SetActive(false);
 
-        CeldaCentradaCuerpoExpandida.SetActive(false);
+        CeldaCentradaCuerpoExpandida.SetActive(true);
         CeldaCentradaCarasExpandida.SetActive(false);
+        CeldaHexagonalExpandida.SetActive(false);
     }
 
     public void AbrirMenuOpciones()
@@ -37,61 +39,50 @@ public class ManagerOpciones : MonoBehaviour
             panelOpciones.SetActive(false);
             panelInferior.SetActive(true);
         }
+
         MenuOpcionesAbierto = !MenuOpcionesAbierto;
     }
 
     public void SeleccionarCeldaCentradaCuerpo()
     {
-        CeldaCentradaCuerpo.SetActive(true);
-        CeldaCentradaCaras.SetActive(false);
-        CeldaHexagonalCompacta.SetActive(false);
+        if (!CeldaCentradaCuerpo.activeSelf) 
+        {
+            CeldaCentradaCuerpo.SetActive(true);
+            CeldaCentradaCaras.SetActive(false);
+            CeldaHexagonalCompacta.SetActive(false);
 
-        CeldaCentradaCarasExpandida.SetActive(false);
+            CeldaCentradaCuerpoExpandida.SetActive(true);
+            CeldaCentradaCarasExpandida.SetActive(false);
+            CeldaHexagonalExpandida.SetActive(false);
+        }
     }
 
     public void SeleccionarCeldaCentradaCaras()
     {
-        CeldaCentradaCuerpo.SetActive(false);
-        CeldaCentradaCaras.SetActive(true);
-        CeldaHexagonalCompacta.SetActive(false);
-        
-        CeldaCentradaCuerpoExpandida.SetActive(false);
+        if (!CeldaCentradaCaras.activeSelf) 
+        {
+            CeldaCentradaCuerpo.SetActive(false);
+            CeldaCentradaCaras.SetActive(true);
+            CeldaHexagonalCompacta.SetActive(false);
+            
+            CeldaCentradaCuerpoExpandida.SetActive(false);
+            CeldaCentradaCarasExpandida.SetActive(true);
+            CeldaHexagonalExpandida.SetActive(false);
+        }
     }
 
     public void SeleccionarCeldaHexagonal()
     {
-        CeldaCentradaCuerpo.SetActive(false);
-        CeldaCentradaCaras.SetActive(false);
-        CeldaHexagonalCompacta.SetActive(true);
-    }
-
-    public void ExpandirEstructura()
-    {
-        if (CeldaCentradaCaras.activeSelf)
+        if (!CeldaHexagonalCompacta.activeSelf) 
         {
-            if (!CeldaCentradaCarasExpandida.activeSelf)
-            {
-                CeldaCentradaCarasExpandida.SetActive(true);
-            }
-            else
-            {
-                CeldaCentradaCarasExpandida.SetActive(false);
-            }
-                
-        }
+            CeldaCentradaCuerpo.SetActive(false);
+            CeldaCentradaCaras.SetActive(false);
+            CeldaHexagonalCompacta.SetActive(true);
 
-        if (CeldaCentradaCuerpo.activeSelf)
-        {
-            if (!CeldaCentradaCuerpoExpandida.activeSelf)
-            {
-                CeldaCentradaCuerpoExpandida.SetActive(true);
-            }
-            else
-            {
-                CeldaCentradaCuerpoExpandida.SetActive(false);
-            }
+            CeldaCentradaCuerpoExpandida.SetActive(false);
+            CeldaCentradaCarasExpandida.SetActive(false);
+            CeldaHexagonalExpandida.SetActive(true);
         }
-
     }
 
     public void MostrarPlanoCorte()
@@ -102,6 +93,24 @@ public class ManagerOpciones : MonoBehaviour
     public void MostrarEjes()
     {
         camaraPrincipal.cullingMask ^= 1 << LayerMask.NameToLayer("Ejes");
+    }
+
+    public void MostrarVistaExpandida()
+    {
+        camaraPrincipal.cullingMask ^= 1 << LayerMask.NameToLayer("BolasTransparentes");
+        sliderTransparencia.interactable = !sliderTransparencia.IsInteractable();
+    }
+
+    public void CambiarTransparencia()
+    {
+        float valorTransparencia = sliderTransparencia.value;
+
+        foreach (Material mat in materialesTransparentes)
+        {
+            Color colorAux = mat.color;
+            colorAux.a = valorTransparencia;
+            mat.color = colorAux;
+        }
     }
 
 }

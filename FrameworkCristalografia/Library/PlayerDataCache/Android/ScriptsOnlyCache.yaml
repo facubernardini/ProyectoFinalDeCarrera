@@ -186,7 +186,7 @@ ScriptsOnlyBuild:
     methodName: MostrarEjes
   - assembly: Assembly-CSharp
     fullTypeName: ManagerOpciones
-    methodName: ExpandirEstructura
+    methodName: MostrarVistaExpandida
   - assembly: Assembly-CSharp
     fullTypeName: RotacionCamara
     methodName: ActivarRotacionCamara
@@ -199,6 +199,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ManagerOpciones
     methodName: AbrirMenuOpciones
+  - assembly: Assembly-CSharp
+    fullTypeName: ManagerOpciones
+    methodName: CambiarTransparencia
   - assembly: Assembly-CSharp
     fullTypeName: ManagerOpciones
     methodName: SeleccionarCeldaHexagonal
@@ -1372,7 +1375,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerIntField
   - hash:
       serializedVersion: 2
-      Hash: 6f84e11758d1c7c2fea9ed99cffa7a44
+      Hash: b1bc59a2c0474d4a29ff19e3c2242e05
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ManagerOpciones
