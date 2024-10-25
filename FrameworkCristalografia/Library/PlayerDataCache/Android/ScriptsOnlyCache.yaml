@@ -4,9 +4,9 @@ ScriptsOnlyBuild:
     - ManagerInicio
     - ManagerModuloCuboCortado
     - ManagerOpciones
+    - ManagerPanelIndices
     - ManagerPlanoCorte
     - RotacionCamara
-    - RotacionCeldas
     - ZoomCamara
     Unity.RenderPipelines.Core.Runtime:
     - UnityEngine.Rendering.UI.DebugUIHandlerBitField
@@ -179,6 +179,9 @@ ScriptsOnlyBuild:
     fullTypeName: ManagerOpciones
     methodName: MostrarPlanoCorte
   - assembly: Assembly-CSharp
+    fullTypeName: ManagerPanelIndices
+    methodName: ActivarModoContinuo
+  - assembly: Assembly-CSharp
     fullTypeName: ManagerOpciones
     methodName: SeleccionarCeldaCentradaCuerpo
   - assembly: Assembly-CSharp
@@ -187,6 +190,12 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ManagerOpciones
     methodName: MostrarVistaExpandida
+  - assembly: Assembly-CSharp
+    fullTypeName: ManagerPanelIndices
+    methodName: ActualizarValorX
+  - assembly: Assembly-CSharp
+    fullTypeName: ManagerPanelIndices
+    methodName: ValorEnteroSlider
   - assembly: Assembly-CSharp
     fullTypeName: RotacionCamara
     methodName: ActivarRotacionCamara
@@ -197,6 +206,15 @@ ScriptsOnlyBuild:
     fullTypeName: ManagerOpciones
     methodName: SeleccionarCeldaCentradaCaras
   - assembly: Assembly-CSharp
+    fullTypeName: ManagerModuloCuboCortado
+    methodName: Atras
+  - assembly: Assembly-CSharp
+    fullTypeName: ManagerPanelIndices
+    methodName: ActualizarValorY
+  - assembly: Assembly-CSharp
+    fullTypeName: ManagerPanelIndices
+    methodName: ValorEnteroSlider
+  - assembly: Assembly-CSharp
     fullTypeName: ManagerOpciones
     methodName: AbrirMenuOpciones
   - assembly: Assembly-CSharp
@@ -205,6 +223,12 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ManagerOpciones
     methodName: SeleccionarCeldaHexagonal
+  - assembly: Assembly-CSharp
+    fullTypeName: ManagerPanelIndices
+    methodName: ActualizarValorZ
+  - assembly: Assembly-CSharp
+    fullTypeName: ManagerPanelIndices
+    methodName: ValorEnteroSlider
   sceneClasses:
     Assets/Scenes/InicioApp.unity:
     - Class: 1
@@ -399,8 +423,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 18454}
     - Class: 114
-      Script: {instanceID: 21074}
-    - Class: 114
       Script: {instanceID: 21306}
     - Class: 114
       Script: {instanceID: 21380}
@@ -420,6 +442,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 23882}
     - Class: 114
       Script: {instanceID: 24440}
+    - Class: 114
+      Script: {instanceID: 44964}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1123,12 +1147,6 @@ ScriptsOnlyBuild:
     className: TMP_TextEventCheck
   - hash:
       serializedVersion: 2
-      Hash: 9432c8e36e492d43c7e3ce14fffc7c9b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: RotacionCeldas
-  - hash:
-      serializedVersion: 2
       Hash: f2098fcd8ee983a05ec192f63904298f
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1793,6 +1811,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: d6c691c8aba66c241cabb99ea2596dfa
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ManagerPanelIndices
   platform: 13
   scenePathNames:
   - Assets/Scenes/InicioApp.unity
