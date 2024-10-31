@@ -1,4 +1,4 @@
-Shader "Custom/OnlyCap"
+Shader "DibujarPerimetro"
 {
     Properties
     {

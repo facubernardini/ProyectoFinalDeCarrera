@@ -318,6 +318,7 @@
 "Assets/Scripts/CorteConTapa.cs"
 "Assets/Scripts/CuboCortado/ManagerModuloCuboCortado.cs"
 "Assets/Scripts/CuboCortado/ManagerOpciones.cs"
+"Assets/Scripts/CuboCortado/ManagerPanelCeldaHexagonal.cs"
 "Assets/Scripts/CuboCortado/ManagerPanelIndices.cs"
 "Assets/Scripts/CuboCortado/ManagerPlanoCorte.cs"
 "Assets/Scripts/CuboCortado/RotacionCamara.cs"

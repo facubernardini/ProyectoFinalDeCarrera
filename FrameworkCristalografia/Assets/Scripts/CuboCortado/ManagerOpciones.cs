@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class ManagerOpciones : MonoBehaviour
 {
-    public GameObject panelInferior, panelOpciones;
+    public GameObject panelInferior, panelOpciones, panelCeldaHexagonal;
     public GameObject CeldaCentradaCuerpo, CeldaCentradaCaras, CeldaHexagonalCompacta;
     public GameObject CeldaCentradaCuerpoExpandida, CeldaCentradaCarasExpandida, CeldaHexagonalExpandida;
     public Camera camaraPrincipal;
@@ -17,6 +17,7 @@ public class ManagerOpciones : MonoBehaviour
         MenuOpcionesAbierto = false;
         panelInferior.SetActive(true);
         panelOpciones.SetActive(false);
+        panelCeldaHexagonal.SetActive(false);
 
         CeldaCentradaCuerpo.SetActive(true);
         CeldaCentradaCaras.SetActive(false);
@@ -54,6 +55,8 @@ public class ManagerOpciones : MonoBehaviour
             CeldaCentradaCuerpoExpandida.SetActive(true);
             CeldaCentradaCarasExpandida.SetActive(false);
             CeldaHexagonalExpandida.SetActive(false);
+
+            panelCeldaHexagonal.SetActive(false);
         }
     }
 
@@ -68,6 +71,8 @@ public class ManagerOpciones : MonoBehaviour
             CeldaCentradaCuerpoExpandida.SetActive(false);
             CeldaCentradaCarasExpandida.SetActive(true);
             CeldaHexagonalExpandida.SetActive(false);
+
+            panelCeldaHexagonal.SetActive(false);
         }
     }
 
@@ -82,6 +87,8 @@ public class ManagerOpciones : MonoBehaviour
             CeldaCentradaCuerpoExpandida.SetActive(false);
             CeldaCentradaCarasExpandida.SetActive(false);
             CeldaHexagonalExpandida.SetActive(true);
+
+            panelCeldaHexagonal.SetActive(true);
         }
     }
 
