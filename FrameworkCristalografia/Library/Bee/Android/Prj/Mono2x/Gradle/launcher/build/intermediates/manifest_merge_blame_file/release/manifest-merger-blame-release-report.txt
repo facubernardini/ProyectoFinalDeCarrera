@@ -73,11 +73,11 @@
 42            android:value="True" />
 42-->[:unityLibrary] D:\Uni\Proyecto Final\ProyectoFinalDeCarrera\FrameworkCristalografia\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:30:13-33
 43        <meta-data
-43-->[:unityLibrary] D:\Uni\Proyecto Final\ProyectoFinalDeCarrera\FrameworkCristalografia\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:31:9-33:36
+43-->[:unityLibrary] D:\Uni\Proyecto Final\ProyectoFinalDeCarrera\FrameworkCristalografia\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:31:9-33:37
 44            android:name="unity.launch-fullscreen"
 44-->[:unityLibrary] D:\Uni\Proyecto Final\ProyectoFinalDeCarrera\FrameworkCristalografia\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:32:13-51
-45            android:value="True" />
-45-->[:unityLibrary] D:\Uni\Proyecto Final\ProyectoFinalDeCarrera\FrameworkCristalografia\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:33:13-33
+45            android:value="False" />
+45-->[:unityLibrary] D:\Uni\Proyecto Final\ProyectoFinalDeCarrera\FrameworkCristalografia\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:33:13-34
 46        <meta-data
 46-->[:unityLibrary] D:\Uni\Proyecto Final\ProyectoFinalDeCarrera\FrameworkCristalografia\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:34:9-36:36
 47            android:name="unity.render-outside-safearea"

@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - CorteConTapa
     - ManagerInicio
     - ManagerModuloCuboCortado
     - ManagerOpciones
@@ -252,115 +253,115 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 16770}
-    - Class: 114
-      Script: {instanceID: 16772}
-    - Class: 114
-      Script: {instanceID: 16774}
-    - Class: 114
       Script: {instanceID: 16776}
     - Class: 114
       Script: {instanceID: 16778}
     - Class: 114
+      Script: {instanceID: 16780}
+    - Class: 114
+      Script: {instanceID: 16782}
+    - Class: 114
       Script: {instanceID: 16784}
     - Class: 114
-      Script: {instanceID: 16836}
+      Script: {instanceID: 16790}
     - Class: 114
-      Script: {instanceID: 16998}
+      Script: {instanceID: 16842}
     - Class: 114
-      Script: {instanceID: 17480}
+      Script: {instanceID: 17006}
     - Class: 114
-      Script: {instanceID: 17596}
+      Script: {instanceID: 17488}
     - Class: 114
-      Script: {instanceID: 17676}
+      Script: {instanceID: 17604}
     - Class: 114
-      Script: {instanceID: 17784}
+      Script: {instanceID: 17684}
     - Class: 114
-      Script: {instanceID: 17896}
+      Script: {instanceID: 17792}
     - Class: 114
-      Script: {instanceID: 18178}
+      Script: {instanceID: 17904}
     - Class: 114
-      Script: {instanceID: 18322}
+      Script: {instanceID: 18186}
     - Class: 114
-      Script: {instanceID: 18454}
+      Script: {instanceID: 18330}
     - Class: 114
-      Script: {instanceID: 19054}
+      Script: {instanceID: 18462}
     - Class: 114
-      Script: {instanceID: 19150}
+      Script: {instanceID: 19062}
     - Class: 114
-      Script: {instanceID: 19340}
+      Script: {instanceID: 19158}
     - Class: 114
-      Script: {instanceID: 19394}
+      Script: {instanceID: 19348}
     - Class: 114
-      Script: {instanceID: 19482}
+      Script: {instanceID: 19402}
     - Class: 114
-      Script: {instanceID: 19864}
+      Script: {instanceID: 19490}
     - Class: 114
-      Script: {instanceID: 19998}
+      Script: {instanceID: 19872}
     - Class: 114
-      Script: {instanceID: 20032}
+      Script: {instanceID: 20006}
     - Class: 114
-      Script: {instanceID: 20168}
+      Script: {instanceID: 20040}
     - Class: 114
-      Script: {instanceID: 20376}
+      Script: {instanceID: 20176}
     - Class: 114
-      Script: {instanceID: 20500}
+      Script: {instanceID: 20384}
     - Class: 114
-      Script: {instanceID: 21244}
+      Script: {instanceID: 20508}
     - Class: 114
-      Script: {instanceID: 21306}
+      Script: {instanceID: 21252}
     - Class: 114
-      Script: {instanceID: 21390}
+      Script: {instanceID: 21314}
     - Class: 114
-      Script: {instanceID: 21408}
+      Script: {instanceID: 21398}
     - Class: 114
-      Script: {instanceID: 21476}
+      Script: {instanceID: 21416}
     - Class: 114
       Script: {instanceID: 21484}
     - Class: 114
-      Script: {instanceID: 21742}
+      Script: {instanceID: 21492}
     - Class: 114
-      Script: {instanceID: 21746}
+      Script: {instanceID: 21750}
     - Class: 114
-      Script: {instanceID: 21766}
+      Script: {instanceID: 21754}
     - Class: 114
-      Script: {instanceID: 22086}
+      Script: {instanceID: 21774}
     - Class: 114
-      Script: {instanceID: 22422}
+      Script: {instanceID: 22094}
     - Class: 114
-      Script: {instanceID: 22436}
+      Script: {instanceID: 22430}
     - Class: 114
-      Script: {instanceID: 22518}
+      Script: {instanceID: 22444}
     - Class: 114
-      Script: {instanceID: 22524}
+      Script: {instanceID: 22526}
     - Class: 114
-      Script: {instanceID: 22672}
+      Script: {instanceID: 22532}
     - Class: 114
-      Script: {instanceID: 22716}
+      Script: {instanceID: 22680}
     - Class: 114
-      Script: {instanceID: 22774}
+      Script: {instanceID: 22724}
     - Class: 114
-      Script: {instanceID: 22858}
+      Script: {instanceID: 22782}
     - Class: 114
-      Script: {instanceID: 22874}
+      Script: {instanceID: 22866}
     - Class: 114
-      Script: {instanceID: 23000}
+      Script: {instanceID: 22882}
     - Class: 114
-      Script: {instanceID: 23170}
+      Script: {instanceID: 23008}
     - Class: 114
-      Script: {instanceID: 23256}
+      Script: {instanceID: 23178}
     - Class: 114
-      Script: {instanceID: 23310}
+      Script: {instanceID: 23264}
     - Class: 114
-      Script: {instanceID: 23356}
+      Script: {instanceID: 23318}
     - Class: 114
-      Script: {instanceID: 23388}
+      Script: {instanceID: 23364}
     - Class: 114
-      Script: {instanceID: 23774}
+      Script: {instanceID: 23396}
     - Class: 114
-      Script: {instanceID: 24574}
+      Script: {instanceID: 23782}
     - Class: 114
-      Script: {instanceID: 24910}
+      Script: {instanceID: 24582}
+    - Class: 114
+      Script: {instanceID: 24918}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -409,41 +410,43 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 16774}
+      Script: {instanceID: 16780}
     - Class: 114
-      Script: {instanceID: 16776}
+      Script: {instanceID: 16782}
     - Class: 114
-      Script: {instanceID: 16836}
+      Script: {instanceID: 16842}
     - Class: 114
-      Script: {instanceID: 17764}
+      Script: {instanceID: 17772}
     - Class: 114
-      Script: {instanceID: 17858}
+      Script: {instanceID: 17866}
     - Class: 114
-      Script: {instanceID: 18178}
+      Script: {instanceID: 18186}
     - Class: 114
-      Script: {instanceID: 18454}
+      Script: {instanceID: 18462}
     - Class: 114
-      Script: {instanceID: 21306}
+      Script: {instanceID: 20608}
     - Class: 114
-      Script: {instanceID: 21380}
+      Script: {instanceID: 21314}
     - Class: 114
-      Script: {instanceID: 21476}
+      Script: {instanceID: 21388}
     - Class: 114
-      Script: {instanceID: 21532}
+      Script: {instanceID: 21484}
     - Class: 114
-      Script: {instanceID: 22436}
+      Script: {instanceID: 21540}
     - Class: 114
-      Script: {instanceID: 22636}
+      Script: {instanceID: 22444}
     - Class: 114
-      Script: {instanceID: 22858}
+      Script: {instanceID: 22644}
     - Class: 114
-      Script: {instanceID: 23774}
+      Script: {instanceID: 22866}
     - Class: 114
-      Script: {instanceID: 23882}
+      Script: {instanceID: 23782}
     - Class: 114
-      Script: {instanceID: 24440}
+      Script: {instanceID: 23890}
     - Class: 114
-      Script: {instanceID: 44964}
+      Script: {instanceID: 24448}
+    - Class: 114
+      Script: {instanceID: 24972}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -509,6 +512,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: Image
+  - hash:
+      serializedVersion: 2
+      Hash: ec42cd648bd1009d48ae3ea0b591a9bd
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: DibujarPerimetro
   - hash:
       serializedVersion: 2
       Hash: 8d7ab1303b1c14da5fdd62bf96ca6e89
@@ -1085,6 +1094,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
     className: TMP_ExampleScript_01
+  - hash:
+      serializedVersion: 2
+      Hash: 8fd2e62ee332c5089f0bb127c9145c09
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: CorteConTapa
   - hash:
       serializedVersion: 2
       Hash: dc31d211c7459841fe4f406ae2e51480
@@ -1771,6 +1786,12 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerFoldout
   - hash:
       serializedVersion: 2
+      Hash: d6c691c8aba66c241cabb99ea2596dfa
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ManagerPanelIndices
+  - hash:
+      serializedVersion: 2
       Hash: ff76cf6cf52b4db7b95af6ffadca9288
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
@@ -1811,12 +1832,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: d6c691c8aba66c241cabb99ea2596dfa
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: ManagerPanelIndices
   platform: 13
   scenePathNames:
   - Assets/Scenes/InicioApp.unity

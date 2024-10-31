@@ -56,9 +56,9 @@ ADDED from D:\Uni\Proyecto Final\ProyectoFinalDeCarrera\FrameworkCristalografia\
 	android:name
 		ADDED from D:\Uni\Proyecto Final\ProyectoFinalDeCarrera\FrameworkCristalografia\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:10:16-50
 meta-data#unity.launch-fullscreen
-ADDED from D:\Uni\Proyecto Final\ProyectoFinalDeCarrera\FrameworkCristalografia\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:11:5-78
+ADDED from D:\Uni\Proyecto Final\ProyectoFinalDeCarrera\FrameworkCristalografia\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:11:5-79
 	android:value
-		ADDED from D:\Uni\Proyecto Final\ProyectoFinalDeCarrera\FrameworkCristalografia\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:11:55-75
+		ADDED from D:\Uni\Proyecto Final\ProyectoFinalDeCarrera\FrameworkCristalografia\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:11:55-76
 	android:name
 		ADDED from D:\Uni\Proyecto Final\ProyectoFinalDeCarrera\FrameworkCristalografia\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:11:16-54
 meta-data#unity.render-outside-safearea

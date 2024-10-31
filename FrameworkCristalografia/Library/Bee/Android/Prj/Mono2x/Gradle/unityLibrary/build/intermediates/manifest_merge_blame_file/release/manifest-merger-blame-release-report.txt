@@ -53,11 +53,11 @@
 30            android:value="True" />
 30-->D:\Uni\Proyecto Final\ProyectoFinalDeCarrera\FrameworkCristalografia\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:10:51-71
 31        <meta-data
-31-->D:\Uni\Proyecto Final\ProyectoFinalDeCarrera\FrameworkCristalografia\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:11:5-78
+31-->D:\Uni\Proyecto Final\ProyectoFinalDeCarrera\FrameworkCristalografia\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:11:5-79
 32            android:name="unity.launch-fullscreen"
 32-->D:\Uni\Proyecto Final\ProyectoFinalDeCarrera\FrameworkCristalografia\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:11:16-54
-33            android:value="True" />
-33-->D:\Uni\Proyecto Final\ProyectoFinalDeCarrera\FrameworkCristalografia\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:11:55-75
+33            android:value="False" />
+33-->D:\Uni\Proyecto Final\ProyectoFinalDeCarrera\FrameworkCristalografia\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:11:55-76
 34        <meta-data
 34-->D:\Uni\Proyecto Final\ProyectoFinalDeCarrera\FrameworkCristalografia\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:12:5-84
 35            android:name="unity.render-outside-safearea"

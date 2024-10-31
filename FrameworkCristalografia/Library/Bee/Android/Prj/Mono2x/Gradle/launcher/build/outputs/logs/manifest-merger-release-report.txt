@@ -105,9 +105,9 @@ ADDED from [:unityLibrary] D:\Uni\Proyecto Final\ProyectoFinalDeCarrera\Framewor
 	android:name
 		ADDED from [:unityLibrary] D:\Uni\Proyecto Final\ProyectoFinalDeCarrera\FrameworkCristalografia\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:29:13-47
 meta-data#unity.launch-fullscreen
-ADDED from [:unityLibrary] D:\Uni\Proyecto Final\ProyectoFinalDeCarrera\FrameworkCristalografia\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:31:9-33:36
+ADDED from [:unityLibrary] D:\Uni\Proyecto Final\ProyectoFinalDeCarrera\FrameworkCristalografia\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:31:9-33:37
 	android:value
-		ADDED from [:unityLibrary] D:\Uni\Proyecto Final\ProyectoFinalDeCarrera\FrameworkCristalografia\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:33:13-33
+		ADDED from [:unityLibrary] D:\Uni\Proyecto Final\ProyectoFinalDeCarrera\FrameworkCristalografia\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:33:13-34
 	android:name
 		ADDED from [:unityLibrary] D:\Uni\Proyecto Final\ProyectoFinalDeCarrera\FrameworkCristalografia\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:32:13-51
 meta-data#unity.render-outside-safearea
