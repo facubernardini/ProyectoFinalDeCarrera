@@ -80,7 +80,7 @@ Material:
     m_Colors:
     - _CapColor: {r: 1, g: 0.6392157, b: 0.25882354, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _CutPlaneNormal: {r: -0.5773509, g: -0.5773498, b: -0.5773502, a: 0}
-    - _CutPlanePos: {r: -0.16666669, g: -0.16666669, b: -0.16666669, a: 0}
+    - _CutPlaneNormal: {r: -0.00007146281, g: -0.70710695, b: -0.7071068, a: 0}
+    - _CutPlanePos: {r: -0.49995, g: -0.000000029802322, b: -0.000000029802322, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
