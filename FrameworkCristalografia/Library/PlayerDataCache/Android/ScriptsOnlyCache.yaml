@@ -2,7 +2,6 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - Billboard
-    - CorteConTapa
     - ManagerInicio
     - ManagerModuloCuboCortado
     - ManagerOpciones
@@ -202,6 +201,9 @@ ScriptsOnlyBuild:
     fullTypeName: ManagerPanelIndices
     methodName: ValorEnteroSlider
   - assembly: Assembly-CSharp
+    fullTypeName: com.marufhow.meshslicer.demo.ClickToCut
+    methodName: ActualizarVistaCorte
+  - assembly: Assembly-CSharp
     fullTypeName: RotacionCamara
     methodName: ActivarRotacionCamara
   - assembly: Assembly-CSharp
@@ -223,6 +225,9 @@ ScriptsOnlyBuild:
     fullTypeName: ManagerPanelIndices
     methodName: ValorEnteroSlider
   - assembly: Assembly-CSharp
+    fullTypeName: com.marufhow.meshslicer.demo.ClickToCut
+    methodName: ActualizarVistaCorte
+  - assembly: Assembly-CSharp
     fullTypeName: ManagerOpciones
     methodName: AbrirMenuOpciones
   - assembly: Assembly-CSharp
@@ -237,6 +242,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ManagerPanelIndices
     methodName: ValorEnteroSlider
+  - assembly: Assembly-CSharp
+    fullTypeName: com.marufhow.meshslicer.demo.ClickToCut
+    methodName: ActualizarVistaCorte
   sceneClasses:
     Assets/Scenes/InicioApp.unity:
     - Class: 1
@@ -338,37 +346,37 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 22472}
     - Class: 114
-      Script: {instanceID: 22554}
+      Script: {instanceID: 22556}
     - Class: 114
-      Script: {instanceID: 22560}
+      Script: {instanceID: 22562}
     - Class: 114
-      Script: {instanceID: 22708}
+      Script: {instanceID: 22710}
     - Class: 114
-      Script: {instanceID: 22752}
+      Script: {instanceID: 22754}
     - Class: 114
-      Script: {instanceID: 22810}
+      Script: {instanceID: 22812}
     - Class: 114
-      Script: {instanceID: 22894}
+      Script: {instanceID: 22896}
     - Class: 114
-      Script: {instanceID: 22910}
+      Script: {instanceID: 22912}
     - Class: 114
-      Script: {instanceID: 23036}
+      Script: {instanceID: 23038}
     - Class: 114
-      Script: {instanceID: 23206}
+      Script: {instanceID: 23208}
     - Class: 114
-      Script: {instanceID: 23294}
+      Script: {instanceID: 23296}
     - Class: 114
-      Script: {instanceID: 23348}
+      Script: {instanceID: 23350}
     - Class: 114
-      Script: {instanceID: 23394}
+      Script: {instanceID: 23396}
     - Class: 114
-      Script: {instanceID: 23426}
+      Script: {instanceID: 23428}
     - Class: 114
-      Script: {instanceID: 23814}
+      Script: {instanceID: 23816}
     - Class: 114
-      Script: {instanceID: 24620}
+      Script: {instanceID: 24626}
     - Class: 114
-      Script: {instanceID: 24956}
+      Script: {instanceID: 24962}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -433,8 +441,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 19148}
     - Class: 114
-      Script: {instanceID: 20634}
-    - Class: 114
       Script: {instanceID: 21340}
     - Class: 114
       Script: {instanceID: 21414}
@@ -445,21 +451,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 22472}
     - Class: 114
-      Script: {instanceID: 22672}
+      Script: {instanceID: 22534}
     - Class: 114
-      Script: {instanceID: 22894}
+      Script: {instanceID: 22674}
     - Class: 114
-      Script: {instanceID: 23814}
+      Script: {instanceID: 22896}
     - Class: 114
-      Script: {instanceID: 23922}
+      Script: {instanceID: 23816}
     - Class: 114
-      Script: {instanceID: 24484}
+      Script: {instanceID: 23924}
     - Class: 114
-      Script: {instanceID: 25010}
+      Script: {instanceID: 24486}
     - Class: 114
-      Script: {instanceID: 25280}
+      Script: {instanceID: 24588}
     - Class: 114
-      Script: {instanceID: 25286}
+      Script: {instanceID: 25016}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1427,6 +1433,12 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
+      Hash: a9beb3abfa685dd17264b2672bc406cb
+    assemblyName: Assembly-CSharp
+    namespaceName: com.marufhow.meshslicer.demo
+    className: ClickToCut
+  - hash:
+      serializedVersion: 2
       Hash: b72839eb6e4350778dc879d98832aa2b
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
@@ -1757,6 +1769,12 @@ ScriptsOnlyBuild:
     className: UnityOnMouseOverMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 1596c9ded514c8e0881001bd6493932e
+    assemblyName: com.marufhow.meshslicer
+    namespaceName: com.marufhow.meshslicer.core
+    className: MHCutter
+  - hash:
+      serializedVersion: 2
       Hash: 24af424a437762b0c98a2238a41b2825
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
@@ -1875,18 +1893,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 256e006b9176a3a9d015f10dd4ded873
-    assemblyName: Assembly-CSharp
-    namespaceName: com.marufhow.meshslicer.demo
-    className: ClickToCut
-  - hash:
-      serializedVersion: 2
-      Hash: 1596c9ded514c8e0881001bd6493932e
-    assemblyName: com.marufhow.meshslicer
-    namespaceName: com.marufhow.meshslicer.core
-    className: MHCutter
   platform: 13
   scenePathNames:
   - Assets/Scenes/InicioApp.unity

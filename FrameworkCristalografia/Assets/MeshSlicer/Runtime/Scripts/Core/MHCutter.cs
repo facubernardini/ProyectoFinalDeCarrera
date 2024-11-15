@@ -12,13 +12,12 @@ namespace com.marufhow.meshslicer.core
     {
         private MHMesh _leftMesh;
         private Mesh _mesh;
-        
         private List<Vector3> _addedVertices;
         private List<Vector3> _fillAreaVertex;
         private List<Vector2> _uvs;
 
-        public void Cut(GameObject cutObject, Vector3 cutPoint, Vector3 cutNormal)
-        {
+        public GameObject Cut(GameObject cutObject, Vector3 cutPoint, Vector3 cutNormal)
+        {   
             // The InverseTransformDirection method is used here to convert the cutNormal from world space to the local space of the cutObject.
             Plane plane = new Plane(cutObject.transform.InverseTransformDirection(-cutNormal),  
                 cutObject.transform.InverseTransformPoint(cutPoint));
@@ -70,6 +69,8 @@ namespace com.marufhow.meshslicer.core
             FillCuttingPlane(plane);
             
             _leftMesh.GenerateMesh(); // reform current to cutObject
+
+            return cutObject;
         }
       
         private void FillCuttingPlane(Plane plane)

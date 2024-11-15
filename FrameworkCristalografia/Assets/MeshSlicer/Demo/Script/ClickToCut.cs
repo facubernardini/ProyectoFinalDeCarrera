@@ -7,8 +7,14 @@ namespace com.marufhow.meshslicer.demo
     {
         public MHCutter _mhCutter;
         public GameObject planoCorte;
-        public GameObject[] celdas;
+
+        public GameObject centradaCuerpoCentro, centradaCuerpoEsquinas;
+        public GameObject centradaCarasA, centradaCarasB, centradaCarasC;
+        public GameObject hexagonalCompactaA, hexagonalCompactaB;
+
+        public GameObject centradaCuerpo, centradaCaras, hexagonalCompacta;
         private Vector3 posicionCorte, direccionCorte;
+        private GameObject corteActualA, corteActualB, corteActualC;
 
         private void Update()
         {
@@ -18,13 +24,41 @@ namespace com.marufhow.meshslicer.demo
 
         public void CortarMallas()
         {
-            for (int i = 0; i < celdas.Length; i++)
+            if (centradaCuerpo.activeSelf)
             {
-                if (celdas[i].activeSelf)
-                {
-                    _mhCutter.Cut(celdas[i], posicionCorte, direccionCorte);
-                }
+                Destroy(corteActualA);
+                Destroy(corteActualB);
+
+                corteActualA = _mhCutter.Cut(Instantiate(centradaCuerpoCentro), posicionCorte, direccionCorte);
+                corteActualB = _mhCutter.Cut(Instantiate(centradaCuerpoEsquinas), posicionCorte, direccionCorte);
             }
+
+            if (centradaCaras.activeSelf)
+            {
+                Destroy(corteActualA);
+                Destroy(corteActualB);
+                Destroy(corteActualC);
+
+                corteActualA = _mhCutter.Cut(Instantiate(centradaCarasA), posicionCorte, direccionCorte);
+                corteActualB = _mhCutter.Cut(Instantiate(centradaCarasB), posicionCorte, direccionCorte);
+                corteActualC = _mhCutter.Cut(Instantiate(centradaCarasC), posicionCorte, direccionCorte);
+            }
+
+            if (hexagonalCompacta.activeSelf)
+            {
+                Destroy(corteActualA);
+                Destroy(corteActualB);
+
+                corteActualA = _mhCutter.Cut(Instantiate(hexagonalCompactaA), posicionCorte, direccionCorte);
+                corteActualB = _mhCutter.Cut(Instantiate(hexagonalCompactaB), posicionCorte, direccionCorte);
+            }
+        }
+
+        public void ActualizarVistaCorte()
+        {
+            Destroy(corteActualA);
+            Destroy(corteActualB);
+            Destroy(corteActualC);
         }
     }
 }
