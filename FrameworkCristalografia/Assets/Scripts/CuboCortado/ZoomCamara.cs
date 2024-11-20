@@ -9,6 +9,6 @@ public class ZoomCamara : MonoBehaviour
     void Update()
     {
         float zoom = slider.value;
-        camaraPrincipal.fieldOfView = 60f - zoom;
+        camaraPrincipal.fieldOfView = 58f - zoom;
     }
 }

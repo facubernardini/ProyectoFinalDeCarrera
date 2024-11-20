@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +7,12 @@ public class ManagerPlanoCorte : MonoBehaviour
     public Slider sliderX, sliderY, sliderZ;
     private Vector3 pointOnXAxis, pointOnYAxis, pointOnZAxis;
 
-    void Update()
+    void Start()
+    {
+        GenerarPlanoDeCorte();
+    }
+
+    public void GenerarPlanoDeCorte()
     {
         if (sliderX.value == 0)
         {
@@ -45,6 +49,23 @@ public class ManagerPlanoCorte : MonoBehaviour
 
         // Posicionamos el plano para que quede en la celda unitaria
         PosicionarPlano();
+    }
+
+    public void NormalizarPlano()
+    {
+        float valorX = sliderX.value;
+        float valorY = sliderY.value;
+        float valorZ = sliderZ.value;
+
+        float max = Math.Max(valorX, Math.Max(valorY, valorZ));
+
+        valorX = valorX / max;
+        valorY = valorY / max;
+        valorZ = valorZ / max;
+
+        sliderX.value = valorX;
+        sliderY.value = valorY;
+        sliderZ.value = valorZ;
     }
 
     // Función para calcular el vector normal de un plano dado por tres puntos

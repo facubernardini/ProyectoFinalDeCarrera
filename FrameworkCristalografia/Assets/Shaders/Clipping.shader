@@ -1,12 +1,18 @@
 Shader "Clipping" {
+
     Properties {
+        
         _MainTex ("Texture", 2D) = "white" {}
         _CubeCenter ("Cube Center", Vector) = (0, 0, 0)
         _CubeSize ("Cube Size", Vector) = (1, 1, 1)
+        _Transparency ("Transparency", Range(0, 1)) = 0.5
     }
+
     SubShader {
-        Tags { "RenderType"="Opaque" }
+
+        Tags { "RenderType"="Transparent" "Queue"="Transparent" }
         LOD 200
+        Blend SrcAlpha OneMinusSrcAlpha
 
         Pass {
             CGPROGRAM
@@ -16,6 +22,7 @@ Shader "Clipping" {
             sampler2D _MainTex;
             float4 _CubeCenter;
             float4 _CubeSize;
+            float _Transparency;
 
             struct appdata {
                 float4 vertex : POSITION;
@@ -47,11 +54,13 @@ Shader "Clipping" {
                     discard;  // No renderizar fuera del cubo
                 }
 
-                // Renderiza la textura
-                return tex2D(_MainTex, i.uv);
+                // Renderiza la textura con transparencia
+                fixed4 texColor = tex2D(_MainTex, i.uv);
+                texColor.a *= _Transparency; // Aplica la transparencia
+                return texColor;
             }
             ENDCG
         }
     }
-    FallBack "Diffuse"
+    FallBack "Transparent"
 }

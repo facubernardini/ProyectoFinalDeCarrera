@@ -51,8 +51,6 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
-    Unity.TextMeshPro.Editor.dll:
-    - TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow
     Unity.TextMeshPro.dll:
     - TMPro.TMP_FontAsset
     - TMPro.TMP_Settings
@@ -189,6 +187,9 @@ ScriptsOnlyBuild:
     fullTypeName: ManagerOpciones
     methodName: SeleccionarCeldaCentradaCuerpo
   - assembly: Assembly-CSharp
+    fullTypeName: com.marufhow.meshslicer.demo.ClickToCut
+    methodName: ActualizarVistaCorte
+  - assembly: Assembly-CSharp
     fullTypeName: ManagerOpciones
     methodName: MostrarEjes
   - assembly: Assembly-CSharp
@@ -204,6 +205,9 @@ ScriptsOnlyBuild:
     fullTypeName: com.marufhow.meshslicer.demo.ClickToCut
     methodName: ActualizarVistaCorte
   - assembly: Assembly-CSharp
+    fullTypeName: ManagerPlanoCorte
+    methodName: GenerarPlanoDeCorte
+  - assembly: Assembly-CSharp
     fullTypeName: RotacionCamara
     methodName: ActivarRotacionCamara
   - assembly: Assembly-CSharp
@@ -212,6 +216,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ManagerOpciones
     methodName: SeleccionarCeldaCentradaCaras
+  - assembly: Assembly-CSharp
+    fullTypeName: com.marufhow.meshslicer.demo.ClickToCut
+    methodName: ActualizarVistaCorte
   - assembly: Assembly-CSharp
     fullTypeName: com.marufhow.meshslicer.demo.ClickToCut
     methodName: CortarMallas
@@ -228,14 +235,23 @@ ScriptsOnlyBuild:
     fullTypeName: com.marufhow.meshslicer.demo.ClickToCut
     methodName: ActualizarVistaCorte
   - assembly: Assembly-CSharp
+    fullTypeName: ManagerPlanoCorte
+    methodName: GenerarPlanoDeCorte
+  - assembly: Assembly-CSharp
     fullTypeName: ManagerOpciones
     methodName: AbrirMenuOpciones
+  - assembly: Assembly-CSharp
+    fullTypeName: ManagerPlanoCorte
+    methodName: NormalizarPlano
   - assembly: Assembly-CSharp
     fullTypeName: ManagerOpciones
     methodName: CambiarTransparencia
   - assembly: Assembly-CSharp
     fullTypeName: ManagerOpciones
     methodName: SeleccionarCeldaHexagonal
+  - assembly: Assembly-CSharp
+    fullTypeName: com.marufhow.meshslicer.demo.ClickToCut
+    methodName: ActualizarVistaCorte
   - assembly: Assembly-CSharp
     fullTypeName: ManagerPanelIndices
     methodName: ActualizarValorZ
@@ -245,6 +261,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: com.marufhow.meshslicer.demo.ClickToCut
     methodName: ActualizarVistaCorte
+  - assembly: Assembly-CSharp
+    fullTypeName: ManagerPlanoCorte
+    methodName: GenerarPlanoDeCorte
   sceneClasses:
     Assets/Scenes/InicioApp.unity:
     - Class: 1
