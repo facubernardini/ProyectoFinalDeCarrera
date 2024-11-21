@@ -51,6 +51,8 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
+    Unity.TextMeshPro.Editor.dll:
+    - TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow
     Unity.TextMeshPro.dll:
     - TMPro.TMP_FontAsset
     - TMPro.TMP_Settings
@@ -393,9 +395,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 23816}
     - Class: 114
-      Script: {instanceID: 24626}
+      Script: {instanceID: 24624}
     - Class: 114
-      Script: {instanceID: 24962}
+      Script: {instanceID: 24960}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -484,7 +486,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 24588}
     - Class: 114
-      Script: {instanceID: 25016}
+      Script: {instanceID: 25014}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
