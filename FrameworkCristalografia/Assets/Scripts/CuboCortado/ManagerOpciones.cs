@@ -66,6 +66,8 @@ public class ManagerOpciones : MonoBehaviour
 
             botonGenerarCorte.interactable = true;
             vistaCorte.SetActive(false);
+
+            mostrarPlanoDeCorte.interactable = true;
         }
     }
 
@@ -85,6 +87,8 @@ public class ManagerOpciones : MonoBehaviour
 
             botonGenerarCorte.interactable = true;
             vistaCorte.SetActive(false);
+
+            mostrarPlanoDeCorte.interactable = true;
         }
     }
 
@@ -103,6 +107,7 @@ public class ManagerOpciones : MonoBehaviour
             panelCeldaHexagonal.SetActive(true);
 
             mostrarPlanoDeCorte.isOn = false;
+            mostrarPlanoDeCorte.interactable = false;
 
             botonGenerarCorte.interactable = false;
             vistaCorte.SetActive(false);

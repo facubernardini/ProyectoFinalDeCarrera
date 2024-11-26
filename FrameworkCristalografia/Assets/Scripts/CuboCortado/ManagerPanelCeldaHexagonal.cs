@@ -1,18 +1,34 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ManagerPanelCeldaHexagonal : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject corteCapaSuperior, corteCapaIntermedia;
+
     void Start()
     {
-        
+        corteCapaSuperior.SetActive(false);
+        corteCapaIntermedia.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void MostrarCorteCapaSuperior()
     {
-        
+        OcultarCorteCapaIntermedia();
+        corteCapaSuperior.SetActive(true);
+    }
+
+    public void OcultarCorteCapaSuperior()
+    {
+        corteCapaSuperior.SetActive(false);
+    }
+
+    public void MostrarCorteCapaIntermedia()
+    {
+        OcultarCorteCapaSuperior();
+        corteCapaIntermedia.SetActive(true);
+    }
+
+    public void OcultarCorteCapaIntermedia()
+    {
+        corteCapaIntermedia.SetActive(false);
     }
 }

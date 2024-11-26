@@ -6,6 +6,7 @@ ScriptsOnlyBuild:
     - ManagerInicio
     - ManagerModuloCuboCortado
     - ManagerOpciones
+    - ManagerPanelCeldaHexagonal
     - ManagerPanelIndices
     - ManagerPlanoCorte
     - ManagerVistaCorte
@@ -188,11 +189,20 @@ ScriptsOnlyBuild:
     fullTypeName: ManagerPanelIndices
     methodName: ActivarModoContinuo
   - assembly: Assembly-CSharp
+    fullTypeName: ManagerPanelCeldaHexagonal
+    methodName: MostrarCorteCapaIntermedia
+  - assembly: Assembly-CSharp
     fullTypeName: ManagerOpciones
     methodName: SeleccionarCeldaCentradaCuerpo
   - assembly: Assembly-CSharp
     fullTypeName: com.marufhow.meshslicer.demo.ClickToCut
     methodName: ActualizarVistaCorte
+  - assembly: Assembly-CSharp
+    fullTypeName: ManagerPanelCeldaHexagonal
+    methodName: OcultarCorteCapaIntermedia
+  - assembly: Assembly-CSharp
+    fullTypeName: ManagerPanelCeldaHexagonal
+    methodName: OcultarCorteCapaSuperior
   - assembly: Assembly-CSharp
     fullTypeName: ManagerOpciones
     methodName: MostrarEjes
@@ -226,6 +236,12 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: com.marufhow.meshslicer.demo.ClickToCut
     methodName: ActualizarVistaCorte
+  - assembly: Assembly-CSharp
+    fullTypeName: ManagerPanelCeldaHexagonal
+    methodName: OcultarCorteCapaIntermedia
+  - assembly: Assembly-CSharp
+    fullTypeName: ManagerPanelCeldaHexagonal
+    methodName: OcultarCorteCapaSuperior
   - assembly: Assembly-CSharp
     fullTypeName: ManagerVistaCorte
     methodName: MostrarIconoLoding
@@ -268,6 +284,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ManagerOpciones
     methodName: CambiarTransparencia
+  - assembly: Assembly-CSharp
+    fullTypeName: ManagerPanelCeldaHexagonal
+    methodName: MostrarCorteCapaSuperior
   - assembly: Assembly-CSharp
     fullTypeName: ManagerOpciones
     methodName: SeleccionarCeldaHexagonal
@@ -344,51 +363,51 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 18480}
     - Class: 114
-      Script: {instanceID: 19082}
+      Script: {instanceID: 19084}
     - Class: 114
-      Script: {instanceID: 19178}
+      Script: {instanceID: 19180}
     - Class: 114
-      Script: {instanceID: 19372}
+      Script: {instanceID: 19374}
     - Class: 114
-      Script: {instanceID: 19426}
+      Script: {instanceID: 19428}
     - Class: 114
-      Script: {instanceID: 19514}
+      Script: {instanceID: 19516}
     - Class: 114
-      Script: {instanceID: 19898}
+      Script: {instanceID: 19900}
     - Class: 114
-      Script: {instanceID: 20032}
+      Script: {instanceID: 20034}
     - Class: 114
-      Script: {instanceID: 20066}
+      Script: {instanceID: 20068}
     - Class: 114
-      Script: {instanceID: 20202}
+      Script: {instanceID: 20204}
     - Class: 114
-      Script: {instanceID: 20410}
+      Script: {instanceID: 20412}
     - Class: 114
-      Script: {instanceID: 20534}
+      Script: {instanceID: 20536}
     - Class: 114
-      Script: {instanceID: 21278}
+      Script: {instanceID: 21280}
     - Class: 114
-      Script: {instanceID: 21340}
+      Script: {instanceID: 21342}
     - Class: 114
-      Script: {instanceID: 21424}
+      Script: {instanceID: 21426}
     - Class: 114
-      Script: {instanceID: 21442}
+      Script: {instanceID: 21444}
     - Class: 114
-      Script: {instanceID: 21510}
+      Script: {instanceID: 21512}
     - Class: 114
-      Script: {instanceID: 21518}
+      Script: {instanceID: 21520}
     - Class: 114
-      Script: {instanceID: 21778}
+      Script: {instanceID: 21780}
     - Class: 114
-      Script: {instanceID: 21782}
+      Script: {instanceID: 21784}
     - Class: 114
-      Script: {instanceID: 21802}
+      Script: {instanceID: 21804}
     - Class: 114
-      Script: {instanceID: 22122}
+      Script: {instanceID: 22124}
     - Class: 114
-      Script: {instanceID: 22458}
+      Script: {instanceID: 22460}
     - Class: 114
-      Script: {instanceID: 22472}
+      Script: {instanceID: 22474}
     - Class: 114
       Script: {instanceID: 22556}
     - Class: 114
@@ -483,23 +502,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 18480}
     - Class: 114
-      Script: {instanceID: 19148}
+      Script: {instanceID: 18812}
     - Class: 114
-      Script: {instanceID: 21340}
+      Script: {instanceID: 19150}
     - Class: 114
-      Script: {instanceID: 21414}
+      Script: {instanceID: 21342}
     - Class: 114
-      Script: {instanceID: 21510}
+      Script: {instanceID: 21416}
     - Class: 114
-      Script: {instanceID: 21566}
+      Script: {instanceID: 21512}
     - Class: 114
-      Script: {instanceID: 22472}
+      Script: {instanceID: 21568}
     - Class: 114
-      Script: {instanceID: 22534}
+      Script: {instanceID: 22474}
     - Class: 114
       Script: {instanceID: 22674}
     - Class: 114
       Script: {instanceID: 22896}
+    - Class: 114
+      Script: {instanceID: 23220}
     - Class: 114
       Script: {instanceID: 23816}
     - Class: 114
@@ -511,9 +532,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 25014}
     - Class: 114
-      Script: {instanceID: 43234}
+      Script: {instanceID: 25284}
     - Class: 114
-      Script: {instanceID: 111472}
+      Script: {instanceID: 25288}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -879,6 +900,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
     className: VertexShakeA
+  - hash:
+      serializedVersion: 2
+      Hash: 953fce58ecc6da957dbd86ad8a747d04
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: CameraCapture
   - hash:
       serializedVersion: 2
       Hash: a1ac4c50e55874de16eee3db71aa9784
@@ -1481,12 +1508,6 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: da230063144fdab0aa0975a36000ebfa
-    assemblyName: Assembly-CSharp
-    namespaceName: com.marufhow.meshslicer.demo
-    className: ClickToCut
-  - hash:
-      serializedVersion: 2
       Hash: b72839eb6e4350778dc879d98832aa2b
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
@@ -1595,7 +1616,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerColor
   - hash:
       serializedVersion: 2
-      Hash: 06272668223e6dbafe22d31834ed9743
+      Hash: bd329c9eb7e0ec5a2a4af8e0b2adf07c
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ManagerPanelCeldaHexagonal
@@ -1943,16 +1964,16 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   - hash:
       serializedVersion: 2
+      Hash: da230063144fdab0aa0975a36000ebfa
+    assemblyName: Assembly-CSharp
+    namespaceName: com.marufhow.meshslicer.demo
+    className: ClickToCut
+  - hash:
+      serializedVersion: 2
       Hash: 4213d7523046b0e40253c0d35ca790eb
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ManagerVistaCorte
-  - hash:
-      serializedVersion: 2
-      Hash: 953fce58ecc6da957dbd86ad8a747d04
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: CameraCapture
   platform: 13
   scenePathNames:
   - Assets/Scenes/InicioApp.unity
