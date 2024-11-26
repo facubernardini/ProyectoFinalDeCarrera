@@ -7,14 +7,17 @@ public class ManagerOpciones : MonoBehaviour
     public GameObject CeldaCentradaCuerpo, CeldaCentradaCaras, CeldaHexagonalCompacta;
     public GameObject CeldaCentradaCuerpoExpandida, CeldaCentradaCarasExpandida, CeldaHexagonalExpandida;
     public Camera camaraPrincipal;
-    public Toggle toggleExpandirEstructura;
+    public Toggle mostrarPlanoDeCorte;
     public Slider sliderTransparencia;
     public Material[] materialesTransparentes;
+    public Button botonGenerarCorte;
+    public GameObject vistaCorte;
     private bool MenuOpcionesAbierto;
 
     void Start()
     {
         MenuOpcionesAbierto = false;
+
         panelInferior.SetActive(true);
         panelOpciones.SetActive(false);
         panelCeldaHexagonal.SetActive(false);
@@ -26,6 +29,9 @@ public class ManagerOpciones : MonoBehaviour
         CeldaCentradaCuerpoExpandida.SetActive(true);
         CeldaCentradaCarasExpandida.SetActive(false);
         CeldaHexagonalExpandida.SetActive(false);
+
+        botonGenerarCorte.interactable = true;
+        vistaCorte.SetActive(false);
     }
 
     public void AbrirMenuOpciones()
@@ -57,6 +63,9 @@ public class ManagerOpciones : MonoBehaviour
             CeldaHexagonalExpandida.SetActive(false);
 
             panelCeldaHexagonal.SetActive(false);
+
+            botonGenerarCorte.interactable = true;
+            vistaCorte.SetActive(false);
         }
     }
 
@@ -73,6 +82,9 @@ public class ManagerOpciones : MonoBehaviour
             CeldaHexagonalExpandida.SetActive(false);
 
             panelCeldaHexagonal.SetActive(false);
+
+            botonGenerarCorte.interactable = true;
+            vistaCorte.SetActive(false);
         }
     }
 
@@ -89,6 +101,11 @@ public class ManagerOpciones : MonoBehaviour
             CeldaHexagonalExpandida.SetActive(true);
 
             panelCeldaHexagonal.SetActive(true);
+
+            mostrarPlanoDeCorte.isOn = false;
+
+            botonGenerarCorte.interactable = false;
+            vistaCorte.SetActive(false);
         }
     }
 

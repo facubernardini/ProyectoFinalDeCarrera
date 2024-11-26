@@ -2,11 +2,13 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - Billboard
+    - CameraCapture
     - ManagerInicio
     - ManagerModuloCuboCortado
     - ManagerOpciones
     - ManagerPanelIndices
     - ManagerPlanoCorte
+    - ManagerVistaCorte
     - RotacionCamara
     - ZoomCamara
     - com.marufhow.meshslicer.demo.ClickToCut
@@ -210,6 +212,9 @@ ScriptsOnlyBuild:
     fullTypeName: ManagerPlanoCorte
     methodName: GenerarPlanoDeCorte
   - assembly: Assembly-CSharp
+    fullTypeName: ManagerVistaCorte
+    methodName: ActivarBotonGenerarCorte
+  - assembly: Assembly-CSharp
     fullTypeName: RotacionCamara
     methodName: ActivarRotacionCamara
   - assembly: Assembly-CSharp
@@ -222,8 +227,20 @@ ScriptsOnlyBuild:
     fullTypeName: com.marufhow.meshslicer.demo.ClickToCut
     methodName: ActualizarVistaCorte
   - assembly: Assembly-CSharp
+    fullTypeName: ManagerVistaCorte
+    methodName: MostrarIconoLoding
+  - assembly: Assembly-CSharp
+    fullTypeName: ManagerVistaCorte
+    methodName: DesactivarBotonGenerarCorte
+  - assembly: Assembly-CSharp
     fullTypeName: com.marufhow.meshslicer.demo.ClickToCut
-    methodName: CortarMallas
+    methodName: CortarMallasWrapper
+  - assembly: Assembly-CSharp
+    fullTypeName: CameraCapture
+    methodName: CapturarCamara
+  - assembly: Assembly-CSharp
+    fullTypeName: ManagerVistaCorte
+    methodName: OcultarVistaCorte
   - assembly: Assembly-CSharp
     fullTypeName: ManagerModuloCuboCortado
     methodName: Atras
@@ -239,6 +256,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ManagerPlanoCorte
     methodName: GenerarPlanoDeCorte
+  - assembly: Assembly-CSharp
+    fullTypeName: ManagerVistaCorte
+    methodName: ActivarBotonGenerarCorte
   - assembly: Assembly-CSharp
     fullTypeName: ManagerOpciones
     methodName: AbrirMenuOpciones
@@ -266,6 +286,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ManagerPlanoCorte
     methodName: GenerarPlanoDeCorte
+  - assembly: Assembly-CSharp
+    fullTypeName: ManagerVistaCorte
+    methodName: ActivarBotonGenerarCorte
   sceneClasses:
     Assets/Scenes/InicioApp.unity:
     - Class: 1
@@ -487,6 +510,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 24588}
     - Class: 114
       Script: {instanceID: 25014}
+    - Class: 114
+      Script: {instanceID: 43234}
+    - Class: 114
+      Script: {instanceID: 111472}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1454,7 +1481,7 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: a9beb3abfa685dd17264b2672bc406cb
+      Hash: da230063144fdab0aa0975a36000ebfa
     assemblyName: Assembly-CSharp
     namespaceName: com.marufhow.meshslicer.demo
     className: ClickToCut
@@ -1472,7 +1499,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerIntField
   - hash:
       serializedVersion: 2
-      Hash: 5d625000b8e880a741430c107aa2b356
+      Hash: 8e62bf4e290bf52c0d6f96e20e18dd22
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ManagerOpciones
@@ -1914,6 +1941,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 4213d7523046b0e40253c0d35ca790eb
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ManagerVistaCorte
+  - hash:
+      serializedVersion: 2
+      Hash: 953fce58ecc6da957dbd86ad8a747d04
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: CameraCapture
   platform: 13
   scenePathNames:
   - Assets/Scenes/InicioApp.unity
