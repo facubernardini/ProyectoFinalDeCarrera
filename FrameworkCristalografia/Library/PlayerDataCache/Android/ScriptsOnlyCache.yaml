@@ -4,7 +4,8 @@ ScriptsOnlyBuild:
     - Billboard
     - CameraCapture
     - ManagerInicio
-    - ManagerModuloCuboCortado
+    - ManagerModuloEstructurasCristalinas
+    - ManagerModuloProcesoCristalizacion
     - ManagerOpciones
     - ManagerPanelCeldaHexagonal
     - ManagerPanelIndices
@@ -139,7 +140,10 @@ ScriptsOnlyBuild:
   methodsToPreserve:
   - assembly: Assembly-CSharp
     fullTypeName: ManagerInicio
-    methodName: IniciarModuloCuboCortado
+    methodName: IniciarModuloProcesoCristalizacion
+  - assembly: Assembly-CSharp
+    fullTypeName: ManagerInicio
+    methodName: IniciarModuloEstructurasCristalinas
   - assembly: Unity.RenderPipelines.Core.Runtime
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerButton
     methodName: OnAction
@@ -258,11 +262,11 @@ ScriptsOnlyBuild:
     fullTypeName: ManagerVistaCorte
     methodName: OcultarVistaCorte
   - assembly: Assembly-CSharp
-    fullTypeName: ManagerModuloCuboCortado
+    fullTypeName: ManagerModuloEstructurasCristalinas
     methodName: Atras
   - assembly: Assembly-CSharp
     fullTypeName: ManagerPanelIndices
-    methodName: ActualizarValorY
+    methodName: ActualizarValorZ
   - assembly: Assembly-CSharp
     fullTypeName: ManagerPanelIndices
     methodName: ValorEnteroSlider
@@ -295,7 +299,7 @@ ScriptsOnlyBuild:
     methodName: ActualizarVistaCorte
   - assembly: Assembly-CSharp
     fullTypeName: ManagerPanelIndices
-    methodName: ActualizarValorZ
+    methodName: ActualizarValorY
   - assembly: Assembly-CSharp
     fullTypeName: ManagerPanelIndices
     methodName: ValorEnteroSlider
@@ -308,6 +312,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ManagerVistaCorte
     methodName: ActivarBotonGenerarCorte
+  - assembly: Assembly-CSharp
+    fullTypeName: ManagerModuloProcesoCristalizacion
+    methodName: Atras
   sceneClasses:
     Assets/Scenes/InicioApp.unity:
     - Class: 1
@@ -456,7 +463,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
-    Assets/Scenes/ModuloCuboCortado.unity:
+    Assets/Scenes/ModuloEstructurasCristalinas.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -551,6 +558,65 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
+    Assets/Scenes/ModuloProcesoCristalizacion.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 16796}
+    - Class: 114
+      Script: {instanceID: 16798}
+    - Class: 114
+      Script: {instanceID: 16858}
+    - Class: 114
+      Script: {instanceID: 18202}
+    - Class: 114
+      Script: {instanceID: 18480}
+    - Class: 114
+      Script: {instanceID: 21418}
+    - Class: 114
+      Script: {instanceID: 21514}
+    - Class: 114
+      Script: {instanceID: 22476}
+    - Class: 114
+      Script: {instanceID: 22900}
+    - Class: 114
+      Script: {instanceID: 23820}
+    - Class: 114
+      Script: {instanceID: 55986}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
   scriptHashData:
   - hash:
       serializedVersion: 2
@@ -600,12 +666,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: Image
-  - hash:
-      serializedVersion: 2
-      Hash: ec42cd648bd1009d48ae3ea0b591a9bd
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: DibujarPerimetro
   - hash:
       serializedVersion: 2
       Hash: 8d7ab1303b1c14da5fdd62bf96ca6e89
@@ -1214,12 +1274,6 @@ ScriptsOnlyBuild:
     className: TMP_ExampleScript_01
   - hash:
       serializedVersion: 2
-      Hash: 8fd2e62ee332c5089f0bb127c9145c09
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: CorteConTapa
-  - hash:
-      serializedVersion: 2
       Hash: dc31d211c7459841fe4f406ae2e51480
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
@@ -1514,7 +1568,7 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: da230063144fdab0aa0975a36000ebfa
+      Hash: c0604e167aa4fdc1f79568f5f8b1177f
     assemblyName: Assembly-CSharp
     namespaceName: com.marufhow.meshslicer.demo
     className: ClickToCut
@@ -1532,7 +1586,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerIntField
   - hash:
       serializedVersion: 2
-      Hash: 8e62bf4e290bf52c0d6f96e20e18dd22
+      Hash: 09e1a53b4a9ca8de2bba61e8b6a9372f
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ManagerOpciones
@@ -1628,7 +1682,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerColor
   - hash:
       serializedVersion: 2
-      Hash: bd329c9eb7e0ec5a2a4af8e0b2adf07c
+      Hash: 686abf7484460f12bae291cc58500196
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ManagerPanelCeldaHexagonal
@@ -1826,22 +1880,16 @@ ScriptsOnlyBuild:
     className: ControlTrack
   - hash:
       serializedVersion: 2
-      Hash: 1f5331a656c0cab2cd3140fe3258efe7
+      Hash: 57db652ba076a097560f3d2efb07f646
     assemblyName: Assembly-CSharp
     namespaceName: 
-    className: ManagerModuloCuboCortado
+    className: ManagerModuloEstructurasCristalinas
   - hash:
       serializedVersion: 2
       Hash: 9a174471d4db2c0c6d3ac47d2f818db1
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnParticleCollisionMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 15554e92c3d8d619b06ece51d5a4d504
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: IntersectionAreaVisualizer
   - hash:
       serializedVersion: 2
       Hash: 0f5a086d4d028363983ba6ca30a01397
@@ -1928,7 +1976,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerFoldout
   - hash:
       serializedVersion: 2
-      Hash: d6c691c8aba66c241cabb99ea2596dfa
+      Hash: d2b573d7f51014642209ff834a525e3f
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ManagerPanelIndices
@@ -1974,8 +2022,15 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: cef4d8bc94574f0bbc7592b0dcf7573c
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ManagerModuloProcesoCristalizacion
   platform: 13
   scenePathNames:
   - Assets/Scenes/InicioApp.unity
-  - Assets/Scenes/ModuloCuboCortado.unity
+  - Assets/Scenes/ModuloEstructurasCristalinas.unity
+  - Assets/Scenes/ModuloProcesoCristalizacion.unity
   playerPath: C:/Users/facub/Downloads/CeldApp.apk

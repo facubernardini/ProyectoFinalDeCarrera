@@ -3,8 +3,29 @@ using UnityEngine.SceneManagement;
 
 public class ManagerInicio : MonoBehaviour
 {
-    public void IniciarModuloCuboCortado()
+    void Start()
     {
-        SceneManager.LoadScene("ModuloCuboCortado");
+        QualitySettings.vSyncCount = 0; // Set vSyncCount to 0 so that using .targetFrameRate is enabled.
+        Application.targetFrameRate = 144;
+    }
+
+    public void IniciarModuloEstructurasCristalinas()
+    {
+        SceneManager.LoadScene("ModuloEstructurasCristalinas");
+    }
+
+    public void IniciarModuloProcesoCristalizacion()
+    {
+        SceneManager.LoadScene("ModuloProcesoCristalizacion");
+    }
+
+    public void IniciarModuloDiagramaDeFases()
+    {
+        SceneManager.LoadScene("ModuloDiagramaDeFases");
+    }
+
+    public void IniciarModuloRealidadAumentada()
+    {
+        SceneManager.LoadScene("ModuloRealidadAumentada");
     }
 }
