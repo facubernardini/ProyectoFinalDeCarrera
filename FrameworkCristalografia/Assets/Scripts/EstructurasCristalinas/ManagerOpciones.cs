@@ -9,14 +9,16 @@ public class ManagerOpciones : MonoBehaviour
     public Camera camaraPrincipal;
     public Toggle mostrarPlanoDeCorte;
     public Slider sliderTransparencia;
-    public Material[] materialesTransparentes;
+    public Material[] materialesTransparentesVistaExpandida;
+    public Material[] materialesTransparentesCeldas;
     public Button botonGenerarCorte;
     public GameObject vistaCorte, planosCorteCeldaHexagonal;
-    private bool MenuOpcionesAbierto;
+    private bool menuOpcionesAbierto, sistemaDeslizamientoActivo;
 
     void Start()
     {
-        MenuOpcionesAbierto = false;
+        menuOpcionesAbierto = false;
+        sistemaDeslizamientoActivo = false;
 
         panelInferior.SetActive(true);
         panelOpciones.SetActive(false);
@@ -37,7 +39,7 @@ public class ManagerOpciones : MonoBehaviour
 
     public void AbrirMenuOpciones()
     {
-        if (!MenuOpcionesAbierto)
+        if (!menuOpcionesAbierto)
         {
             panelOpciones.SetActive(true);
             panelInferior.SetActive(false);
@@ -48,7 +50,7 @@ public class ManagerOpciones : MonoBehaviour
             panelInferior.SetActive(true);
         }
 
-        MenuOpcionesAbierto = !MenuOpcionesAbierto;
+        menuOpcionesAbierto = !menuOpcionesAbierto;
     }
 
     public void SeleccionarCeldaCentradaCuerpo()
@@ -138,12 +140,54 @@ public class ManagerOpciones : MonoBehaviour
     {
         float valorTransparencia = sliderTransparencia.value;
 
-        foreach (Material mat in materialesTransparentes)
+        foreach (Material mat in materialesTransparentesVistaExpandida)
         {
             Color colorAux = mat.color;
             colorAux.a = valorTransparencia;
             mat.color = colorAux;
         }
+    }
+
+    public void SistemaDeslizamiento()
+    {
+        camaraPrincipal.cullingMask ^= 1 << LayerMask.NameToLayer("SistemaDeDeslizamiento");
+
+        if (!sistemaDeslizamientoActivo)
+        {
+            int i = 1;
+
+            foreach (Material mat in materialesTransparentesCeldas)
+            {
+                mat.SetFloat("_Mode", 3);
+
+                mat.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.One);
+                mat.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
+                mat.SetInt("_ZWrite", 0);
+                mat.DisableKeyword("_ALPHATEST_ON");
+                mat.DisableKeyword("_ALPHABLEND_ON");
+                mat.EnableKeyword("_ALPHAPREMULTIPLY_ON");
+                mat.renderQueue = (int)UnityEngine.Rendering.RenderQueue.Transparent + i;
+                i++;
+            }
+            sistemaDeslizamientoActivo = true;
+        }
+        else
+        {
+            foreach (Material mat in materialesTransparentesCeldas)
+            {
+                mat.SetFloat("_Mode", 0);
+
+                mat.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.One);
+                mat.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.Zero);
+                mat.SetInt("_ZWrite", 1);
+                mat.DisableKeyword("_ALPHATEST_ON");
+                mat.DisableKeyword("_ALPHABLEND_ON");
+                mat.DisableKeyword("_ALPHAPREMULTIPLY_ON");
+                //mat.renderQueue = -1;
+            }
+            sistemaDeslizamientoActivo = false;
+        }
+        
     }
 
 }
