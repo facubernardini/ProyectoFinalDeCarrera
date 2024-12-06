@@ -11,8 +11,10 @@ public class ManagerOpciones : MonoBehaviour
     public Slider sliderTransparencia;
     public Material[] materialesTransparentesVistaExpandida;
     public Material[] materialesTransparentesCeldas;
-    public Button botonGenerarCorte;
+    public Button botonGenerarCorte, botonOpciones;
     public GameObject vistaCorte, planosCorteCeldaHexagonal;
+    public Sprite imagenOpciones, imagenSalir;
+
     private bool menuOpcionesAbierto, sistemaDeslizamientoActivo;
 
     void Start()
@@ -51,6 +53,7 @@ public class ManagerOpciones : MonoBehaviour
         }
 
         menuOpcionesAbierto = !menuOpcionesAbierto;
+        CambiarIconoBotonOpciones();
     }
 
     public void SeleccionarCeldaCentradaCuerpo()
@@ -154,7 +157,7 @@ public class ManagerOpciones : MonoBehaviour
 
         if (!sistemaDeslizamientoActivo)
         {
-            int i = 1;
+            int i = 1; // Para que no queden todos los materiales con el mismo valor renderQueue y se glitcheen
 
             foreach (Material mat in materialesTransparentesCeldas)
             {
@@ -183,11 +186,22 @@ public class ManagerOpciones : MonoBehaviour
                 mat.DisableKeyword("_ALPHATEST_ON");
                 mat.DisableKeyword("_ALPHABLEND_ON");
                 mat.DisableKeyword("_ALPHAPREMULTIPLY_ON");
-                //mat.renderQueue = -1;
+                mat.renderQueue = 2000;
             }
             sistemaDeslizamientoActivo = false;
         }
         
     }
 
+    private void CambiarIconoBotonOpciones()
+    {
+        if (menuOpcionesAbierto)
+        {
+            botonOpciones.image.sprite = imagenSalir;
+        }
+        else
+        {
+            botonOpciones.image.sprite = imagenOpciones;
+        }
+    }
 }

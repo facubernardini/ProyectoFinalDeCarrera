@@ -3,6 +3,8 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - Billboard
     - CameraCapture
+    - GeneradorEsferas
+    - ManagerCamara
     - ManagerInicio
     - ManagerModuloEstructurasCristalinas
     - ManagerModuloProcesoCristalizacion
@@ -11,8 +13,6 @@ ScriptsOnlyBuild:
     - ManagerPanelIndices
     - ManagerPlanoCorte
     - ManagerVistaCorte
-    - RotacionCamara
-    - ZoomCamara
     - com.marufhow.meshslicer.demo.ClickToCut
     Unity.RenderPipelines.Core.Runtime:
     - UnityEngine.Rendering.UI.DebugUIHandlerBitField
@@ -231,10 +231,10 @@ ScriptsOnlyBuild:
     fullTypeName: ManagerVistaCorte
     methodName: ActivarBotonGenerarCorte
   - assembly: Assembly-CSharp
-    fullTypeName: RotacionCamara
+    fullTypeName: ManagerCamara
     methodName: ActivarRotacionCamara
   - assembly: Assembly-CSharp
-    fullTypeName: RotacionCamara
+    fullTypeName: ManagerCamara
     methodName: DesactivarRotacionCamara
   - assembly: Assembly-CSharp
     fullTypeName: ManagerOpciones
@@ -320,6 +320,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ManagerModuloProcesoCristalizacion
     methodName: Atras
+  - assembly: Assembly-CSharp
+    fullTypeName: GeneradorEsferas
+    methodName: GenerarSimulacion
   sceneClasses:
     Assets/Scenes/InicioApp.unity:
     - Class: 1
@@ -508,8 +511,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 17786}
     - Class: 114
-      Script: {instanceID: 17880}
-    - Class: 114
       Script: {instanceID: 18200}
     - Class: 114
       Script: {instanceID: 18478}
@@ -572,9 +573,19 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
     - Class: 28
       Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
     - Class: 48
+      Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 64
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
@@ -597,8 +608,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 21348}
     - Class: 114
-      Script: {instanceID: 21416}
-    - Class: 114
       Script: {instanceID: 21512}
     - Class: 114
       Script: {instanceID: 22474}
@@ -606,9 +615,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 22898}
     - Class: 114
       Script: {instanceID: 23818}
+    - Class: 114
+      Script: {instanceID: 137928}
     - Class: 115
       Script: {instanceID: 0}
-    - Class: 128
+    - Class: 135
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -797,12 +808,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
     className: DebugUIHandlerToggle
-  - hash:
-      serializedVersion: 2
-      Hash: b0d207fb8d8ec836dc3a1a15a1aeb91a
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: ZoomCamara
   - hash:
       serializedVersion: 2
       Hash: da281dc879c7932e0c9669da88ae40c0
@@ -1459,10 +1464,10 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerIndirectToggle
   - hash:
       serializedVersion: 2
-      Hash: cc294dc5ba032d11623faa15d650432f
+      Hash: 8bdc065a94d88c5475f6170e068d6bc8
     assemblyName: Assembly-CSharp
     namespaceName: 
-    className: RotacionCamara
+    className: ManagerCamara
   - hash:
       serializedVersion: 2
       Hash: 0dd14e314956b0d0d83ffcffe60aa46f
@@ -1597,7 +1602,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerIntField
   - hash:
       serializedVersion: 2
-      Hash: 96be36f9ea9b44a958fd3d4ef8079cbe
+      Hash: 511b01182320b1279632976ebad06adf
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ManagerOpciones
@@ -1987,7 +1992,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerFoldout
   - hash:
       serializedVersion: 2
-      Hash: d2b573d7f51014642209ff834a525e3f
+      Hash: ee436a9beffb20910381e8b32e4abe66
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ManagerPanelIndices
@@ -2033,6 +2038,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 515c792eb91c6d2ab3be96c7162acb99
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: GeneradorEsferas
   platform: 13
   scenePathNames:
   - Assets/Scenes/InicioApp.unity

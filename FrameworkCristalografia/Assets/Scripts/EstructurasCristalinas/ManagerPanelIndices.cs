@@ -7,18 +7,22 @@ public class ManagerPanelIndices : MonoBehaviour
 {
     public Slider sliderX, sliderZ, sliderY;
     public TextMeshProUGUI valorX, valorY, valorZ;
+    public Button botonNormalizarPlano;
     private Boolean modoContinuoActivado;
     private float umbral;
 
     void Start()
     {
         modoContinuoActivado = false;
-        umbral = 0.14f;
+        umbral = 0.1f;
 
         valorX.text = sliderX.value + "";
         valorY.text = sliderY.value + "";
         valorZ.text = sliderZ.value + "";
+
+        botonNormalizarPlano.interactable = false;
     }
+    
     public void ActivarModoContinuo()
     {
         if (!modoContinuoActivado)
@@ -26,12 +30,17 @@ public class ManagerPanelIndices : MonoBehaviour
             sliderX.wholeNumbers = false;
             sliderY.wholeNumbers = false;
             sliderZ.wholeNumbers = false;
+            
+            botonNormalizarPlano.interactable = true;
+            
         }
         else
         {
             sliderX.wholeNumbers = true;
             sliderY.wholeNumbers = true;
             sliderZ.wholeNumbers = true;
+
+            botonNormalizarPlano.interactable = false;
         }
 
         modoContinuoActivado = !modoContinuoActivado;

@@ -1,4 +1,4 @@
-#Thu Dec 05 13:49:48 ART 2024
+#Fri Dec 06 17:49:11 ART 2024
 base.0=D\:\\Uni\\Proyecto Final\\ProyectoFinalDeCarrera\\FrameworkCristalografia\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

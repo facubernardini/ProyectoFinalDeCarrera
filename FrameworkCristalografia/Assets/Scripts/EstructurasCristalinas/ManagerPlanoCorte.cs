@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class ManagerPlanoCorte : MonoBehaviour
 {
@@ -53,19 +54,37 @@ public class ManagerPlanoCorte : MonoBehaviour
 
     public void NormalizarPlano()
     {
-        float valorX = sliderX.value;
-        float valorY = sliderY.value;
-        float valorZ = sliderZ.value;
+        float valorActualX = sliderX.value;
+        float valorActualY = sliderY.value;
+        float valorActualZ = sliderZ.value;
 
-        float max = Math.Max(valorX, Math.Max(valorY, valorZ));
+        float max = Math.Max(valorActualX, Math.Max(valorActualY, valorActualZ));
 
-        valorX = valorX / max;
-        valorY = valorY / max;
-        valorZ = valorZ / max;
+        float valorObjetivoX = valorActualX / max;
+        float valorObjetivoY = valorActualY / max;
+        float valorObjetivoZ = valorActualZ / max;
 
-        sliderX.value = valorX;
-        sliderY.value = valorY;
-        sliderZ.value = valorZ;
+        float duracion = 0.1f;
+
+        if (max > 1)
+        {
+            StartCoroutine(ActualizarSlider(sliderX, valorActualX, valorObjetivoX, duracion));
+            StartCoroutine(ActualizarSlider(sliderY, valorActualY, valorObjetivoY, duracion));
+            StartCoroutine(ActualizarSlider(sliderZ, valorActualZ, valorObjetivoZ, duracion));
+        }
+    }
+
+    private IEnumerator ActualizarSlider(Slider slider, float valorActual, float valorObjetivo, float duracion)
+    {
+        float tiempoInicial = 0f;
+
+        while (tiempoInicial < duracion)
+        {
+            tiempoInicial += Time.deltaTime;
+            slider.value = Mathf.Lerp(valorActual, valorObjetivo, tiempoInicial / duracion);
+            yield return null;
+        }
+        slider.value = valorObjetivo;
     }
 
     // Función para calcular el vector normal de un plano dado por tres puntos
