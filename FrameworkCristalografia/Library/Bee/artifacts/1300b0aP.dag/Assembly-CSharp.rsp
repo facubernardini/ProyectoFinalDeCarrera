@@ -327,6 +327,7 @@
 "Assets/Scripts/EstructurasCristalinas/ManagerPlanoCorte.cs"
 "Assets/Scripts/EstructurasCristalinas/ManagerVistaCorte.cs"
 "Assets/Scripts/ManagerInicio.cs"
+"Assets/Scripts/ProcesoCristalizacion/DesactivarColision.cs"
 "Assets/Scripts/ProcesoCristalizacion/GeneradorEsferas.cs"
 "Assets/Scripts/ProcesoCristalizacion/ManagerModuloProcesoCristalizacion.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
