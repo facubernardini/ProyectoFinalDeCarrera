@@ -1,12 +1,14 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GeneradorEsferas : MonoBehaviour
 {
     public GameObject spherePrefab;
     public float minX, maxX, minY, maxY;
     public Transform contenedorBolas;
+    public Slider sliderProporcion;
 
-    private float filaActual, columnaActual, separacion;
+    private float filaActual, columnaActual, separacion, proporcion;
 
     void Start()
     {
@@ -17,12 +19,13 @@ public class GeneradorEsferas : MonoBehaviour
     {
         filaActual = minY;
         columnaActual = minX;
+        proporcion = sliderProporcion.value;
 
         VaciarContenedor();
-        InvokeRepeating("CreateRow", 0f, 0.015f);
+        InvokeRepeating("CrearFila", 0f, 0.015f);
     }
     
-    private void CreateRow()
+    private void CrearFila()
     {
         if (filaActual <= maxY)
         {
@@ -32,7 +35,7 @@ public class GeneradorEsferas : MonoBehaviour
                 GameObject nuevaBolita = Instantiate(spherePrefab, newPosition, transform.rotation);
                 nuevaBolita.transform.SetParent(contenedorBolas);
 
-                if (Random.Range(0,5) == 0){
+                if (Random.Range(1, 100) <= proporcion){
                     nuevaBolita.transform.localScale *= 0.53f;
                     nuevaBolita.GetComponent<Renderer>().material.color = Color.red;
                 }
@@ -47,7 +50,7 @@ public class GeneradorEsferas : MonoBehaviour
 
     private void VaciarContenedor()
     {
-        CancelInvoke("CreateRow");
+        CancelInvoke("CrearFila");
         
         foreach (Transform bola in contenedorBolas)
         {

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3984557208458886408}
   - component: {fileID: 8736809572765121473}
   - component: {fileID: 2378310858257354747}
-  - component: {fileID: -562806965152997804}
+  - component: {fileID: -3815538967882636510}
   - component: {fileID: -3812369920411210004}
   - component: {fileID: 5568189418089807625}
   m_Layer: 13
@@ -86,7 +86,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &-562806965152997804
+--- !u!135 &-3815538967882636510
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

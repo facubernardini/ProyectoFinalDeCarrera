@@ -3,6 +3,7 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - Billboard
     - CameraCapture
+    - CameraManager
     - DesactivarColision
     - GeneradorEsferas
     - ManagerCamara
@@ -93,6 +94,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.RawImage
     - UnityEngine.UI.Slider
+    - UnityEngine.UI.Text
     - UnityEngine.UI.Toggle
     com.marufhow.meshslicer.dll:
     - com.marufhow.meshslicer.core.MHCutter
@@ -316,12 +318,96 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ManagerOpciones
     methodName: SistemaDeslizamiento
+  - assembly: UnityEngine.UI
+    fullTypeName: UnityEngine.UI.Toggle
+    methodName: set_isOn
+  - assembly: UnityEngine.UI
+    fullTypeName: UnityEngine.UI.Toggle
+    methodName: set_isOn
+  - assembly: UnityEngine.UI
+    fullTypeName: UnityEngine.UI.Toggle
+    methodName: set_isOn
+  - assembly: UnityEngine.UI
+    fullTypeName: UnityEngine.UI.Toggle
+    methodName: set_isOn
+  - assembly: UnityEngine.UI
+    fullTypeName: UnityEngine.UI.Toggle
+    methodName: set_isOn
+  - assembly: UnityEngine.UI
+    fullTypeName: UnityEngine.UI.Toggle
+    methodName: set_isOn
+  - assembly: UnityEngine.UI
+    fullTypeName: UnityEngine.UI.Toggle
+    methodName: set_isOn
+  - assembly: UnityEngine.UI
+    fullTypeName: UnityEngine.UI.Toggle
+    methodName: set_isOn
+  - assembly: UnityEngine.UI
+    fullTypeName: UnityEngine.UI.Toggle
+    methodName: set_isOn
+  - assembly: UnityEngine.UI
+    fullTypeName: UnityEngine.UI.Toggle
+    methodName: set_isOn
+  - assembly: UnityEngine.UI
+    fullTypeName: UnityEngine.UI.Toggle
+    methodName: set_isOn
+  - assembly: UnityEngine.UI
+    fullTypeName: UnityEngine.UI.Toggle
+    methodName: set_isOn
+  - assembly: UnityEngine.UI
+    fullTypeName: UnityEngine.UI.Toggle
+    methodName: set_isOn
+  - assembly: UnityEngine.UI
+    fullTypeName: UnityEngine.UI.Toggle
+    methodName: set_isOn
+  - assembly: UnityEngine.UI
+    fullTypeName: UnityEngine.UI.Toggle
+    methodName: set_isOn
   - assembly: Assembly-CSharp
     fullTypeName: ManagerModuloProcesoCristalizacion
     methodName: Atras
   - assembly: Assembly-CSharp
     fullTypeName: GeneradorEsferas
     methodName: GenerarSimulacion
+  - assembly: Assembly-CSharp
+    fullTypeName: CameraManager
+    methodName: RestablecerCamara
+  - assembly: UnityEngine.UI
+    fullTypeName: UnityEngine.UI.Toggle
+    methodName: set_isOn
+  - assembly: UnityEngine.UI
+    fullTypeName: UnityEngine.UI.Toggle
+    methodName: set_isOn
+  - assembly: UnityEngine.UI
+    fullTypeName: UnityEngine.UI.Toggle
+    methodName: set_isOn
+  - assembly: UnityEngine.UI
+    fullTypeName: UnityEngine.UI.Toggle
+    methodName: set_isOn
+  - assembly: UnityEngine.UI
+    fullTypeName: UnityEngine.UI.Toggle
+    methodName: set_isOn
+  - assembly: Assembly-CSharp
+    fullTypeName: CameraManager
+    methodName: ActivarMovimientoCamara
+  - assembly: Assembly-CSharp
+    fullTypeName: CameraManager
+    methodName: DesactivarMovimientoCamara
+  - assembly: UnityEngine.UI
+    fullTypeName: UnityEngine.UI.Toggle
+    methodName: set_isOn
+  - assembly: UnityEngine.UI
+    fullTypeName: UnityEngine.UI.Toggle
+    methodName: set_isOn
+  - assembly: UnityEngine.UI
+    fullTypeName: UnityEngine.UI.Toggle
+    methodName: set_isOn
+  - assembly: UnityEngine.UI
+    fullTypeName: UnityEngine.UI.Toggle
+    methodName: set_isOn
+  - assembly: UnityEngine.UI
+    fullTypeName: UnityEngine.UI.Toggle
+    methodName: set_isOn
   sceneClasses:
     Assets/Scenes/InicioApp.unity:
     - Class: 1
@@ -595,6 +681,8 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 16794}
+    - Class: 114
       Script: {instanceID: 16796}
     - Class: 114
       Script: {instanceID: 16798}
@@ -605,7 +693,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 18476}
     - Class: 114
+      Script: {instanceID: 21338}
+    - Class: 114
       Script: {instanceID: 21346}
+    - Class: 114
+      Script: {instanceID: 21414}
     - Class: 114
       Script: {instanceID: 21510}
     - Class: 114
@@ -618,7 +710,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 23704}
     - Class: 114
       Script: {instanceID: 23820}
+    - Class: 114
+      Script: {instanceID: 27684}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 135
       Script: {instanceID: 0}
@@ -1795,7 +1891,7 @@ ScriptsOnlyBuild:
     className: BasicPlayableBehaviour
   - hash:
       serializedVersion: 2
-      Hash: 07efe9dacf72572b1907e1c8bf6668fa
+      Hash: 11746bbdaa3448608c69a4865f9f4ffe
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: GeneradorEsferas
@@ -2051,6 +2147,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: fed66949fd2043328f3ce67672c9b94a
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: CameraManager
   platform: 13
   scenePathNames:
   - Assets/Scenes/InicioApp.unity
