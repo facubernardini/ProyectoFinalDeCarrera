@@ -443,7 +443,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Visualiza las diferentes celdas unitarias e interact\xFAa con los \xEDndices
+  m_text: "Visualiza las diferentes celdas unitarias e interact\xFAa con los \xCDndices
     de Miller para obtener planos de corte"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 260f174d5cbea1045ba03fcd6bbe6fd5, type: 2}
@@ -623,7 +623,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -832,7 +832,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1065,7 +1065,7 @@ GameObject:
   - component: {fileID: 854992263}
   - component: {fileID: 854992262}
   m_Layer: 5
-  m_Name: BotonModuloBolas
+  m_Name: BotonModuloDiagramaDeFases
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1116,7 +1116,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1901,8 +1901,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Diferencia los distintos tipos de cristalizaci\xF3n, con caracter\xEDsticas
-    particulares en cada uno de ellos"
+  m_text: "Genera una simulaci\xF3n \ncon f\xEDsicas realistas para observar como
+    se cristalizan los diferentes materiales"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 260f174d5cbea1045ba03fcd6bbe6fd5, type: 2}
   m_sharedMaterial: {fileID: -5505351565181752219, guid: 260f174d5cbea1045ba03fcd6bbe6fd5, type: 2}
@@ -2643,7 +2643,7 @@ GameObject:
   - component: {fileID: 1923926550}
   - component: {fileID: 1923926549}
   m_Layer: 5
-  m_Name: BotonModuloBolas
+  m_Name: BotonModuloAR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2694,7 +2694,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -2713,7 +2713,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1923926550}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1432778824}
+        m_TargetAssemblyTypeName: ManagerInicio, Assembly-CSharp
+        m_MethodName: IniciarModuloRealidadAumentada
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1923926550
 MonoBehaviour:
   m_ObjectHideFlags: 0
