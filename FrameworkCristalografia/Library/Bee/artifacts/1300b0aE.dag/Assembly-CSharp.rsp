@@ -119,6 +119,7 @@
 -define:ENABLE_TERRAIN
 -define:ENABLE_TILEMAP
 -define:ENABLE_TIMELINE
+-define:ENABLE_INPUT_SYSTEM
 -define:ENABLE_LEGACY_INPUT_MANAGER
 -define:TEXTCORE_FONT_ENGINE_1_5_OR_NEWER
 -define:PROBUILDER_EXPERIMENTAL_FEATURES
@@ -345,6 +346,7 @@
 -r:"Library/Bee/artifacts/1300b0aE.dag/Unity.InputSystem.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/Unity.Mathematics.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/Unity.Mathematics.ref.dll"
+-r:"Library/Bee/artifacts/1300b0aE.dag/Unity.Mobile.AndroidLogcat.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/Unity.Performance.Profile-Analyzer.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/Unity.PlasticSCM.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/Unity.RenderPipelines.Core.Editor.ref.dll"
@@ -411,6 +413,8 @@
 "Assets/Scripts/ProcesoCristalizacion/CameraManager.cs"
 "Assets/Scripts/ProcesoCristalizacion/DesactivarColision.cs"
 "Assets/Scripts/ProcesoCristalizacion/GeneradorEsferas.cs"
+"Assets/Scripts/ProcesoCristalizacion/LogicaProporciones.cs"
+"Assets/Scripts/ProcesoCristalizacion/ManagerInterface.cs"
 "Assets/Scripts/ProcesoCristalizacion/ManagerModuloProcesoCristalizacion.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"

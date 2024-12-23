@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638702390436177946
-    m_Hash: 2406766950
+      ticks: 638703039819321521
+    m_Hash: 1035093923
   m_LockFileStatus:
     m_FilePath: D:/Uni/Proyecto Final/ProyectoFinalDeCarrera/FrameworkCristalografia/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638702390436240050
-    m_Hash: 210476936
+      ticks: 638703039819392267
+    m_Hash: 3752393227
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -416,6 +416,91 @@ m_ResolvedPackages:
     path: 
   unityLifecycle:
     version: 1.0.1
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  fingerprint: 
+- packageId: com.unity.mobile.android-logcat@1.4.4
+  testable: 0
+  isDirectDependency: 1
+  version: 1.4.4
+  source: 1
+  resolvedPath: D:\Uni\Proyecto Final\ProyectoFinalDeCarrera\FrameworkCristalografia\Library\PackageCache\com.unity.mobile.android-logcat@1.4.4
+  assetPath: Packages/com.unity.mobile.android-logcat
+  name: com.unity.mobile.android-logcat
+  displayName: Android Logcat
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: 
+  description: "Android Logcat package provides support for:\n - Android log messages\n
+    - Android application memory statistics\n - Input injection\n - Android Screen
+    Capture\n - Android Screen Recorder\n - Stacktrace Utility\n\nClick the 'View
+    documentation' link above for more information.\n\nThe window can be accessed
+    in Unity Editor via 'Window > Analysis > Android Logcat', or simply by pressing
+    'Alt+6' on Windows or 'Option+6' on macOS. \n\nMake sure to have Android module
+    loaded and switch to Android build target in 'Build Settings' window if the menu
+    doesn't exist."
+  status: 0
+  errors: []
+  versions:
+    all:
+    - 0.1.5-preview
+    - 0.2.7-preview
+    - 1.0.0
+    - 1.0.1-preview
+    - 1.0.3-preview
+    - 1.1.0
+    - 1.1.1
+    - 1.2.0-preview
+    - 1.2.0
+    - 1.2.1
+    - 1.2.2
+    - 1.2.3
+    - 1.3.2
+    - 1.4.0
+    - 1.4.1
+    - 1.4.2
+    - 1.4.3
+    - 1.4.4
+    compatible:
+    - 1.4.1
+    - 1.4.2
+    - 1.4.3
+    - 1.4.4
+    recommended: 1.4.4
+    deprecated: []
+  dependencies: []
+  resolvedDependencies: []
+  keywords:
+  - Mobile
+  - Android
+  - Logcat
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 638695207981140000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.mobile.android-logcat@1.4/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.com/Unity-Technologies/com.unity.mobile.logcat.git
+    revision: a7be70627fd638630a4541312b1e93348d78089d
+    path: 
+  unityLifecycle:
+    version: 1.4.1
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -3334,7 +3419,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: assets
   description: "Common utility classes for XR projects\nRefer to API documentation
     for details. Some particularly useful utilities include:\n\u25AA Geometry Utilities\n 
     \u25AA Point of closest approach\n  \u25AA Closest edge of a polygon\n  \u25AA
@@ -3347,9 +3432,38 @@ m_ResolvedPackages:
   errors: []
   versions:
     all:
+    - 2.0.0-pre.3
+    - 2.0.0-pre.5
+    - 2.0.0-pre.6
+    - 2.0.0
+    - 2.0.1
+    - 2.1.0-pre.1
+    - 2.1.0
+    - 2.1.1
+    - 2.2.0-pre.1
+    - 2.2.0-pre.2
+    - 2.2.0
+    - 2.2.1
+    - 2.2.2
+    - 2.2.3
+    - 2.3.0-pre.1
+    - 2.3.0-pre.2
+    - 2.3.0-pre.3
     - 2.3.0
+    - 2.4.0-exp.1
+    - 2.4.0-exp.2
+    - 2.4.0-exp.3
+    - 2.4.0
+    - 2.5.0
+    - 2.5.1
     compatible:
     - 2.3.0
+    - 2.4.0-exp.1
+    - 2.4.0-exp.2
+    - 2.4.0-exp.3
+    - 2.4.0
+    - 2.5.0
+    - 2.5.1
     recommended: 2.3.0
     deprecated: []
   dependencies:
@@ -3382,7 +3496,7 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 0
+  datePublishedTicks: 638411351550000000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.xr.core-utils@2.3/manual/index.html
   hasRepository: 1
   repository:
@@ -5038,9 +5152,11 @@ m_ResolvedPackages:
     - 2.1.8
     - 2.1.9
     - 2.1.10
+    - 2.1.11
     compatible:
     - 2.1.10
-    recommended: 2.1.10
+    - 2.1.11
+    recommended: 2.1.11
     deprecated: []
   dependencies:
   - name: com.unity.modules.vr

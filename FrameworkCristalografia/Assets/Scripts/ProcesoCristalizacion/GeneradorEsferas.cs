@@ -9,10 +9,13 @@ public class GeneradorEsferas : MonoBehaviour
     public Slider sliderProporcion;
 
     private float filaActual, columnaActual, separacion, proporcion;
+    private float radioCarbono, radioNiquel, radioCromo, radioMolibdeno, radioVanadio, radioHierro;
 
     void Start()
     {
         separacion = 0.141f;
+
+        EstablecerRadiosAtomicos();
     }
 
     public void GenerarSimulacion()
@@ -22,7 +25,7 @@ public class GeneradorEsferas : MonoBehaviour
         proporcion = sliderProporcion.value;
 
         VaciarContenedor();
-        InvokeRepeating("CrearFila", 0f, 0.015f);
+        InvokeRepeating("CrearFila", 0f, 0.02f);
     }
     
     private void CrearFila()
@@ -56,5 +59,15 @@ public class GeneradorEsferas : MonoBehaviour
         {
             Destroy(bola.gameObject);
         }
+    }
+
+    private void EstablecerRadiosAtomicos()
+    {
+        radioCarbono = 0.429f;
+        radioNiquel = 0.955f;
+        radioCromo = 1.064f;
+        radioMolibdeno = 1.217f;
+        radioVanadio = 1.096f;
+        radioHierro = 1f;
     }
 }
