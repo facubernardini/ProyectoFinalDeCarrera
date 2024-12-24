@@ -7,6 +7,7 @@ public class ManagerInterface : MonoBehaviour
 {
     public Slider sliderCarbono, sliderNiquel, sliderCromo, sliderMolibdeno, sliderVanadio, sliderHierro;
     public TMP_InputField inputCarbono, inputNiquel, inputCromo, inputMolibdeno, inputVanadio, inputHierro;
+    public GameObject panelProporciones, panelCantidades, botonProporciones, botonCantidades;
 
     void Start()
     {
@@ -16,6 +17,12 @@ public class ManagerInterface : MonoBehaviour
         ModificarInputMolibdeno();
         ModificarInputVanadio();
         ModificarInputHierro();
+
+        botonCantidades.SetActive(true);
+        botonProporciones.SetActive(false);
+
+        panelCantidades.SetActive(false);
+        panelProporciones.SetActive(true);
     }
 
     public void ModificarInputCarbono()
@@ -116,5 +123,24 @@ public class ManagerInterface : MonoBehaviour
     public void ModificarInputHierro()
     {
         inputHierro.text = Math.Round(sliderHierro.value, 2) + "%";
+    }
+
+    public void MostrarPanelProporciones()
+    {
+        botonProporciones.SetActive(false);
+        botonCantidades.SetActive(true);
+        
+        panelProporciones.SetActive(true);
+        panelCantidades.SetActive(false);
+        
+    }
+
+    public void MostrarPanelCantidades()
+    {
+        botonCantidades.SetActive(false);
+        botonProporciones.SetActive(true);
+
+        panelCantidades.SetActive(true);
+        panelProporciones.SetActive(false);
     }
 }

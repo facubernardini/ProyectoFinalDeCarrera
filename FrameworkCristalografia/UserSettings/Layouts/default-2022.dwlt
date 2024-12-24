@@ -228,7 +228,7 @@ MonoBehaviour:
   - {fileID: 15}
   - {fileID: 11}
   m_Selected: 0
-  m_LastSelected: 1
+  m_LastSelected: 2
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -311,7 +311,7 @@ MonoBehaviour:
   m_UseMipMap: 0
   m_SimulatorState:
     controlPanelVisible: 0
-    controlPanelWidth: NaN
+    controlPanelWidth: 0
     controlPanelFoldoutKeys:
     - UnityEditor.DeviceSimulation.ApplicationSettingsPlugin
     controlPanelFoldoutValues: 00
@@ -368,7 +368,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: b6e8feff00e9feff00f0feff52f0feff4cf2feffbef2feffec0dffff360effff2215ffff5215ffff3817ffff5e17ffff8052ffffca52ffffb459ffffe259ffffc85bffffee5bffff185effff3e60ffff0c70ffff5670ffff4077ffff6e77ffff5479ffff7a79ffff8c98ffffdea2ffff28a3ffff12aaffff40aaffff26acffff4cacffffbabbffffe0bdffff42bfffffdebfffffb8deffff02dfffffeae5ffff16e6fffffce7ffff22e8ffff02ebffff8eebffff08ecffff28fbffff7873000092730000ae730000a6a10000cca10000f4a1000022a20000cca20000eea200004ea300008ca30000cca30000e6a30000c4c60000ecc60000ecc700006ec80000acc80000d6cd000064ce000002cf0000accf0000dccf0000e6cf000024d0000076d00000ead00000eaef000018f00000c2f00000e4f0000044f1000082f10000c2f10000dcf10000a42d0100d22d01007c2e01009e2e0100fe2e01003c2f01007c2f0100962f01004e39010076390100f8390100363a0100fc3a0100684f0100964f01004050010062500100c250010000510100405101005a510100f2ad010074ae0100b2ae0100f2ae01000caf01002cca0100aeca0100ecca010026e0010054e00100fee0010020e1010080e10100bee10100fee1010018e20100
+      m_ExpandedIDs: e0f6fffff8f8ffff9ef9ffff28fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -483,7 +483,8 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 1
-    m_Folders: []
+    m_Folders:
+    - Assets/Editor/Migration
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -500,7 +501,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 466a0000
     m_LastClickedID: 27206
-    m_ExpandedIDs: 000000005c7600005e76000060760000627600006476000066760000687600006a7600006c7600006e76000070760000727600007476000076760000787600007a7600007c7600007e76000080760000827600008476000086760000887600008a7600008c7600008e76000090760000927600009476000096760000
+    m_ExpandedIDs: 00000000387a00003a7a00003c7a00003e7a0000407a0000427a0000447a0000467a0000487a00004a7a00004c7a00004e7a0000507a0000527a0000547a0000567a0000587a00005a7a00005c7a00005e7a0000607a0000627a0000647a0000667a0000687a00006a7a00006c7a00006e7a0000707a0000727a0000747a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -528,18 +529,18 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff000000005c7600005e76000060760000627600006476000066760000687600006a7600006c7600006e76000070760000727600007476000076760000787600007a7600007c7600007e76000080760000827600008476000086760000887600008a7600008c7600008e76000090760000927600009476000096760000f0760000
+    m_ExpandedIDs: ffffffff00000000387a00003a7a00003c7a00003e7a0000407a0000427a0000447a0000467a0000487a00004a7a00004c7a00004e7a0000507a0000527a0000547a0000567a0000587a00005a7a00005c7a00005e7a0000607a0000627a0000647a0000667a0000687a00006a7a00006c7a00006e7a0000707a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: LogicaProporciones
-      m_OriginalName: LogicaProporciones
+      m_Name: CapturaModelos3D
+      m_OriginalName: CapturaModelos3D
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 86484
+      m_UserData: 31424
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -651,7 +652,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -1064,7 +1065,7 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 186.67345, y: 214.75664, z: 0}
+    m_Target: {x: 685.38855, y: 1409.7773, z: 0}
     speed: 2
     m_Value: {x: 186.67345, y: 214.75664, z: 0}
   m_RenderMode: 0
@@ -1114,9 +1115,9 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0, y: 0, z: 0, w: 1}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0, w: 1}
+    m_Value: {x: -0, y: 0, z: -0, w: -1}
   m_Size:
-    m_Target: 257.5546
+    m_Target: 1558.1216
     speed: 2
     m_Value: 257.5546
   m_Ortho:
