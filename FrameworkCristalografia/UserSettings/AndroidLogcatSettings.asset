@@ -3,7 +3,7 @@
     "m_SelectedProcess": {
         "deviceId": "ZY22FXVMGG",
         "name": "com.FacundoBernardini.CeldApp",
-        "processId": 20830,
+        "processId": 24353,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -11,13 +11,37 @@
         {
             "deviceId": "ZY22FXVMGG",
             "name": "com.FacundoBernardini.CeldApp",
-            "processId": 10617,
+            "processId": 5785,
             "exited": true
         },
         {
             "deviceId": "ZY22FXVMGG",
             "name": "com.FacundoBernardini.CeldApp",
-            "processId": 20830,
+            "processId": 7373,
+            "exited": true
+        },
+        {
+            "deviceId": "ZY22FXVMGG",
+            "name": "com.FacundoBernardini.CeldApp",
+            "processId": 9997,
+            "exited": true
+        },
+        {
+            "deviceId": "ZY22FXVMGG",
+            "name": "com.FacundoBernardini.CeldApp",
+            "processId": 22362,
+            "exited": true
+        },
+        {
+            "deviceId": "ZY22FXVMGG",
+            "name": "com.FacundoBernardini.CeldApp",
+            "processId": 23355,
+            "exited": false
+        },
+        {
+            "deviceId": "ZY22FXVMGG",
+            "name": "com.FacundoBernardini.CeldApp",
+            "processId": 24353,
             "exited": false
         }
     ],
@@ -76,7 +100,7 @@
     },
     "m_FilterOptions": {
         "m_Filter": "",
-        "m_UseRegularExpressions": false,
+        "m_UseRegularExpressions": true,
         "m_MatchCase": false
     },
     "m_SymbolPaths": [],
@@ -113,5 +137,5 @@
             "exited": false
         }
     },
-    "m_AutoScroll": 2
+    "m_AutoScroll": 0
 }
