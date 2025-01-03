@@ -53,7 +53,6 @@ public class ManagerOpciones : MonoBehaviour
         }
 
         menuOpcionesAbierto = !menuOpcionesAbierto;
-        CambiarIconoBotonOpciones();
     }
 
     public void SeleccionarCeldaCentradaCuerpo()
@@ -193,7 +192,7 @@ public class ManagerOpciones : MonoBehaviour
         
     }
 
-    private void CambiarIconoBotonOpciones()
+    public void CambiarIconoBotonOpciones()
     {
         if (menuOpcionesAbierto)
         {
