@@ -3,7 +3,7 @@
     "m_SelectedProcess": {
         "deviceId": "ZY22FXVMGG",
         "name": "com.FacundoBernardini.CeldApp",
-        "processId": 28142,
+        "processId": 17427,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -11,49 +11,31 @@
         {
             "deviceId": "ZY22FXVMGG",
             "name": "com.FacundoBernardini.CeldApp",
-            "processId": 24353,
+            "processId": 11040,
             "exited": true
         },
         {
             "deviceId": "ZY22FXVMGG",
             "name": "com.FacundoBernardini.CeldApp",
-            "processId": 17959,
+            "processId": 11955,
             "exited": true
         },
         {
             "deviceId": "ZY22FXVMGG",
             "name": "com.FacundoBernardini.CeldApp",
-            "processId": 23217,
+            "processId": 12701,
             "exited": true
         },
         {
             "deviceId": "ZY22FXVMGG",
             "name": "com.FacundoBernardini.CeldApp",
-            "processId": 27153,
+            "processId": 16584,
             "exited": true
         },
         {
             "deviceId": "ZY22FXVMGG",
             "name": "com.FacundoBernardini.CeldApp",
-            "processId": 14500,
-            "exited": false
-        },
-        {
-            "deviceId": "ZY22FXVMGG",
-            "name": "com.FacundoBernardini.CeldApp",
-            "processId": 20562,
-            "exited": false
-        },
-        {
-            "deviceId": "ZY22FXVMGG",
-            "name": "com.FacundoBernardini.CeldApp",
-            "processId": 25836,
-            "exited": false
-        },
-        {
-            "deviceId": "ZY22FXVMGG",
-            "name": "com.FacundoBernardini.CeldApp",
-            "processId": 28142,
+            "processId": 17427,
             "exited": false
         }
     ],

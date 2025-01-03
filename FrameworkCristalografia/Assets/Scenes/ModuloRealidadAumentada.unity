@@ -3987,7 +3987,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1359404908}
+  - {fileID: 695586863}
   m_Father: {fileID: 1096563407}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &613916894
@@ -4142,6 +4142,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 655175345}
   m_CullTransparentMesh: 1
+--- !u!1 &695586862
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 695586863}
+  - component: {fileID: 695586864}
+  m_Layer: 0
+  m_Name: Contenedor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &695586863
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695586862}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 1359404908}
+  m_Father: {fileID: 613916893}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &695586864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695586862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f82844e21c249b54db769fdb42c10d7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &700356015
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6576,12 +6621,12 @@ GameObject:
   - component: {fileID: 1076420417}
   - component: {fileID: 1076420416}
   m_Layer: 5
-  m_Name: BotonAreaRotacionCamara
+  m_Name: BotonAreaInteraccion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1076420415
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6618,9 +6663,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: RotacionCamara, Assembly-CSharp
-          m_MethodName: ActivarRotacionCamara
+        - m_Target: {fileID: 695586864}
+          m_TargetAssemblyTypeName: ManagerObjetoAR, Assembly-CSharp
+          m_MethodName: ActivarManipulacionObjeto
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -6634,9 +6679,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: RotacionCamara, Assembly-CSharp
-          m_MethodName: DesactivarRotacionCamara
+        - m_Target: {fileID: 695586864}
+          m_TargetAssemblyTypeName: ManagerObjetoAR, Assembly-CSharp
+          m_MethodName: DesactivarManipulacionObjeto
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -9326,7 +9371,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1359404908}
-  - component: {fileID: 1359404909}
   m_Layer: 0
   m_Name: ElementosAR
   m_TagString: Untagged
@@ -9351,20 +9395,8 @@ Transform:
   - {fileID: 21544322}
   - {fileID: 1893878123}
   - {fileID: 1352338267}
-  m_Father: {fileID: 613916893}
+  m_Father: {fileID: 695586863}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &1359404909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1359404907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f82844e21c249b54db769fdb42c10d7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1370101233
 GameObject:
   m_ObjectHideFlags: 0
@@ -13996,6 +14028,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 695586864}
+        m_TargetAssemblyTypeName: ManagerObjetoAR, Assembly-CSharp
+        m_MethodName: RestablecerEscala
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1543972179}
         m_TargetAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
         m_MethodName: set_sprite
