@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GeneradorEsferas : MonoBehaviour
+public class GeneradorEsferasProporciones : MonoBehaviour
 {
     public GameObject spherePrefab;
     public float minX, maxX, minY, maxY;
@@ -14,21 +14,58 @@ public class GeneradorEsferas : MonoBehaviour
 
     void Start()
     {
-        separacion = 0.15f;
-
         EstablecerRadiosAtomicos();
     }
 
-    public void GenerarSimulacion()
+    public void SimulacionProporciones()
     {
         filaActual = minY;
         columnaActual = minX;
 
         VaciarContenedor();
-        InvokeRepeating("CrearFila", 0f, 0.02f);
+        AsignarSeparacionEntreEsferas();
+        InvokeRepeating("IniciarSimulacionProporciones", 0f, 0.02f);
+    }
+
+    private void VaciarContenedor()
+    {     
+        foreach (Transform bola in contenedorBolas)
+        {
+            Destroy(bola.gameObject);
+        }
+    }
+
+    private void AsignarSeparacionEntreEsferas()
+    {
+        separacion = 0;
+
+        if (sliderMolibdeno.interactable && (sliderMolibdeno.value > 0))
+        {
+            separacion = 0.14f * radioMolibdeno;
+        }
+        else if (sliderVanadio.interactable && (sliderVanadio.value > 0))
+        {
+            separacion = 0.14f * radioVanadio;
+        }
+        else if (sliderCromo.interactable && (sliderCromo.value > 0))
+        {
+            separacion = 0.14f * radioCromo;
+        }
+        else if (sliderHierro.value > 0)
+        {
+            separacion = 0.14f * radioHierro;
+        }
+        else if (sliderNiquel.interactable && (sliderNiquel.value > 0))
+        {
+            separacion = 0.14f * radioNiquel;
+        }
+        else if (sliderCarbono.interactable && (sliderCarbono.value > 0))
+        {
+            separacion = 0.14f * radioCarbono;
+        }
     }
     
-    private void CrearFila()
+    private void IniciarSimulacionProporciones()
     {
         if (filaActual <= maxY)
         {
@@ -47,15 +84,9 @@ public class GeneradorEsferas : MonoBehaviour
             columnaActual = minX;
             filaActual += separacion;
         }
-    }
-
-    private void VaciarContenedor()
-    {
-        CancelInvoke("CrearFila");
-        
-        foreach (Transform bola in contenedorBolas)
+        else
         {
-            Destroy(bola.gameObject);
+            CancelInvoke("IniciarSimulacionProporciones");
         }
     }
 
@@ -72,6 +103,7 @@ public class GeneradorEsferas : MonoBehaviour
     private float ObtenerRadioEsferaGenerada()
     {
         int numAleatorio = Random.Range(1, 10000);
+
         float proporcionActual = 0;
         float proporcionAcumulada = 0;
         float radioEsfera = 0;
