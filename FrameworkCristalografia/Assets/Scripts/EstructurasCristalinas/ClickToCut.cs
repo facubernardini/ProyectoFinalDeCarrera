@@ -36,6 +36,9 @@ namespace com.marufhow.meshslicer.demo
 
                 corteActualA = _mhCutter.Cut(Instantiate(centradaCuerpoCentro), posicionCorte, direccionCorte);
                 corteActualB = _mhCutter.Cut(Instantiate(centradaCuerpoEsquinas), posicionCorte, direccionCorte);
+
+                corteActualA.transform.SetParent(centradaCuerpo.transform, false);
+                corteActualB.transform.SetParent(centradaCuerpo.transform, false);
             }
 
             if (centradaCaras.activeSelf)
@@ -47,6 +50,10 @@ namespace com.marufhow.meshslicer.demo
                 corteActualA = _mhCutter.Cut(Instantiate(centradaCarasA), posicionCorte, direccionCorte);
                 corteActualB = _mhCutter.Cut(Instantiate(centradaCarasB), posicionCorte, direccionCorte);
                 corteActualC = _mhCutter.Cut(Instantiate(centradaCarasC), posicionCorte, direccionCorte);
+
+                corteActualA.transform.SetParent(centradaCaras.transform, false);
+                corteActualB.transform.SetParent(centradaCaras.transform, false);
+                corteActualC.transform.SetParent(centradaCaras.transform, false);
             }
 
             iconoLoading.SetActive(false);

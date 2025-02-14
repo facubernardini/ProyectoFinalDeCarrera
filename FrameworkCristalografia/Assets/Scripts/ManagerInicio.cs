@@ -28,4 +28,9 @@ public class ManagerInicio : MonoBehaviour
     {
         SceneManager.LoadScene("ModuloRealidadAumentada");
     }
+
+    public void Atras()
+    {
+        SceneManager.LoadScene("InicioApp");
+    }
 }

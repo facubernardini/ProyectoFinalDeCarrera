@@ -73,7 +73,7 @@ public class ManagerObjetoAR : MonoBehaviour
             float distanceDelta = previousDistance - currentDistance;
 
             escalado += -distanceDelta * scaleSpeed * Time.deltaTime;
-            escalado = Mathf.Clamp(escalado, 0.7f, 1.4f);
+            escalado = Mathf.Clamp(escalado, 0.6f, 1.5f);
             transform.localScale = new Vector3(escalado, escalado, escalado);
             
         }

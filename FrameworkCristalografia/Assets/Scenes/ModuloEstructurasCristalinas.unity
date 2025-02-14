@@ -5575,8 +5575,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1798296078}
-        m_TargetAssemblyTypeName: ManagerModuloCuboCortado, Assembly-CSharp
+      - m_Target: {fileID: 1798296085}
+        m_TargetAssemblyTypeName: ManagerInicio, Assembly-CSharp
         m_MethodName: Atras
         m_Mode: 1
         m_Arguments:
@@ -8997,7 +8997,7 @@ Transform:
   m_GameObject: {fileID: 1290300631}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.37901533, y: 0.37183616, z: 0.11265812}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11037,12 +11037,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1798296075}
   - component: {fileID: 1798296077}
-  - component: {fileID: 1798296078}
   - component: {fileID: 1798296079}
   - component: {fileID: 1798296081}
   - component: {fileID: 1798296082}
   - component: {fileID: 1798296083}
   - component: {fileID: 1798296084}
+  - component: {fileID: 1798296085}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -11059,7 +11059,7 @@ Transform:
   m_GameObject: {fileID: 1798296074}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.028559327, y: 0.80889976, z: -1.846796}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11103,19 +11103,6 @@ MonoBehaviour:
   planosCorteCeldaHexagonal: {fileID: 865216045}
   imagenOpciones: {fileID: 21300000, guid: 997e7a52ce76332459ddcbb24793a711, type: 3}
   imagenSalir: {fileID: 21300000, guid: 666498c9c36959844b3fa152dace115a, type: 3}
---- !u!114 &1798296078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1798296074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58ad7e343417bb84da182b89d94de379, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  generarCorte: {fileID: 765187160}
 --- !u!114 &1798296079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11205,6 +11192,18 @@ MonoBehaviour:
   corteCapaIntermedia: {fileID: 1991474909}
   planoSuperior: {fileID: 1498713667}
   planoIntermedio: {fileID: 953210817}
+--- !u!114 &1798296085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1798296074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bef421b19e5f6a047a5f8d1c7ba53870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1815985443
 PrefabInstance:
   m_ObjectHideFlags: 0

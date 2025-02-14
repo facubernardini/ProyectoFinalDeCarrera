@@ -32,7 +32,6 @@ public class ManagerPanelIndices : MonoBehaviour
             sliderZ.wholeNumbers = false;
             
             botonNormalizarPlano.interactable = true;
-            
         }
         else
         {

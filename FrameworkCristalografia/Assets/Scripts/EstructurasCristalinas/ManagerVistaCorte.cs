@@ -5,11 +5,13 @@ public class ManagerVistaCorte : MonoBehaviour
 {
     public GameObject iconoLoading, vistaCorte;
     public Button botonGenerarCorte;
+
     void Start()
     {
         iconoLoading.SetActive(false);
         vistaCorte.SetActive(true);
-        botonGenerarCorte.interactable = true;
+        botonGenerarCorte.interactable = false;
+        botonGenerarCorte.onClick.Invoke();
     }
 
     public void MostrarVistaCorte()

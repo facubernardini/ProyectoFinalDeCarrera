@@ -3546,7 +3546,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 444078218}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 6.6
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -3573,11 +3573,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 471304716}
-  - component: {fileID: 471304717}
   - component: {fileID: 471304718}
   - component: {fileID: 471304719}
   - component: {fileID: 471304720}
   - component: {fileID: 471304721}
+  - component: {fileID: 471304722}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -3600,18 +3600,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &471304717
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 471304715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f085ee5057ea82b4bb3cf3554f4b7eb4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &471304718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3706,6 +3694,18 @@ MonoBehaviour:
   inputMolibdeno: {fileID: 1721895343}
   inputVanadio: {fileID: 2097743159}
   inputHierro: {fileID: 1148670587}
+--- !u!114 &471304722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471304715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bef421b19e5f6a047a5f8d1c7ba53870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &494484948
 GameObject:
   m_ObjectHideFlags: 0
@@ -6213,7 +6213,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bc7742b2b6bc5e84c8f3a0186f73283f, type: 2}
+  - {fileID: 2100000, guid: bc21b83d793e6404cad39276a9aa03e4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8003,7 +8003,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bc7742b2b6bc5e84c8f3a0186f73283f, type: 2}
+  - {fileID: 2100000, guid: bc21b83d793e6404cad39276a9aa03e4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8637,8 +8637,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 471304717}
-        m_TargetAssemblyTypeName: ManagerModuloProcesoCristalizacion, Assembly-CSharp
+      - m_Target: {fileID: 471304722}
+        m_TargetAssemblyTypeName: ManagerInicio, Assembly-CSharp
         m_MethodName: Atras
         m_Mode: 1
         m_Arguments:
@@ -11168,7 +11168,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bc7742b2b6bc5e84c8f3a0186f73283f, type: 2}
+  - {fileID: 2100000, guid: bc21b83d793e6404cad39276a9aa03e4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
