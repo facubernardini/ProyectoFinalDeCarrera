@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LogicaDiagramas : MonoBehaviour
 {
@@ -44,6 +45,21 @@ public class LogicaDiagramas : MonoBehaviour
         }
     }
 
+    public void EstablecerNuevoPunto()
+    {
+        Invoke("EstablecerNuevoPuntoWrap", 0.01f);
+    }
+    
+    private void EstablecerNuevoPuntoWrap()
+    {
+        float posicionY = (managerInterface.ObtenerTemperatura() - 1000) / 5;
+        float posicionX = managerInterface.ObtenerPorcentajeFaseUno();
+
+        Vector3 posicionNuevoPunto = new Vector3(posicionX, 0f, posicionY);
+
+        ManagerCobreNiquel(posicionNuevoPunto);
+    }
+
     private void ManagerCobreNiquel(Vector3 origen)
     {
         float temperatura = (float) Math.Round((origen.z / 2 * 10) + 1000, 1);
@@ -83,11 +99,6 @@ public class LogicaDiagramas : MonoBehaviour
 
                 porcentajeFaseAlpha = (C-L) / (S-L) * 100;
                 porcentajeFaseLiquida = (S-C) / (S-L) * 100;
-
-                L = (float) Math.Round(L, 2);
-                S = (float) Math.Round(S, 2);
-                porcentajeFaseAlpha = (float) Math.Round(porcentajeFaseAlpha, 2);
-                porcentajeFaseLiquida = (float) Math.Round(porcentajeFaseLiquida, 2);
                 
                 managerInterface.ColocarPuntos(new Vector3(L, 0f, origen.z), new Vector3(origen.x, 0f, origen.z), new Vector3(S, 0f, origen.z));
                 managerInterface.ActualizarZona("Líquida + Alpha");

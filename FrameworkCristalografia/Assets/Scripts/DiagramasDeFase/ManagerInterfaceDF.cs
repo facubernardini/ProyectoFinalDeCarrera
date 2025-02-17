@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,16 +12,47 @@ public class ManagerInterfaceDF : MonoBehaviour
     public InterfaceCobreNiquel managerInterfaceCuNi;
     private GameObject puntoL, puntoC, puntoS;
 
+    public float ObtenerTemperatura()
+    {
+        return float.Parse(inputTemp.text);
+    }
+
+    public float ObtenerPorcentajeFaseUno()
+    {
+        return float.Parse(inputPorcentajeMat1.text);
+    }
+
+    public float ObtenerPorcentajeFaseDos()
+    {
+        return float.Parse(inputPorcentajeMat2.text);
+    }
+
     public void ActualizarTemperatura(float temp)
     {
         inputTemp.text = temp + "";
         sliderTemp.value = temp;
     }
 
+    public void ActualizarTemperatura()
+    {
+        inputTemp.text = sliderTemp.value + "";
+    }
+
     public void ActualizarPorcentajeFaseUno(float porcentaje)
     {
         inputPorcentajeMat1.text = porcentaje + "";
         sliderPorcentMat1.value = porcentaje;
+    }
+
+    public void ActualizarPorcentajeFaseUno()
+    {
+        inputPorcentajeMat1.text = sliderPorcentMat1.value + "";
+    }
+
+    public void ActualizarPorcentajeFaseUnoDesdeInput()
+    {
+        float nuevoPorcentaje = 100f - float.Parse(inputPorcentajeMat2.text);
+        inputPorcentajeMat1.text = nuevoPorcentaje + "";
     }
 
     public void ActualizarPorcentajeFaseDos(float porcentaje)
@@ -36,25 +68,23 @@ public class ManagerInterfaceDF : MonoBehaviour
 
     public void ActualizarResultados(float porcentajeFaseLiquida, float porcentajeFaseAlpha, float porcentajeNiquel, float porcentajeCobre, float L, float C, float S)
     {
-        /*if (porcentajeFaseLiquida == 100f)
-        {
-            managerInterfaceCuNi.ActualizarResultadosZonaLiquida(porcentajeNiquel, porcentajeCobre);
-        }
-        else if (porcentajeFaseSolida == 100f)
-        {
-            managerInterfaceCuNi.ActualizarResultadosZonaSolida(porcentajeNiquel, porcentajeCobre);
-        }*/
-        managerInterfaceCuNi.ActualizarResultados(porcentajeFaseLiquida, porcentajeFaseAlpha, porcentajeNiquel, porcentajeCobre, L, C, S);
-        
+        porcentajeFaseAlpha = (float) Math.Round(porcentajeFaseAlpha, 2);
+        porcentajeFaseLiquida = (float) Math.Round(porcentajeFaseLiquida, 2);
+
+        L = (float) Math.Round(L, 2);
+        C = (float) Math.Round(C, 2);
+        S = (float) Math.Round(S, 2);
+
+        managerInterfaceCuNi.ActualizarResultados(porcentajeFaseLiquida, porcentajeFaseAlpha, porcentajeNiquel, porcentajeCobre, L, C, S);      
     }
 
     public void Restablecer()
     {
         DestruirPuntos();
-        ActualizarTemperatura(0);
+        ActualizarTemperatura(1000);
         ActualizarPorcentajeFaseUno(0);
-        ActualizarPorcentajeFaseDos(0);
-        ActualizarZona("-");
+        ActualizarPorcentajeFaseDos(100);
+        ActualizarZona("");
         managerInterfaceCuNi.Restablecer();
     }
 
@@ -72,11 +102,6 @@ public class ManagerInterfaceDF : MonoBehaviour
         DestruirPuntos();
         
         puntoC = Instantiate(prefabPuntoC, ubicacionPuntoC, Quaternion.identity);
-    }
-
-    public void ReiniciarInterfaz()
-    {
-        DestruirPuntos();
     }
 
     private void DestruirPuntos()
