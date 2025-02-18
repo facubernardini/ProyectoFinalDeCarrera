@@ -7,6 +7,10 @@ TagManager:
   - LimiteDelGrafico
   - LiquidusLine
   - SolidusLine
+  - AlphaLine
+  - L+AlphaLine
+  - L+BetaLine
+  - BetaLine
   layers:
   - Default
   - TransparentFX

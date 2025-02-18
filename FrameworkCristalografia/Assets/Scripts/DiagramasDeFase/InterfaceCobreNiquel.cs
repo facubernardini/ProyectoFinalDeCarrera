@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System;
 
 public class InterfaceCobreNiquel : MonoBehaviour
 {
@@ -36,11 +37,12 @@ public class InterfaceCobreNiquel : MonoBehaviour
         }
         else // Zona liquida + alpha
         {
-            porcentajeCobreFL.text = 100f-L + "%";
             porcentajeNiquelFL.text = L + "%";
-
-            porcentajeCobreFS.text = 100f-S + "%";
+            porcentajeCobreFL.text = Math.Round(100f-L, 2) + "%";
+            
             porcentajeNiquelFS.text = S + "%";
+            porcentajeCobreFS.text = Math.Round(100f-S, 2) + "%";
+            
 
             textoSC.text = $"({S} - {C})";
             textoSL1.text = $"({S} - {L})";

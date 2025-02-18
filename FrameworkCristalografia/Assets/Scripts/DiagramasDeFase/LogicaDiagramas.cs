@@ -165,7 +165,33 @@ public class LogicaDiagramas : MonoBehaviour
         {
             managerInterface.ColocarPuntoC(new Vector3(origen.x, 0f, origen.z)); // Test (Borrar)
 
-            // Logica aqui
+            if (Physics.Raycast(origen, Vector3.back, out hit))
+            {
+                if (hit.collider.CompareTag("LiquidusLine")) // Zona Liquida
+                {
+                    Debug.Log("Estoy en zona Liquida");
+                }
+                else if (hit.collider.CompareTag("AlphaLine")) // Zona Alpha
+                {
+                    Debug.Log("Estoy en zona Alpha");
+                }
+                else if (hit.collider.CompareTag("L+AlphaLine")) // Zona Liquida+Alpha
+                {
+                    Debug.Log("Estoy en zona Liquida+Alpha");
+                }
+                else if (hit.collider.CompareTag("L+BetaLine")) // Zona Liquida+Beta
+                {
+                    Debug.Log("Estoy en zona Liquida+Beta");
+                }
+                else if (hit.collider.CompareTag("BetaLine")) // Zona Beta
+                {
+                    Debug.Log("Estoy en zona Beta");
+                }
+                else if (hit.collider.CompareTag("LimiteDelGrafico")) // Zona Alpha+Beta
+                {
+                    Debug.Log("Estoy en zona Alpha+Beta");
+                }
+            }
 
             managerInterface.ActualizarTemperatura(temperatura);
             managerInterface.ActualizarPorcentajeFaseUno(porcentajePlomo);
