@@ -7,10 +7,64 @@ public class ManagerInterfaceDF : MonoBehaviour
 {
     public GameObject prefabPuntoL, prefabPuntoC, prefabPuntoS;
     public TMP_InputField inputTemp, inputPorcentajeMat1, inputPorcentajeMat2;
+    public TMP_Text textoTempMin, textoTempMax, textoPorcentajeMat1, textoPorcentajeMat2;
     public Slider sliderTemp, sliderPorcentMat1, sliderPorcentMat2;
     public TMP_Text textZona;
     public InterfaceCobreNiquel managerInterfaceCuNi;
+    public InterfacePlomoEstano managerInterfacePbSn;
     private GameObject puntoL, puntoC, puntoS;
+    private bool modoCuNi, modoPbSn, modoFeC;
+
+    void Start()
+    {
+        modoCuNi = true;
+        modoPbSn = false;
+        modoFeC = false;
+    }
+    public void ModoCobreNiquel()
+    {
+        sliderTemp.minValue = 1000f;
+        sliderTemp.maxValue = 1500f;
+
+        textoTempMin.text = "1000°C";
+        textoTempMax.text = "1500°C";
+        textoPorcentajeMat1.text = "Porcentaje Ni:";
+        textoPorcentajeMat2.text = "Porcentaje Cu:";
+
+        modoCuNi = true;
+        modoPbSn = false;
+        modoFeC = false;
+    }
+
+    public void ModoPlomoEstano()
+    {
+        sliderTemp.minValue = 0f;
+        sliderTemp.maxValue = 400f;
+
+        textoTempMin.text = "0°C";
+        textoTempMax.text = "400°C";
+        textoPorcentajeMat1.text = "Porcentaje Sn:";
+        textoPorcentajeMat2.text = "Porcentaje Pb:";
+
+        modoCuNi = false;
+        modoPbSn = true;
+        modoFeC = false;
+    }
+
+    public void ModoHierroCarbono()
+    {
+        sliderTemp.minValue = 400f;
+        sliderTemp.maxValue = 1600f;
+
+        textoTempMin.text = "400°C";
+        textoTempMax.text = "1600°C";
+        textoPorcentajeMat1.text = "Porcentaje C:";
+        textoPorcentajeMat2.text = "Porcentaje Fe:";
+
+        modoCuNi = false;
+        modoPbSn = false;
+        modoFeC = true;
+    }
 
     public float ObtenerTemperatura()
     {
@@ -66,7 +120,7 @@ public class ManagerInterfaceDF : MonoBehaviour
         textZona.text = zona;
     }
 
-    public void ActualizarResultados(float porcentajeFaseLiquida, float porcentajeFaseAlpha, float porcentajeNiquel, float porcentajeCobre, float L, float C, float S)
+    public void ActualizarResultadosCobreNiquel(float porcentajeFaseLiquida, float porcentajeFaseAlpha, float porcentajeNiquel, float porcentajeCobre, float L, float C, float S)
     {
         porcentajeFaseAlpha = (float) Math.Round(porcentajeFaseAlpha, 2);
         porcentajeFaseLiquida = (float) Math.Round(porcentajeFaseLiquida, 2);
@@ -81,11 +135,26 @@ public class ManagerInterfaceDF : MonoBehaviour
     public void Restablecer()
     {
         DestruirPuntos();
-        ActualizarTemperatura(1000);
         ActualizarPorcentajeFaseUno(0);
         ActualizarPorcentajeFaseDos(100);
         ActualizarZona("");
-        managerInterfaceCuNi.Restablecer();
+
+        if (modoCuNi)
+        {   
+            ActualizarTemperatura(1000);
+            managerInterfaceCuNi.Restablecer();
+        }
+        if (modoPbSn)
+        {
+            ActualizarTemperatura(0);
+            managerInterfacePbSn.Restablecer();
+        }
+        if (modoFeC)
+        {
+            ActualizarTemperatura(400);
+            //managerInterfaceFeC.Restablecer();
+        }
+        
     }
 
     public void ColocarPuntos(Vector3 ubicacionPuntoL, Vector3 ubicacionPuntoC, Vector3 ubicacionPuntoS)

@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class LogicaDiagramas : MonoBehaviour
 {
@@ -34,7 +33,7 @@ public class LogicaDiagramas : MonoBehaviour
                     }
                     else if (modoPbSn)
                     {
-                        //ManagerPlomoEstano(hit)
+                        ManagerPlomoEstano(hit.point);
                     }
                     else if (modoFeC)
                     {
@@ -45,6 +44,30 @@ public class LogicaDiagramas : MonoBehaviour
         }
     }
 
+    public void ActivarModoCobreNiquel()
+    {
+        modoCuNi = true;
+        modoPbSn = false;
+        modoFeC = false;
+        managerInterface.ModoCobreNiquel();
+    }
+
+    public void ActivarModoPlomoEstano()
+    {
+        modoCuNi = false;
+        modoPbSn = true;
+        modoFeC = false;
+        managerInterface.ModoPlomoEstano();
+    }
+
+    public void ActivarModoHierroCarbono()
+    {
+        modoCuNi = false;
+        modoPbSn = false;
+        modoFeC = true;
+        managerInterface.ModoHierroCarbono();
+    }
+
     public void EstablecerNuevoPunto()
     {
         Invoke("EstablecerNuevoPuntoWrap", 0.01f);
@@ -52,12 +75,23 @@ public class LogicaDiagramas : MonoBehaviour
     
     private void EstablecerNuevoPuntoWrap()
     {
-        float posicionY = (managerInterface.ObtenerTemperatura() - 1000) / 5;
         float posicionX = managerInterface.ObtenerPorcentajeFaseUno();
 
-        Vector3 posicionNuevoPunto = new Vector3(posicionX, 0f, posicionY);
+        if (modoCuNi)
+        {
+            float posicionY = (managerInterface.ObtenerTemperatura() - 1000) / 5;
+            Vector3 posicionNuevoPunto = new Vector3(posicionX, 0f, posicionY);
 
-        ManagerCobreNiquel(posicionNuevoPunto);
+            ManagerCobreNiquel(posicionNuevoPunto);
+        }
+        if (modoPbSn)
+        {
+            float posicionY = managerInterface.ObtenerTemperatura() / 4;
+            Vector3 posicionNuevoPunto = new Vector3(posicionX, 0f, posicionY);
+
+            ManagerPlomoEstano(posicionNuevoPunto);
+        }
+        
     }
 
     private void ManagerCobreNiquel(Vector3 origen)
@@ -115,7 +149,27 @@ public class LogicaDiagramas : MonoBehaviour
             managerInterface.ActualizarPorcentajeFaseUno(porcentajeCobre);
             managerInterface.ActualizarPorcentajeFaseDos(porcentajeNiquel);
 
-            managerInterface.ActualizarResultados(porcentajeFaseLiquida, porcentajeFaseAlpha, porcentajeNiquel, porcentajeCobre, L, C, S);
+            managerInterface.ActualizarResultadosCobreNiquel(porcentajeFaseLiquida, porcentajeFaseAlpha, porcentajeNiquel, porcentajeCobre, L, C, S);
+        }
+    }
+
+    private void ManagerPlomoEstano(Vector3 origen)
+    {
+        float temperatura = (float) Math.Round(origen.z * 4, 1);
+        float porcentajePlomo = (float) Math.Round(origen.x, 2);
+        float porcentajeEstano = (float) Math.Round(100 - porcentajePlomo, 2);
+
+        RaycastHit hit;
+
+        if (Physics.Raycast(origen, Vector3.back, out hit))
+        {
+            managerInterface.ColocarPuntoC(new Vector3(origen.x, 0f, origen.z)); // Test (Borrar)
+
+            // Logica aqui
+
+            managerInterface.ActualizarTemperatura(temperatura);
+            managerInterface.ActualizarPorcentajeFaseUno(porcentajePlomo);
+            managerInterface.ActualizarPorcentajeFaseDos(porcentajeEstano);
         }
     }
 }
