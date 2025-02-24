@@ -8,7 +8,7 @@ public class ManagerPanelIndices : MonoBehaviour
     public Slider sliderX, sliderZ, sliderY;
     public TextMeshProUGUI valorX, valorY, valorZ;
     public Button botonNormalizarPlano;
-    private Boolean modoContinuoActivado;
+    private bool modoContinuoActivado;
     private float umbral;
 
     void Start()

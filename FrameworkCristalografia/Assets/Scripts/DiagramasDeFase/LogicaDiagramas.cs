@@ -5,43 +5,58 @@ public class LogicaDiagramas : MonoBehaviour
 {
     public Camera camara;
     public ManagerInterfaceDF managerInterface;
-    private bool modoCuNi, modoPbSn, modoFeC;
+    private bool modoCuNi, modoPbSn, modoFeC, interaccionGrafico;
 
     void Start()
     {
         modoCuNi = true;
         modoPbSn = false;
         modoFeC = false;
+
+        interaccionGrafico = false;
     }
 
     void Update()
     {
-        if (Input.touchCount == 1) 
+        if (interaccionGrafico)
         {
-            Touch touch = Input.GetTouch(0); 
-
-            if (touch.phase == TouchPhase.Began) 
+            if (Input.touchCount == 1) 
             {
-                Ray ray = camara.ScreenPointToRay(touch.position);
-                RaycastHit hit;
+                Touch touch = Input.GetTouch(0); 
 
-                if (Physics.Raycast(ray, out hit)) // Si no toca dentro del grafico, no entra a este if porque el rayo sigue al infinito
+                if (touch.phase == TouchPhase.Began) 
                 {
-                    if (modoCuNi)
-                    { 
-                        ManagerCobreNiquel(hit.point);
-                    }
-                    else if (modoPbSn)
+                    Ray ray = camara.ScreenPointToRay(touch.position);
+                    RaycastHit hit;
+
+                    if (Physics.Raycast(ray, out hit)) // Si no toca dentro del grafico, no entra a este if porque el rayo sigue al infinito
                     {
-                        ManagerPlomoEstano(hit.point);
-                    }
-                    else if (modoFeC)
-                    {
-                        //ManagerHierroCarbono(hit)
+                        if (modoCuNi)
+                        { 
+                            ManagerCobreNiquel(hit.point);
+                        }
+                        else if (modoPbSn)
+                        {
+                            ManagerPlomoEstano(hit.point);
+                        }
+                        else if (modoFeC)
+                        {
+                            //ManagerHierroCarbono(hit)
+                        }
                     }
                 }
             }
         }
+    }
+
+    public void ActivarInteraccionGrafico()
+    {
+        interaccionGrafico = true;
+    }
+
+    public void DesactivarInteraccionGrafico()
+    {
+        interaccionGrafico = false;
     }
 
     public void ActivarModoCobreNiquel()
@@ -97,8 +112,8 @@ public class LogicaDiagramas : MonoBehaviour
     private void ManagerCobreNiquel(Vector3 origen)
     {
         float temperatura = (float) Math.Round((origen.z / 2 * 10) + 1000, 1);
-        float porcentajeCobre = (float) Math.Round(origen.x, 2);
-        float porcentajeNiquel = (float) Math.Round(100 - porcentajeCobre, 2);
+        float porcentajeCobre = (float) Math.Round(100 - origen.x, 2);
+        float porcentajeNiquel = (float) Math.Round(origen.x, 2);
 
         RaycastHit hit;
 
@@ -146,8 +161,8 @@ public class LogicaDiagramas : MonoBehaviour
                 managerInterface.ActualizarZona("Sólida");
             }
             managerInterface.ActualizarTemperatura(temperatura);
-            managerInterface.ActualizarPorcentajeFaseUno(porcentajeCobre);
-            managerInterface.ActualizarPorcentajeFaseDos(porcentajeNiquel);
+            managerInterface.ActualizarPorcentajeFaseUno(porcentajeNiquel);
+            managerInterface.ActualizarPorcentajeFaseDos(porcentajeCobre);
 
             managerInterface.ActualizarResultadosCobreNiquel(porcentajeFaseLiquida, porcentajeFaseAlpha, porcentajeNiquel, porcentajeCobre, L, C, S);
         }
@@ -198,4 +213,5 @@ public class LogicaDiagramas : MonoBehaviour
             managerInterface.ActualizarPorcentajeFaseDos(porcentajeEstano);
         }
     }
+
 }

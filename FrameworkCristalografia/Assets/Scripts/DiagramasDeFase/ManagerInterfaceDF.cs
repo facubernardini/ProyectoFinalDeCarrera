@@ -12,6 +12,7 @@ public class ManagerInterfaceDF : MonoBehaviour
     public TMP_Text textZona;
     public InterfaceCobreNiquel managerInterfaceCuNi;
     public InterfacePlomoEstano managerInterfacePbSn;
+    public LineRenderer lineRendererTemp, lineRendererL, lineRendererC, lineRendererS;
     private GameObject puntoL, puntoC, puntoS;
     private bool modoCuNi, modoPbSn, modoFeC;
 
@@ -138,6 +139,8 @@ public class ManagerInterfaceDF : MonoBehaviour
         ActualizarPorcentajeFaseUno(0);
         ActualizarPorcentajeFaseDos(100);
         ActualizarZona("");
+        BorrarLineas();
+        
 
         if (modoCuNi)
         {   
@@ -164,6 +167,8 @@ public class ManagerInterfaceDF : MonoBehaviour
         puntoL = Instantiate(prefabPuntoL, ubicacionPuntoL, Quaternion.identity);
         puntoC = Instantiate(prefabPuntoC, ubicacionPuntoC, Quaternion.identity);
         puntoS = Instantiate(prefabPuntoS, ubicacionPuntoS, Quaternion.identity);
+
+        TrazarLineas(ubicacionPuntoL, ubicacionPuntoC, ubicacionPuntoS);
     }
 
     public void ColocarPuntoC(Vector3 ubicacionPuntoC)
@@ -171,6 +176,8 @@ public class ManagerInterfaceDF : MonoBehaviour
         DestruirPuntos();
         
         puntoC = Instantiate(prefabPuntoC, ubicacionPuntoC, Quaternion.identity);
+
+        TrazarLineas(ubicacionPuntoC);
     }
 
     private void DestruirPuntos()
@@ -178,6 +185,47 @@ public class ManagerInterfaceDF : MonoBehaviour
         Destroy(puntoL);
         Destroy(puntoC);
         Destroy(puntoS);
+    }
+
+    private void TrazarLineas(Vector3 ubicacionPuntoL, Vector3 ubicacionPuntoC, Vector3 ubicacionPuntoS)
+    {
+        lineRendererTemp.positionCount = 2;
+        lineRendererL.positionCount = 2;
+        lineRendererC.positionCount = 2;
+        lineRendererS.positionCount = 2;
+
+        lineRendererTemp.SetPosition(0, new Vector3(0f, -0.01f, ubicacionPuntoC.z));
+        lineRendererTemp.SetPosition(1, new Vector3(ubicacionPuntoS.x, -0.01f, ubicacionPuntoC.z));
+
+        lineRendererL.SetPosition(0, new Vector3(ubicacionPuntoL.x, -0.01f, ubicacionPuntoL.z));
+        lineRendererL.SetPosition(1, new Vector3(ubicacionPuntoL.x, -0.01f, 0f));
+
+        lineRendererC.SetPosition(0, new Vector3(ubicacionPuntoC.x, -0.01f, ubicacionPuntoC.z));
+        lineRendererC.SetPosition(1, new Vector3(ubicacionPuntoC.x, -0.01f, 0f));
+
+        lineRendererS.SetPosition(0, new Vector3(ubicacionPuntoS.x, -0.01f, ubicacionPuntoS.z));
+        lineRendererS.SetPosition(1, new Vector3(ubicacionPuntoS.x, -0.01f, 0f));
+    }
+
+    private void TrazarLineas(Vector3 ubicacionPuntoC)
+    {
+        BorrarLineas();
+        lineRendererTemp.positionCount = 2;
+        lineRendererC.positionCount = 2;
+
+        lineRendererTemp.SetPosition(0, new Vector3(0f, -0.01f, ubicacionPuntoC.z));
+        lineRendererTemp.SetPosition(1, new Vector3(ubicacionPuntoC.x, -0.01f, ubicacionPuntoC.z));
+
+        lineRendererC.SetPosition(0, new Vector3(ubicacionPuntoC.x, -0.01f, ubicacionPuntoC.z));
+        lineRendererC.SetPosition(1, new Vector3(ubicacionPuntoC.x, -0.01f, 0f));
+    }
+
+    private void BorrarLineas()
+    {
+        lineRendererTemp.positionCount = 0;
+        lineRendererL.positionCount = 0;
+        lineRendererC.positionCount = 0;
+        lineRendererS.positionCount = 0;
     }
     
 }

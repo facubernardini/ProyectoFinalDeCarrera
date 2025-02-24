@@ -1,13 +1,12 @@
 using UnityEngine;
 
-public class CameraManager : MonoBehaviour
+public class ZoomCamara : MonoBehaviour
 {
-    public float minX = -1.5f, maxX = 1.5f;
-    public float minY = 2f, maxY = 4.6f;
     public GameObject botonRestablecerCamara;
     private bool isMoving, permitirMovimientoCamara;
     private Camera camara;
-    private float zoomSpeed, moveSpeed, minFOV, maxFOV;
+    private float zoomSpeed, moveSpeed, minSize, maxSize;
+    private float minX, maxX, minY, maxY;
     private Vector2 lastTouchPosition;
 
     void Start()
@@ -15,11 +14,17 @@ public class CameraManager : MonoBehaviour
         permitirMovimientoCamara = false;
         camara = GetComponent<Camera>();
 
-        zoomSpeed = 0.06f;
-        moveSpeed = 0.6f;
+        minX = 15f;
+        maxX = 80f;
 
-        minFOV = 28f;
-        maxFOV = 55f;
+        minY = 15f;
+        maxY = 80f;
+
+        zoomSpeed = 0.1f;
+        moveSpeed = 10f;
+
+        minSize = 40f;
+        maxSize = 100f;
 
         botonRestablecerCamara.SetActive(false);
     }
@@ -27,7 +32,7 @@ public class CameraManager : MonoBehaviour
     void Update()
     {
         MovimientoCamara();
-        ZoomCamara();
+        Zoom();
     }
 
     private void MovimientoCamara()
@@ -46,10 +51,10 @@ public class CameraManager : MonoBehaviour
                 Vector2 touchDelta = touch.position - lastTouchPosition;
 
                 Vector3 newPosition = transform.position + new Vector3(-touchDelta.x * moveSpeed * Time.deltaTime,
-                                                                       -touchDelta.y * moveSpeed * Time.deltaTime, 0);
+                                                                       0f, -touchDelta.y * moveSpeed * Time.deltaTime);
 
                 newPosition.x = Mathf.Clamp(newPosition.x, minX, maxX);
-                newPosition.y = Mathf.Clamp(newPosition.y, minY, maxY);
+                newPosition.z = Mathf.Clamp(newPosition.z, minY, maxY);
 
                 transform.position = newPosition;
                 
@@ -64,7 +69,7 @@ public class CameraManager : MonoBehaviour
         }
     }
 
-    private void ZoomCamara()
+    private void Zoom()
     {
         if (permitirMovimientoCamara && Input.touchCount == 2)
         {
@@ -80,9 +85,9 @@ public class CameraManager : MonoBehaviour
 
             float distanceDelta = previousDistance - currentDistance;
 
-            camara.fieldOfView += distanceDelta * zoomSpeed;
+            camara.orthographicSize += distanceDelta * zoomSpeed;
 
-            camara.fieldOfView = Mathf.Clamp(camara.fieldOfView, minFOV, maxFOV);
+            camara.orthographicSize = Mathf.Clamp(camara.orthographicSize, minSize, maxSize);
 
             botonRestablecerCamara.SetActive(true);
         } 
@@ -100,8 +105,8 @@ public class CameraManager : MonoBehaviour
 
     public void RestablecerCamara()
     {
-        camara.fieldOfView = 55f;
-        transform.position = new Vector3(0f, 3.8f, -9f);
+        camara.orthographicSize = 100f;
+        transform.position = new Vector3(50f, 10f, 40f);
 
         botonRestablecerCamara.SetActive(false);
     }
