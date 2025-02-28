@@ -13,6 +13,7 @@ public class ManagerInterfaceDF : MonoBehaviour
     public InterfaceCobreNiquel managerInterfaceCuNi;
     public InterfacePlomoEstano managerInterfacePbSn;
     public LineRenderer lineRendererTemp, lineRendererL, lineRendererC, lineRendererS;
+    public Button restablecer;
     private GameObject puntoL, puntoC, puntoS;
     private bool modoCuNi, modoPbSn, modoFeC;
 
@@ -21,7 +22,10 @@ public class ManagerInterfaceDF : MonoBehaviour
         modoCuNi = true;
         modoPbSn = false;
         modoFeC = false;
+
+        restablecer.interactable = false;
     }
+
     public void ModoCobreNiquel()
     {
         sliderTemp.minValue = 1000f;
@@ -101,7 +105,7 @@ public class ManagerInterfaceDF : MonoBehaviour
 
     public void ActualizarPorcentajeFaseUno()
     {
-        inputPorcentajeMat1.text = sliderPorcentMat1.value + "";
+        inputPorcentajeMat1.text = (float) Math.Round(sliderPorcentMat1.value, 2) + "";
     }
 
     public void ActualizarPorcentajeFaseUnoDesdeInput()
@@ -140,7 +144,7 @@ public class ManagerInterfaceDF : MonoBehaviour
         ActualizarPorcentajeFaseDos(100);
         ActualizarZona("");
         BorrarLineas();
-        
+        restablecer.interactable = false;
 
         if (modoCuNi)
         {   
@@ -169,6 +173,8 @@ public class ManagerInterfaceDF : MonoBehaviour
         puntoS = Instantiate(prefabPuntoS, ubicacionPuntoS, Quaternion.identity);
 
         TrazarLineas(ubicacionPuntoL, ubicacionPuntoC, ubicacionPuntoS);
+
+        restablecer.interactable = true;
     }
 
     public void ColocarPuntoC(Vector3 ubicacionPuntoC)
@@ -178,6 +184,8 @@ public class ManagerInterfaceDF : MonoBehaviour
         puntoC = Instantiate(prefabPuntoC, ubicacionPuntoC, Quaternion.identity);
 
         TrazarLineas(ubicacionPuntoC);
+
+        restablecer.interactable = true;
     }
 
     private void DestruirPuntos()

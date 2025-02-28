@@ -5,7 +5,7 @@ public class LogicaDiagramas : MonoBehaviour
 {
     public Camera camara;
     public ManagerInterfaceDF managerInterface;
-    private bool modoCuNi, modoPbSn, modoFeC, interaccionGrafico;
+    private bool modoCuNi, modoPbSn, modoFeC, interaccionGrafico, puntoColocado;
 
     void Start()
     {
@@ -14,13 +14,14 @@ public class LogicaDiagramas : MonoBehaviour
         modoFeC = false;
 
         interaccionGrafico = false;
+        puntoColocado = false;
     }
 
     void Update()
     {
         if (interaccionGrafico)
         {
-            if (Input.touchCount == 1) 
+            if (Input.touchCount == 1 && !puntoColocado) 
             {
                 Touch touch = Input.GetTouch(0); 
 
@@ -41,12 +42,20 @@ public class LogicaDiagramas : MonoBehaviour
                         }
                         else if (modoFeC)
                         {
-                            //ManagerHierroCarbono(hit)
+                            //ManagerHierroCarbono(hit.point)
                         }
+
+                        puntoColocado = true;
                     }
+                    
                 }
             }
         }
+    }
+
+    public void PuntoActualEliminado()
+    {
+        puntoColocado = false;
     }
 
     public void ActivarInteraccionGrafico()
@@ -85,6 +94,7 @@ public class LogicaDiagramas : MonoBehaviour
 
     public void EstablecerNuevoPunto()
     {
+        puntoColocado = true;
         Invoke("EstablecerNuevoPuntoWrap", 0.01f);
     }
     
