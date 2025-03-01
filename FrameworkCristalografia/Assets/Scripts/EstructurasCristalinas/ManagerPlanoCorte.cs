@@ -7,39 +7,55 @@ public class ManagerPlanoCorte : MonoBehaviour
 {
     public Slider sliderX, sliderY, sliderZ;
     private Vector3 pointOnXAxis, pointOnYAxis, pointOnZAxis;
+    private bool modoFraccion;
 
     void Start()
     {
+        modoFraccion = false;
         GenerarPlanoDeCorte();
+    }
+
+    public void ActivarModoFraccion()
+    {
+        modoFraccion = !modoFraccion;
     }
 
     public void GenerarPlanoDeCorte()
     {
-        if (sliderX.value == 0)
+        if (modoFraccion)
         {
-            pointOnXAxis.x = 9999;
+            pointOnXAxis.x = 1 / sliderX.value;
+            pointOnYAxis.y = 1 / sliderY.value;
+            pointOnZAxis.z = 1 / sliderZ.value;
         }
         else
         {
-            pointOnXAxis.x = sliderX.value;
-        }
+            if (sliderX.value == 0)
+            {
+                pointOnXAxis.x = 9999;
+            }
+            else
+            {
+                pointOnXAxis.x = sliderX.value;
+            }
 
-        if (sliderY.value == 0)
-        {
-            pointOnYAxis.y = 9999;
-        }
-        else
-        {
-            pointOnYAxis.y = sliderY.value;
-        }
+            if (sliderY.value == 0)
+            {
+                pointOnYAxis.y = 9999;
+            }
+            else
+            {
+                pointOnYAxis.y = sliderY.value;
+            }
 
-        if (sliderZ.value == 0)
-        {
-            pointOnZAxis.z = 9999;
-        }
-        else
-        {
-            pointOnZAxis.z = sliderZ.value;
+            if (sliderZ.value == 0)
+            {
+                pointOnZAxis.z = 9999;
+            }
+            else
+            {
+                pointOnZAxis.z = sliderZ.value;
+            }
         }
 
         // Calculamos el vector normal del plano
