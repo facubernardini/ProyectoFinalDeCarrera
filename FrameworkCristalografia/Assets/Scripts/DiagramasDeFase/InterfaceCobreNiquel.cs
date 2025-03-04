@@ -23,15 +23,9 @@ public class InterfaceCobreNiquel : MonoBehaviour
         {
             porcentajeCobreFL.text = $"{porcentajeCobre}%";
             porcentajeNiquelFL.text = $"{porcentajeNiquel}%";
-
-            porcentajeCobreFS.text = "0%";
-            porcentajeNiquelFS.text = "0%";
         }
         else if (porcentajeFS == 100f) // Zona solida
         {
-            porcentajeCobreFL.text = "0%";
-            porcentajeNiquelFL.text = "0%";
-
             porcentajeCobreFS.text = $"{porcentajeCobre}%";
             porcentajeNiquelFS.text = $"{porcentajeNiquel}%";
         }

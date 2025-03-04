@@ -4,16 +4,23 @@ using UnityEngine.UI;
 public class GeneradorEsferasProporciones : MonoBehaviour
 {
     public GameObject spherePrefab;
-    public float minX, maxX, minY, maxY;
+    
     public Transform contenedorBolas;
     public Slider sliderCarbono, sliderNiquel, sliderCromo, sliderMolibdeno, sliderVanadio, sliderHierro;
 
     private float filaActual, columnaActual, separacion;
     private float radioCarbono, radioNiquel, radioCromo, radioMolibdeno, radioVanadio, radioHierro;
+    private float areaCaja, areaEsferasGeneradas;
+    private float minX, maxX, minY;
     private Color colorEsfera;
 
     void Start()
     {
+        minX = -3f;
+        maxX = 3f;
+        minY = 7.2f;
+        areaCaja = (maxX - minX) * 6f;
+        areaEsferasGeneradas = 0;
         EstablecerRadiosAtomicos();
     }
 
@@ -67,7 +74,7 @@ public class GeneradorEsferasProporciones : MonoBehaviour
     
     private void IniciarSimulacionProporciones()
     {
-        if (filaActual <= maxY)
+        if (areaEsferasGeneradas < (areaCaja * 0.9))
         {
             while (columnaActual <= maxX)
             {
@@ -75,9 +82,11 @@ public class GeneradorEsferasProporciones : MonoBehaviour
                 GameObject nuevaEsfera = Instantiate(spherePrefab, newPosition, transform.rotation);
                 nuevaEsfera.transform.SetParent(contenedorBolas);
 
-                nuevaEsfera.transform.localScale *= ObtenerRadioEsferaGenerada();
+                float radioEsferaGenerada = ObtenerRadioEsferaGenerada();
+                nuevaEsfera.transform.localScale *= radioEsferaGenerada;
                 nuevaEsfera.GetComponent<Renderer>().material.color = colorEsfera;
                 
+                areaEsferasGeneradas += (float) (System.Math.PI * System.Math.Pow(0.07 * radioEsferaGenerada, 2));
                 columnaActual += separacion;
             }
 
@@ -86,6 +95,7 @@ public class GeneradorEsferasProporciones : MonoBehaviour
         }
         else
         {
+            areaEsferasGeneradas = 0;
             CancelInvoke("IniciarSimulacionProporciones");
         }
     }

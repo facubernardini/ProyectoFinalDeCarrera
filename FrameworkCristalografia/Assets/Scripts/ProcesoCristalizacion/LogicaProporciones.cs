@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,57 +9,66 @@ public class LogicaProporciones : MonoBehaviour
     void Update()
     {
         SumarProporciones();
-
         CompletarProporcionesConHierro();
-        ComprobarProporcionCarbono();
-        ComprobarProporcionNiquel();
-        ComprobarProporcionCromo();
-        ComprobarProporcionMolibdeno();
-        ComprobarProporcionVanadio();
     }
 
-    private void ComprobarProporcionCarbono()
+    public void ComprobarProporcionCarbono()
     {
         if (sliderCarbono.interactable)
         {
             float cantidadMaximaPermitida = 100f - sumaTotal + sliderCarbono.value;
-            sliderCarbono.value = Math.Clamp(sliderCarbono.value, 0, cantidadMaximaPermitida);
+            if (sliderCarbono.value > cantidadMaximaPermitida)
+            {
+                sliderCarbono.value = cantidadMaximaPermitida;
+            }
         }
     }
 
-    private void ComprobarProporcionNiquel()
+    public void ComprobarProporcionNiquel()
     {
         if (sliderNiquel.interactable)
         {
             float cantidadMaximaPermitida = 100f - sumaTotal + sliderNiquel.value;
-            sliderNiquel.value = Math.Clamp(sliderNiquel.value, 0, cantidadMaximaPermitida);
+            if (sliderNiquel.value > cantidadMaximaPermitida)
+            {
+                sliderNiquel.value = cantidadMaximaPermitida;
+            }
         }
     }
 
-    private void ComprobarProporcionCromo()
+    public void ComprobarProporcionCromo()
     {
         if (sliderCromo.interactable)
         {
             float cantidadMaximaPermitida = 100f - sumaTotal + sliderCromo.value;
-            sliderCromo.value = Math.Clamp(sliderCromo.value, 0, cantidadMaximaPermitida);
+            if (sliderCromo.value > cantidadMaximaPermitida)
+            {
+                sliderCromo.value = cantidadMaximaPermitida;
+            }
         }
     }
 
-    private void ComprobarProporcionMolibdeno()
+    public void ComprobarProporcionMolibdeno()
     {
         if (sliderMolibdeno.interactable)
         {
             float cantidadMaximaPermitida = 100f - sumaTotal + sliderMolibdeno.value;
-            sliderMolibdeno.value = Math.Clamp(sliderMolibdeno.value, 0, cantidadMaximaPermitida);
+            if (sliderMolibdeno.value > cantidadMaximaPermitida)
+            {
+                sliderMolibdeno.value = cantidadMaximaPermitida;
+            }
         }
     }
 
-    private void ComprobarProporcionVanadio()
+    public void ComprobarProporcionVanadio()
     {
         if (sliderVanadio.interactable)
         {
             float cantidadMaximaPermitida = 100f - sumaTotal + sliderVanadio.value;
-            sliderVanadio.value = Math.Clamp(sliderVanadio.value, 0, cantidadMaximaPermitida);
+            if (sliderVanadio.value > cantidadMaximaPermitida)
+            {
+                sliderVanadio.value = cantidadMaximaPermitida;
+            }
         }
     }
 

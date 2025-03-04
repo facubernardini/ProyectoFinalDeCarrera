@@ -105,16 +105,22 @@ public class LogicaDiagramas : MonoBehaviour
         if (modoCuNi)
         {
             float posicionY = (managerInterface.ObtenerTemperatura() - 1000) / 5;
-            Vector3 posicionNuevoPunto = new Vector3(posicionX, 0f, posicionY);
 
-            ManagerCobreNiquel(posicionNuevoPunto);
+            if (posicionY >= 0 && posicionY <= 100)
+            {
+                Vector3 posicionNuevoPunto = new Vector3(posicionX, 0f, posicionY);
+                ManagerCobreNiquel(posicionNuevoPunto);
+            }
         }
         if (modoPbSn)
         {
             float posicionY = managerInterface.ObtenerTemperatura() / 4;
-            Vector3 posicionNuevoPunto = new Vector3(posicionX, 0f, posicionY);
-
-            ManagerPlomoEstano(posicionNuevoPunto);
+            
+            if (posicionY >= 0 && posicionY <= 100)
+            {
+                Vector3 posicionNuevoPunto = new Vector3(posicionX, 0f, posicionY);
+                ManagerPlomoEstano(posicionNuevoPunto);
+            }
         }
         
     }
@@ -181,46 +187,120 @@ public class LogicaDiagramas : MonoBehaviour
     private void ManagerPlomoEstano(Vector3 origen)
     {
         float temperatura = (float) Math.Round(origen.z * 4, 1);
-        float porcentajePlomo = (float) Math.Round(origen.x, 2);
-        float porcentajeEstano = (float) Math.Round(100 - porcentajePlomo, 2);
+        float porcentajeEstano = (float) Math.Round(origen.x, 2);
+        float porcentajePlomo = (float) Math.Round(100 - porcentajeEstano, 2);
 
         RaycastHit hit;
 
         if (Physics.Raycast(origen, Vector3.back, out hit))
         {
-            managerInterface.ColocarPuntoC(new Vector3(origen.x, 0f, origen.z)); // Test (Borrar)
+            float porcentajeFaseAlpha = 0;
+            float porcentajeFaseBeta = 0;
+            float porcentajeFaseLiquida = 0;
 
-            if (Physics.Raycast(origen, Vector3.back, out hit))
+            float L = 0;
+            float C = origen.x;
+            float S = 0;
+
+            if (hit.collider.CompareTag("LiquidusLine")) // Zona Liquida
             {
-                if (hit.collider.CompareTag("LiquidusLine")) // Zona Liquida
+                porcentajeFaseAlpha = 0;
+                porcentajeFaseBeta = 0;
+                porcentajeFaseLiquida = 100f;
+                
+                managerInterface.ColocarPuntoC(new Vector3(origen.x, 0f, origen.z));
+                managerInterface.ActualizarZona("Líquida");
+            }
+            else if (hit.collider.CompareTag("AlphaLine")) // Zona Alpha
+            {
+                porcentajeFaseAlpha = 100f;
+                porcentajeFaseBeta = 0;
+                porcentajeFaseLiquida = 0f;
+
+                managerInterface.ColocarPuntoC(new Vector3(origen.x, 0f, origen.z));
+                managerInterface.ActualizarZona("Alpha");
+            }
+            else if (hit.collider.CompareTag("L+AlphaLine")) // Zona Liquida+Alpha
+            {
+                if (Physics.Raycast(origen, Vector3.left, out hit))
                 {
-                    Debug.Log("Estoy en zona Liquida");
+                    L = hit.point.x;
                 }
-                else if (hit.collider.CompareTag("AlphaLine")) // Zona Alpha
+
+                if (Physics.Raycast(origen, Vector3.right, out hit))
                 {
-                    Debug.Log("Estoy en zona Alpha");
+                    S = hit.point.x;
                 }
-                else if (hit.collider.CompareTag("L+AlphaLine")) // Zona Liquida+Alpha
+                porcentajeFaseLiquida = (C-L) / (S-L) * 100;
+                porcentajeFaseAlpha = (S-C) / (S-L) * 100;
+            
+                managerInterface.ColocarPuntos(new Vector3(L, 0f, origen.z), new Vector3(origen.x, 0f, origen.z), new Vector3(S, 0f, origen.z));
+                managerInterface.ActualizarZona("L + Alpha");
+            }
+            else if (hit.collider.CompareTag("L+BetaLine")) // Zona Liquida+Beta
+            {
+                if (Physics.Raycast(origen, Vector3.left, out hit))
                 {
-                    Debug.Log("Estoy en zona Liquida+Alpha");
+                    L = hit.point.x;
                 }
-                else if (hit.collider.CompareTag("L+BetaLine")) // Zona Liquida+Beta
+
+                if (Physics.Raycast(origen, Vector3.right, out hit))
                 {
-                    Debug.Log("Estoy en zona Liquida+Beta");
+                    S = hit.point.x;
                 }
-                else if (hit.collider.CompareTag("BetaLine")) // Zona Beta
+                porcentajeFaseLiquida = (S-C) / (S-L) * 100;
+                porcentajeFaseBeta = (C-L) / (S-L) * 100;
+            
+                managerInterface.ColocarPuntos(new Vector3(L, 0f, origen.z), new Vector3(origen.x, 0f, origen.z), new Vector3(S, 0f, origen.z));
+                managerInterface.ActualizarZona("L + Beta");
+            }
+            else if (hit.collider.CompareTag("BetaLine")) // Zona Beta
+            {
+                porcentajeFaseAlpha = 0f;
+                porcentajeFaseBeta = 100;
+                porcentajeFaseLiquida = 0f;
+
+                managerInterface.ColocarPuntoC(new Vector3(origen.x, 0f, origen.z));
+                managerInterface.ActualizarZona("Beta");
+            }
+            else if (hit.collider.CompareTag("LimiteDelGrafico")) // Zona Alpha+Beta
+            {
+                if (Physics.Raycast(origen, Vector3.left, out hit))
                 {
-                    Debug.Log("Estoy en zona Beta");
+                    if (hit.collider.CompareTag("LimiteDelGrafico"))
+                    {
+                        L = 0;
+                    }
+                    else
+                    {
+                        L = hit.point.x;
+                    }
                 }
-                else if (hit.collider.CompareTag("LimiteDelGrafico")) // Zona Alpha+Beta
+
+                if (Physics.Raycast(origen, Vector3.right, out hit))
                 {
-                    Debug.Log("Estoy en zona Alpha+Beta");
+                    if (hit.collider.CompareTag("LimiteDelGrafico"))
+                    {
+                        S = 100;
+                    }
+                    else
+                    {
+                        S = hit.point.x;
+                    }
                 }
+                porcentajeFaseAlpha = (S-C) / (S-L) * 100;
+                porcentajeFaseBeta = (C-L) / (S-L) * 100;
+                porcentajeFaseLiquida = 0;
+                
+                managerInterface.ColocarPuntos(new Vector3(L, 0f, origen.z), new Vector3(origen.x, 0f, origen.z), new Vector3(S, 0f, origen.z));
+                managerInterface.ActualizarZona("Alpha + Beta");
             }
 
             managerInterface.ActualizarTemperatura(temperatura);
-            managerInterface.ActualizarPorcentajeFaseUno(porcentajePlomo);
-            managerInterface.ActualizarPorcentajeFaseDos(porcentajeEstano);
+            managerInterface.ActualizarPorcentajeFaseUno(porcentajeEstano);
+            managerInterface.ActualizarPorcentajeFaseDos(porcentajePlomo);
+
+            managerInterface.ActualizarResultadosPlomoEstano(porcentajeFaseLiquida, porcentajeFaseAlpha, porcentajeFaseBeta, porcentajeEstano, porcentajePlomo, L, C, S);
         }
     }
 

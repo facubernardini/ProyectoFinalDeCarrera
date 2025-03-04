@@ -6,7 +6,7 @@ public class DesactivarColision : MonoBehaviour
 {
     void Start()
     {
-        Invoke("StopCollider", 6);
+        Invoke("StopCollider", 8);
     }
 
     void StopCollider()

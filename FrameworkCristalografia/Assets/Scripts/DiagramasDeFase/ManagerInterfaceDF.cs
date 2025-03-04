@@ -137,6 +137,19 @@ public class ManagerInterfaceDF : MonoBehaviour
         managerInterfaceCuNi.ActualizarResultados(porcentajeFaseLiquida, porcentajeFaseAlpha, porcentajeNiquel, porcentajeCobre, L, C, S);      
     }
 
+    public void ActualizarResultadosPlomoEstano(float porcentajeFaseLiquida, float porcentajeFaseAlpha, float porcentajeFaseBeta, float porcentajeEstano, float porcentajePlomo, float L, float C, float S)
+    {
+        porcentajeFaseAlpha = (float) Math.Round(porcentajeFaseAlpha, 2);
+        porcentajeFaseBeta = (float) Math.Round(porcentajeFaseBeta, 2);
+        porcentajeFaseLiquida = (float) Math.Round(porcentajeFaseLiquida, 2);
+
+        L = (float) Math.Round(L, 2);
+        C = (float) Math.Round(C, 2);
+        S = (float) Math.Round(S, 2);
+
+        managerInterfacePbSn.ActualizarResultados(porcentajeFaseLiquida, porcentajeFaseAlpha, porcentajeFaseBeta, porcentajeEstano, porcentajePlomo, L, C, S);
+    }
+
     public void Restablecer()
     {
         DestruirPuntos();
