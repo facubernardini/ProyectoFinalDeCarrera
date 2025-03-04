@@ -9,12 +9,14 @@ public class InterfaceCobreNiquel : MonoBehaviour
     public TMP_Text porcentajeFaseLiquida, porcentajeNiquelFL, porcentajeCobreFL;
     public TMP_Text porcentajeFaseSolida, porcentajeNiquelFS, porcentajeCobreFS;
 
+    void Start()
+    {
+        Restablecer();
+    }
+
     public void ActualizarResultados(float porcentajeFL, float porcentajeFS, float porcentajeNiquel, float porcentajeCobre, float L, float C, float S)
     {
         Restablecer();
-
-        resultadoFaseL.text = $"= {porcentajeFL}%";
-        resultadoFaseAlpha.text = $"= {porcentajeFS}%";
 
         porcentajeFaseLiquida.text = $"{porcentajeFL}%";
         porcentajeFaseSolida.text = $"{porcentajeFS}%";
@@ -31,6 +33,9 @@ public class InterfaceCobreNiquel : MonoBehaviour
         }
         else // Zona liquida + alpha
         {
+            resultadoFaseL.text = $"{porcentajeFL}%";
+            resultadoFaseAlpha.text = $"{porcentajeFS}%";
+
             porcentajeNiquelFL.text = L + "%";
             porcentajeCobreFL.text = Math.Round(100f-L, 2) + "%";
             
@@ -38,24 +43,24 @@ public class InterfaceCobreNiquel : MonoBehaviour
             porcentajeCobreFS.text = Math.Round(100f-S, 2) + "%";
             
 
-            textoSC.text = $"({S} - {C})";
-            textoSL1.text = $"({S} - {L})";
+            textoSC.text = $"<color=blue>{S}</color> - <color=red>{C}</color>";
+            textoSL1.text = $"<color=blue>{S}</color> - <color=#14a700>{L}</color>";
 
-            textoCL.text = $"({C} - {L})";
-            textoSL2.text = $"({S} - {L})";
+            textoCL.text = $"<color=red>{C}</color> - <color=#14a700>{L}</color>";
+            textoSL2.text = $"<color=blue>{S}</color> - <color=#14a700>{L}</color>";
         }
         
     }
 
     public void Restablecer()
     {
-        textoSC.text = "(  S  -  C  )";
-        textoSL1.text = "(  S  -  L  )";
-        resultadoFaseL.text = "=  0%";
+        textoSC.text = "(  <color=blue>S</color>  -  <color=red>C</color>  )";
+        textoSL1.text = "(  <color=blue>S</color>  -  <color=#14a700>L</color>  )";
+        resultadoFaseL.text = "0%";
 
-        textoCL.text = "(  C  -  L  )";
-        textoSL2.text = "(  S  -  L  )"; 
-        resultadoFaseAlpha.text = "=  0%";
+        textoCL.text = "(  <color=red>C</color>  -  <color=#14a700>L</color>  )";
+        textoSL2.text = "(  <color=blue>S</color>  -  <color=#14a700>L</color>  )"; 
+        resultadoFaseAlpha.text = "0%";
 
         porcentajeFaseLiquida.text = "0%";
         porcentajeNiquelFL.text = "0%";

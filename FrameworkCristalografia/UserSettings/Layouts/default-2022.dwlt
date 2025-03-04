@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Simulator
+  m_Title: Hierarchy
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 492}
   m_MaxSize: {x: 10000, y: 10000}
@@ -163,10 +163,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 817
+    width: 828
     height: 939
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
@@ -174,7 +174,7 @@ MonoBehaviour:
   - {fileID: 11}
   - {fileID: 14}
   m_Selected: 0
-  m_LastSelected: 2
+  m_LastSelected: 1
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -190,12 +190,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 817
+    x: 828
     y: 0
-    width: 318
+    width: 307
     height: 939
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -246,8 +246,8 @@ MonoBehaviour:
     y: 0
     width: 492
     height: 939
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -276,7 +276,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73
-    width: 816
+    width: 827
     height: 918
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -312,8 +312,8 @@ MonoBehaviour:
     pluginStates:
     - '{}'
     - '{}'
-    scale: 10
-    fitToScreenEnabled: 1
+    scale: 30
+    fitToScreenEnabled: 0
     rotationDegree: 0
     highlightSafeAreaEnabled: 0
     friendlyName: Samsung Galaxy Note20 Ultra 5G
@@ -342,7 +342,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73
-    width: 816
+    width: 827
     height: 918
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -702,9 +702,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 798.1211, y: 1434.5951, z: 0}
+    m_Target: {x: 155.98203, y: 432.66403, z: 0}
     speed: 2
-    m_Value: {x: 798.1211, y: 1434.5951, z: 0}
+    m_Value: {x: 155.98203, y: 432.66403, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -754,9 +754,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1592.5712
+    m_Target: 469.016
     speed: 2
-    m_Value: 1592.5712
+    m_Value: 491.1162
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -803,7 +803,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73
-    width: 816
+    width: 827
     height: 918
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -857,23 +857,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 816
+      width: 827
       height: 897
-    m_Scale: {x: 1.6658069, y: 1.6658069}
-    m_Translation: {x: 408, y: 448.50006}
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 413.5, y: 448.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -244.92635
-      y: -269.23892
-      width: 489.8527
-      height: 538.4778
+      x: -413.5
+      y: -448.5
+      width: 827
+      height: 897
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 816, y: 918}
+  m_LastWindowPixelSize: {x: 827, y: 918}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000001000000000000
@@ -1866,9 +1866,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 817
+    x: 828
     y: 73
-    width: 316
+    width: 305
     height: 918
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -1883,9 +1883,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: dcd60100
-      m_LastClickedID: 120540
-      m_ExpandedIDs: f8b7fcffe4bafcff8ef3fcffd8f3fcff96f9fcff7cfbfcffaefbfcffa4fdfcffcafdfcff000bfdff4a0bfdff0811fdffee12fdff2013fdff1615fdff3c15fdff2c23fdff7623fdff3429fdff1a2bfdff4c2bfdff422dfdff682dfdff2c37fdffc841fdff1242fdffd047fdffb649fdffe849fdffde4bfdff044cfdff725dfdffbc5dfdff7a63fdff6065fdff9265fdff8867fdffae67fdffcca5fdff16a6fdffd4abfdffbaadfdffecadfdffe2affdff08b0fdffbee5ffff62f8ffff6ef8ffff72f8ffff8af8ffff96f8ffff28fbffff747200007e7200001e730000f0250100fa250100c8260100844a0100164d010072d50100a6d60100b0d601009ad90100aed90100d0d901007edb0100
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: e67dffff327effff8084ffffa886ffff0e87ffff2a89ffffa089ffff4ea3ffff02caffff4ecaffff12d0fffff8d1ffff2ad2ffff20d4ffff46d4ffff82e1ffffcee1ffff92e7ffff78e9ffffaae9ffffa0ebffffc6ebffff28fbffff74d000007ed0000030d1000070d10000b0d10000c6d1000036d3000068d3000070d300000ed50000a2e70000aee8000096ea0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1970,7 +1970,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 466a0000
     m_LastClickedID: 27206
-    m_ExpandedIDs: 00000000ce790000d0790000d2790000d4790000d6790000d8790000da790000
+    m_ExpandedIDs: 00000000427b0000447b0000467b0000487b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1998,7 +1998,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ee34fdffffffffff00000000ce790000d0790000d2790000d4790000
+    m_ExpandedIDs: ffffffff00000000427b0000447b0000487b0000947b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

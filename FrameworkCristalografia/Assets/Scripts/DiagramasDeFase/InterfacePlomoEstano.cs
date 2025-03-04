@@ -14,10 +14,6 @@ public class InterfacePlomoEstano : MonoBehaviour
     {
         Restablecer();
 
-        resultadoFaseL.text = $"= {porcentajeFaseLiquida}%";
-        resultadoFaseAlpha.text = $"= {porcentajeFaseAlpha}%";
-        resultadoFaseBeta.text = $"= {porcentajeFaseBeta}%";
-
         porcentajeFL.text = $"{porcentajeFaseLiquida}%";
         porcentajeFA.text = $"{porcentajeFaseAlpha}%";
         porcentajeFB.text = $"{porcentajeFaseBeta}%";
@@ -39,61 +35,70 @@ public class InterfacePlomoEstano : MonoBehaviour
         }
         else if (porcentajeFaseLiquida > 0 && porcentajeFaseAlpha > 0) // Zona L + Alpha
         {
+            resultadoFaseL.text = $"{porcentajeFaseLiquida}%";
+            resultadoFaseAlpha.text = $"{porcentajeFaseAlpha}%";
+
             porcentajeEstanoFL.text = S + "%";
             porcentajePlomoFL.text = Math.Round(100f-S, 2) + "%";
             
             porcentajeEstanoFA.text = L + "%";
             porcentajePlomoFA.text = Math.Round(100f-L, 2) + "%";
 
-            textoSCLiquida.text = $"({C} - {L})";
-            textoSLLiquida.text = $"({S} - {L})";
+            textoSCLiquida.text = $"<color=red>{C}</color> - <color=#14a700>{L}</color>";
+            textoSLLiquida.text = $"<color=blue>{S}</color> - <color=#14a700>{L}</color>";
 
-            textoSCAlpha.text = $"({S} - {C})";
-            textoSLAlpha.text = $"({S} - {L})";
+            textoSCAlpha.text = $"<color=blue>{S}</color> - <color=red>{C}</color>";
+            textoSLAlpha.text = $"<color=blue>{S}</color> - <color=#14a700>{L}</color>";
         }
         else if (porcentajeFaseLiquida > 0 && porcentajeFaseBeta > 0) // Zona L + Beta
         {
+            resultadoFaseL.text = $"{porcentajeFaseLiquida}%";
+            resultadoFaseBeta.text = $"{porcentajeFaseBeta}%";
+
             porcentajeEstanoFL.text = L + "%";
             porcentajePlomoFL.text = Math.Round(100f-L, 2) + "%";
             
             porcentajeEstanoFB.text = S + "%";
             porcentajePlomoFB.text = Math.Round(100f-S, 2) + "%";
 
-            textoSCLiquida.text = $"({S} - {C})";
-            textoSLLiquida.text = $"({S} - {L})";
+            textoSCLiquida.text = $"<color=blue>{S}</color> - <color=red>{C}</color>";
+            textoSLLiquida.text = $"<color=blue>{S}</color> - <color=#14a700>{L}</color>";
 
-            textoCLBeta.text = $"({C} - {L})";
-            textoSLBeta.text = $"({S} - {L})";
+            textoCLBeta.text = $"<color=red>{C}</color> - <color=#14a700>{L}</color>";
+            textoSLBeta.text = $"<color=blue>{S}</color> - <color=#14a700>{L}</color>";
         }
         else // Zona Alpha + Beta
         {
+            resultadoFaseAlpha.text = $"{porcentajeFaseAlpha}%";
+            resultadoFaseBeta.text = $"{porcentajeFaseBeta}%";
+
             porcentajeEstanoFA.text = L + "%";
             porcentajePlomoFA.text = Math.Round(100f-L, 2) + "%";
 
             porcentajeEstanoFB.text = S + "%";
             porcentajePlomoFB.text = Math.Round(100f-S, 2) + "%";  
             
-            textoSCAlpha.text = $"({S} - {C})";
-            textoSLAlpha.text = $"({S} - {L})";
+            textoSCAlpha.text = $"<color=blue>{S}</color> - <color=red><color=red>{C}</color></color>";
+            textoSLAlpha.text = $"<color=blue>{S}</color> - <color=#14a700>{L}</color>";
 
-            textoCLBeta.text = $"({C} - {L})";
-            textoSLBeta.text = $"({S} - {L})";
+            textoCLBeta.text = $"<color=red>{C}</color> - <color=#14a700>{L}</color>";
+            textoSLBeta.text = $"<color=blue>{S}</color> - <color=#14a700>{L}</color>";
         }
     }
 
     public void Restablecer()
     {
-        textoSCLiquida.text = "(S-C) | (C-L)";
-        textoSLLiquida.text = "(  S  -  L  )";
-        resultadoFaseL.text = "=  0%";
+        textoSCLiquida.text = "(<color=blue>S</color>-<color=red>C</color>) | (<color=red>C</color>-<color=#14a700>L</color>)";
+        textoSLLiquida.text = "(  <color=blue>S</color>  -  <color=#14a700>L</color>  )";
+        resultadoFaseL.text = "0%";
 
-        textoSCAlpha.text = "(  S  -  C  )";
-        textoSLAlpha.text = "(  S  -  L  )"; 
-        resultadoFaseAlpha.text = "=  0%";
+        textoSCAlpha.text = "(  <color=blue>S</color>  -  <color=red>C</color>  )";
+        textoSLAlpha.text = "(  <color=blue>S</color>  -  <color=#14a700>L</color>  )"; 
+        resultadoFaseAlpha.text = "0%";
 
-        textoCLBeta.text = "(  C  -  L  )";
-        textoSLBeta.text = "(  S  -  L  )"; 
-        resultadoFaseBeta.text = "=  0%";
+        textoCLBeta.text = "(  <color=red>C</color>  -  <color=#14a700>L</color>  )";
+        textoSLBeta.text = "(  <color=blue>S</color>  -  <color=#14a700>L</color>  )"; 
+        resultadoFaseBeta.text = "0%";
 
         porcentajeFL.text = "0%";
         porcentajeEstanoFL.text = "0%";

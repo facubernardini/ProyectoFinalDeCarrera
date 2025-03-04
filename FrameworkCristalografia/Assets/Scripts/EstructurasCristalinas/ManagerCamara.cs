@@ -17,7 +17,7 @@ public class ManagerCamara : MonoBehaviour
         // Rotacion
         isRotating = false;
         permitirRotacionCamara = false;
-        rotationSpeed = 25f; // Velocidad de rotacion de la camara
+        rotationSpeed = 22f; // Velocidad de rotacion de la camara
         currentYAngle = 0f;
         distance = 5.5f; // Distancia entre la camara y el centro de la celda unitaria
         transform.LookAt(target);

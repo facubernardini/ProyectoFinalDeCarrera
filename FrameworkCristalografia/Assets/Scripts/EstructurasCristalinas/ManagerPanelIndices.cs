@@ -58,12 +58,15 @@ public class ManagerPanelIndices : MonoBehaviour
             sliderZ.minValue = 1;
 
             toggleModoContinuo.isOn = false;
+            toggleModoContinuo.interactable = false;
         }
         else
         {
             sliderX.minValue = 0;
             sliderY.minValue = 0;
             sliderZ.minValue = 0;
+
+            toggleModoContinuo.interactable = true;
         }
 
         modoFraccion = !modoFraccion;
