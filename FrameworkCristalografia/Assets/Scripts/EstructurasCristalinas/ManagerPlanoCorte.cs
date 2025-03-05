@@ -24,9 +24,9 @@ public class ManagerPlanoCorte : MonoBehaviour
     {
         if (modoFraccion)
         {
-            pointOnXAxis.x = 1 / sliderX.value;
-            pointOnYAxis.y = 1 / sliderY.value;
-            pointOnZAxis.z = 1 / sliderZ.value;
+            pointOnXAxis.x = (sliderX.value == 0) ? 9999 : 1 / sliderX.value;
+            pointOnYAxis.y = (sliderY.value == 0) ? 9999 : 1 / sliderY.value;
+            pointOnZAxis.z = (sliderZ.value == 0) ? 9999 : 1 / sliderZ.value;
         }
         else
         {

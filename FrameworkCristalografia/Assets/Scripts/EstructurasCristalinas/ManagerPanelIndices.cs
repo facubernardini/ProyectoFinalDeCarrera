@@ -53,19 +53,11 @@ public class ManagerPanelIndices : MonoBehaviour
     {
         if (!modoFraccion)
         {
-            sliderX.minValue = 1;
-            sliderY.minValue = 1;
-            sliderZ.minValue = 1;
-
             toggleModoContinuo.isOn = false;
             toggleModoContinuo.interactable = false;
         }
         else
         {
-            sliderX.minValue = 0;
-            sliderY.minValue = 0;
-            sliderZ.minValue = 0;
-
             toggleModoContinuo.interactable = true;
         }
 
@@ -84,13 +76,13 @@ public class ManagerPanelIndices : MonoBehaviour
     {
         if (modoFraccion)
         {
-            if (sliderX.value == 1)
+            if (sliderX.value > 1)
             {
-                valorX.text = 1 + "";
+                valorX.text = "1/" + Math.Round(sliderX.value, 2);
             }
             else
             {
-                valorX.text = "1/" + Math.Round(sliderX.value, 2);
+                valorX.text = Math.Round(sliderX.value, 2) + "";
             }
         }
         else
@@ -103,13 +95,13 @@ public class ManagerPanelIndices : MonoBehaviour
     {
         if (modoFraccion)
         {
-            if (sliderY.value == 1)
+            if (sliderY.value > 1)
             {
-                valorY.text = 1 + "";
+                valorY.text = "1/" + Math.Round(sliderY.value, 2);
             }
             else
             {
-                valorY.text = "1/" + Math.Round(sliderY.value, 2);
+                valorY.text = Math.Round(sliderY.value, 2) + "";
             }
         }
         else
@@ -122,13 +114,13 @@ public class ManagerPanelIndices : MonoBehaviour
     {
         if (modoFraccion)
         {
-            if (sliderZ.value == 1)
+            if (sliderZ.value > 1)
             {
-                valorZ.text = 1 + "";
+                valorZ.text = "1/" + Math.Round(sliderZ.value, 2);
             }
             else
             {
-                valorZ.text = "1/" + Math.Round(sliderZ.value, 2);
+                valorZ.text = Math.Round(sliderZ.value, 2) + "";
             }
         }
         else
@@ -191,6 +183,10 @@ public class ManagerPanelIndices : MonoBehaviour
                 sliderX.value = x;
                 sliderY.value = y;
                 sliderZ.value = z;
+
+                valorX.text = x + "";
+                valorY.text = y + "";
+                valorZ.text = z + "";
             }
         }
     }
