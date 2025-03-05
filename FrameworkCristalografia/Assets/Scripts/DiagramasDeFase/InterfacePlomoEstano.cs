@@ -88,16 +88,16 @@ public class InterfacePlomoEstano : MonoBehaviour
 
     public void Restablecer()
     {
-        textoSCLiquida.text = "(<color=blue>S</color>-<color=red>C</color>) | (<color=red>C</color>-<color=#14a700>L</color>)";
-        textoSLLiquida.text = "(  <color=blue>S</color>  -  <color=#14a700>L</color>  )";
+        textoSCLiquida.text = "";
+        textoSLLiquida.text = "";
         resultadoFaseL.text = "0%";
 
-        textoSCAlpha.text = "(  <color=blue>S</color>  -  <color=red>C</color>  )";
-        textoSLAlpha.text = "(  <color=blue>S</color>  -  <color=#14a700>L</color>  )"; 
+        textoSCAlpha.text = "";
+        textoSLAlpha.text = ""; 
         resultadoFaseAlpha.text = "0%";
 
-        textoCLBeta.text = "(  <color=red>C</color>  -  <color=#14a700>L</color>  )";
-        textoSLBeta.text = "(  <color=blue>S</color>  -  <color=#14a700>L</color>  )"; 
+        textoCLBeta.text = "";
+        textoSLBeta.text = ""; 
         resultadoFaseBeta.text = "0%";
 
         porcentajeFL.text = "0%";

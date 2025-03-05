@@ -201,6 +201,15 @@ public class ManagerInterfaceDF : MonoBehaviour
         restablecer.interactable = true;
     }
 
+    public void ActualizarColorSliderTemp()
+    {
+        Color startColor = Color.blue;
+        Color endColor = Color.red;
+
+        float t = (sliderTemp.value-sliderTemp.minValue) / (sliderTemp.maxValue-sliderTemp.minValue);
+        sliderTemp.fillRect.GetComponent<Image>().color = Color.Lerp(startColor, endColor, t);
+    }
+
     private void DestruirPuntos()
     {
         Destroy(puntoL);

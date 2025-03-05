@@ -166,15 +166,15 @@ public class LogicaDiagramas : MonoBehaviour
                 porcentajeFaseLiquida = (S-C) / (S-L) * 100;
                 
                 managerInterface.ColocarPuntos(new Vector3(L, 0f, origen.z), new Vector3(origen.x, 0f, origen.z), new Vector3(S, 0f, origen.z));
-                managerInterface.ActualizarZona("Líquida + Alpha");
+                managerInterface.ActualizarZona("Líquida + α");
             }
-            else if (hit.collider.CompareTag("LimiteDelGrafico")) // Estoy en zona solida
+            else if (hit.collider.CompareTag("LimiteDelGrafico")) // Estoy en zona alpha
             {
                 porcentajeFaseLiquida = 0f;
                 porcentajeFaseAlpha = 100f;
 
                 managerInterface.ColocarPuntoC(new Vector3(origen.x, 0f, origen.z));
-                managerInterface.ActualizarZona("Sólida");
+                managerInterface.ActualizarZona("α");
             }
             managerInterface.ActualizarTemperatura(temperatura);
             managerInterface.ActualizarPorcentajeFaseUno(porcentajeNiquel);
@@ -218,7 +218,7 @@ public class LogicaDiagramas : MonoBehaviour
                 porcentajeFaseLiquida = 0f;
 
                 managerInterface.ColocarPuntoC(new Vector3(origen.x, 0f, origen.z));
-                managerInterface.ActualizarZona("Alpha");
+                managerInterface.ActualizarZona("α");
             }
             else if (hit.collider.CompareTag("L+AlphaLine")) // Zona Liquida+Alpha
             {
@@ -235,7 +235,7 @@ public class LogicaDiagramas : MonoBehaviour
                 porcentajeFaseAlpha = (S-C) / (S-L) * 100;
             
                 managerInterface.ColocarPuntos(new Vector3(L, 0f, origen.z), new Vector3(origen.x, 0f, origen.z), new Vector3(S, 0f, origen.z));
-                managerInterface.ActualizarZona("L + Alpha");
+                managerInterface.ActualizarZona("Líquida + α");
             }
             else if (hit.collider.CompareTag("L+BetaLine")) // Zona Liquida+Beta
             {
@@ -252,7 +252,7 @@ public class LogicaDiagramas : MonoBehaviour
                 porcentajeFaseBeta = (C-L) / (S-L) * 100;
             
                 managerInterface.ColocarPuntos(new Vector3(L, 0f, origen.z), new Vector3(origen.x, 0f, origen.z), new Vector3(S, 0f, origen.z));
-                managerInterface.ActualizarZona("L + Beta");
+                managerInterface.ActualizarZona("Líquida + β");
             }
             else if (hit.collider.CompareTag("BetaLine")) // Zona Beta
             {
@@ -261,7 +261,7 @@ public class LogicaDiagramas : MonoBehaviour
                 porcentajeFaseLiquida = 0f;
 
                 managerInterface.ColocarPuntoC(new Vector3(origen.x, 0f, origen.z));
-                managerInterface.ActualizarZona("Beta");
+                managerInterface.ActualizarZona("β");
             }
             else if (hit.collider.CompareTag("LimiteDelGrafico")) // Zona Alpha+Beta
             {
@@ -293,7 +293,7 @@ public class LogicaDiagramas : MonoBehaviour
                 porcentajeFaseLiquida = 0;
                 
                 managerInterface.ColocarPuntos(new Vector3(L, 0f, origen.z), new Vector3(origen.x, 0f, origen.z), new Vector3(S, 0f, origen.z));
-                managerInterface.ActualizarZona("Alpha + Beta");
+                managerInterface.ActualizarZona("α + β");
             }
 
             managerInterface.ActualizarTemperatura(temperatura);
