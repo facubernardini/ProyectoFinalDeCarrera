@@ -7,11 +7,12 @@ public class ManagerInterfaceDF : MonoBehaviour
 {
     public GameObject prefabPuntoL, prefabPuntoC, prefabPuntoS;
     public TMP_InputField inputTemp, inputPorcentajeMat1, inputPorcentajeMat2;
-    public TMP_Text textoTempMin, textoTempMax, textoPorcentajeMat1, textoPorcentajeMat2;
+    public TMP_Text textoTempMin, textoTempMax, textoPorcentajeMat1, textoPorcentajeMat2, textoPorcentajeMax;
     public Slider sliderTemp, sliderPorcentMat1, sliderPorcentMat2;
     public TMP_Text textZona;
     public InterfaceCobreNiquel managerInterfaceCuNi;
     public InterfacePlomoEstano managerInterfacePbSn;
+    public InterfaceHierroCarbono managerInterfaceFeC;
     public LineRenderer lineRendererTemp, lineRendererL, lineRendererC, lineRendererS;
     public Button restablecer;
     private GameObject puntoL, puntoC, puntoS;
@@ -31,10 +32,13 @@ public class ManagerInterfaceDF : MonoBehaviour
         sliderTemp.minValue = 1000f;
         sliderTemp.maxValue = 1500f;
 
+        sliderPorcentMat1.maxValue = 100f;
+
         textoTempMin.text = "1000°C";
         textoTempMax.text = "1500°C";
         textoPorcentajeMat1.text = "Porcentaje Ni:";
         textoPorcentajeMat2.text = "Porcentaje Cu:";
+        textoPorcentajeMax.text = "100%";
 
         modoCuNi = true;
         modoPbSn = false;
@@ -46,10 +50,13 @@ public class ManagerInterfaceDF : MonoBehaviour
         sliderTemp.minValue = 0f;
         sliderTemp.maxValue = 400f;
 
+        sliderPorcentMat1.maxValue = 100f;
+
         textoTempMin.text = "0°C";
         textoTempMax.text = "400°C";
         textoPorcentajeMat1.text = "Porcentaje Sn:";
         textoPorcentajeMat2.text = "Porcentaje Pb:";
+        textoPorcentajeMax.text = "100%";
 
         modoCuNi = false;
         modoPbSn = true;
@@ -59,12 +66,15 @@ public class ManagerInterfaceDF : MonoBehaviour
     public void ModoHierroCarbono()
     {
         sliderTemp.minValue = 400f;
-        sliderTemp.maxValue = 1600f;
+        sliderTemp.maxValue = 1400f;
+
+        sliderPorcentMat1.maxValue = 6.7f;
 
         textoTempMin.text = "400°C";
-        textoTempMax.text = "1600°C";
+        textoTempMax.text = "1400°C";
         textoPorcentajeMat1.text = "Porcentaje C:";
         textoPorcentajeMat2.text = "Porcentaje Fe:";
+        textoPorcentajeMax.text = "6.7%";
 
         modoCuNi = false;
         modoPbSn = false;
@@ -150,6 +160,21 @@ public class ManagerInterfaceDF : MonoBehaviour
         managerInterfacePbSn.ActualizarResultados(porcentajeFaseLiquida, porcentajeFaseAlpha, porcentajeFaseBeta, porcentajeEstano, porcentajePlomo, L, C, S);
     }
 
+    public void ActualizarResultadosHierroCarbono(float porcentajeFaseLiquida, float porcentajeFaseAlpha, float porcentajeFaseGamma, float porcentajeFaseFe3C, float porcentajeCarbono, float porcentajeHierro, float L, float C, float S)
+    {
+        porcentajeFaseLiquida = (float) Math.Round(porcentajeFaseLiquida, 2);
+        porcentajeFaseAlpha = (float) Math.Round(porcentajeFaseAlpha, 2);
+        porcentajeFaseGamma = (float) Math.Round(porcentajeFaseGamma, 2);
+        porcentajeFaseFe3C = (float) Math.Round(porcentajeFaseFe3C, 2);
+        
+
+        L = (float) Math.Round(L, 2);
+        C = (float) Math.Round(C, 2);
+        S = (float) Math.Round(S, 2);
+
+        managerInterfaceFeC.ActualizarResultados(porcentajeFaseLiquida, porcentajeFaseAlpha, porcentajeFaseGamma, porcentajeFaseFe3C, porcentajeCarbono, porcentajeHierro, L, C, S);
+    }
+
     public void Restablecer()
     {
         DestruirPuntos();
@@ -172,7 +197,7 @@ public class ManagerInterfaceDF : MonoBehaviour
         if (modoFeC)
         {
             ActualizarTemperatura(400);
-            //managerInterfaceFeC.Restablecer();
+            managerInterfaceFeC.Restablecer();
         }
         
     }

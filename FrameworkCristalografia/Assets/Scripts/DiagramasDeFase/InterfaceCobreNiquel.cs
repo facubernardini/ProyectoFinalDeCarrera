@@ -4,8 +4,11 @@ using System;
 
 public class InterfaceCobreNiquel : MonoBehaviour
 {
+    // Grilla regla de la palanca
     public TMP_Text textoSC, textoSL1, textoSL2, textoCL;
     public TMP_Text resultadoFaseL, resultadoFaseAlpha;
+
+    // Grilla resultados
     public TMP_Text porcentajeFaseLiquida, porcentajeNiquelFL, porcentajeCobreFL;
     public TMP_Text porcentajeFaseSolida, porcentajeNiquelFS, porcentajeCobreFS;
 

@@ -11,6 +11,11 @@ TagManager:
   - L+AlphaLine
   - L+BetaLine
   - BetaLine
+  - Gamma
+  - L+Gamma
+  - L+Fe3C
+  - Gamma+Fe3C
+  - Alpha+Gamma
   layers:
   - Default
   - TransparentFX

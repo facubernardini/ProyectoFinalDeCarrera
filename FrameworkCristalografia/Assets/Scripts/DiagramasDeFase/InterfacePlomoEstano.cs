@@ -4,8 +4,11 @@ using System;
 
 public class InterfacePlomoEstano : MonoBehaviour
 {
+    // Grilla regla de la palanca
     public TMP_Text textoSCLiquida, textoSLLiquida, textoSCAlpha, textoSLAlpha, textoCLBeta, textoSLBeta;
     public TMP_Text resultadoFaseL, resultadoFaseAlpha, resultadoFaseBeta;
+    
+    // Grilla resultados
     public TMP_Text porcentajeFL, porcentajeEstanoFL, porcentajePlomoFL;
     public TMP_Text porcentajeFA, porcentajeEstanoFA, porcentajePlomoFA;
     public TMP_Text porcentajeFB, porcentajeEstanoFB, porcentajePlomoFB;
