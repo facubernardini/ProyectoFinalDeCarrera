@@ -118,7 +118,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 50}
   m_MaxSize: {x: 32384, y: 8096}
   vertical: 1
-  controlID: 15
+  controlID: 16
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 50}
   m_MaxSize: {x: 32384, y: 8096}
   vertical: 0
-  controlID: 16
+  controlID: 17
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -246,8 +246,8 @@ MonoBehaviour:
     y: 0
     width: 543
     height: 939
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -1885,7 +1885,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: f02ffeff3a30feff4636feff3a38feff6c38feff623afeff883afeff3054feff125ffeff5c5ffeff6865feff5c67feff8e67feff8469feffaa69feff6eb4feffb8b4feffc4bafeffb8bcfeffeabcfeffe0befeff06bffeff1c92ffff6c92ffff0299ffff469bffffac9bffffc89dffff3e9effff28fbffff60b9000074b9000014be00004a2401005c6401007c640100f26501005a67010042aa0100
+      m_ExpandedIDs: 10c3ffff5ac3fffff0c9ffff34ccffff9accffffb6ceffff2ccfffffaedefffff8deffff04e5fffff8e6ffff2ae7ffff20e9ffff46e9fffff0f4ffff28fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1970,7 +1970,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 466a0000
     m_LastClickedID: 27206
-    m_ExpandedIDs: 00000000aa7a0000b67d0000b87d0000ba7d0000bc7d0000be7d0000c07d0000c27d0000
+    m_ExpandedIDs: 00000000ba7a0000c27d0000c47d0000c67d0000c87d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1998,18 +1998,18 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000aa7a0000b67d0000b87d0000ba7d0000bc7d0000
+    m_ExpandedIDs: ffffffff00000000ba7a0000c27d0000c47d0000c67d0000c87d00000c7e0000147e0000187e0000ce810000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: LogicaDiagramas
-      m_OriginalName: LogicaDiagramas
+      m_Name: ManagerOpciones
+      m_OriginalName: ManagerOpciones
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 24020
+      m_UserData: 26882
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
