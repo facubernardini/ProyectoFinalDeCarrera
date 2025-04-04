@@ -20,7 +20,7 @@ public class ZoomCamara : MonoBehaviour
         minY = 15f;
         maxY = 80f;
 
-        zoomSpeed = 0.1f;
+        zoomSpeed = 10f;
         moveSpeed = 10f;
 
         minSize = 40f;
@@ -85,7 +85,7 @@ public class ZoomCamara : MonoBehaviour
 
             float distanceDelta = previousDistance - currentDistance;
 
-            camara.orthographicSize += distanceDelta * zoomSpeed;
+            camara.orthographicSize += distanceDelta * zoomSpeed * Time.deltaTime;
 
             camara.orthographicSize = Mathf.Clamp(camara.orthographicSize, minSize, maxSize);
 

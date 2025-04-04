@@ -15,7 +15,7 @@ public class CameraManager : MonoBehaviour
         permitirMovimientoCamara = false;
         camara = GetComponent<Camera>();
 
-        zoomSpeed = 0.06f;
+        zoomSpeed = 5f;
         moveSpeed = 0.6f;
 
         minFOV = 28f;
@@ -80,7 +80,7 @@ public class CameraManager : MonoBehaviour
 
             float distanceDelta = previousDistance - currentDistance;
 
-            camara.fieldOfView += distanceDelta * zoomSpeed;
+            camara.fieldOfView += distanceDelta * zoomSpeed * Time.deltaTime;
 
             camara.fieldOfView = Mathf.Clamp(camara.fieldOfView, minFOV, maxFOV);
 

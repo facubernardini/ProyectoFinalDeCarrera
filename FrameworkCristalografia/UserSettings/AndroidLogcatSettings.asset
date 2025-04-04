@@ -3,7 +3,7 @@
     "m_SelectedProcess": {
         "deviceId": "ZY22FXVMGG",
         "name": "com.FacundoBernardini.CeldApp",
-        "processId": 17305,
+        "processId": 12200,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -228,6 +228,30 @@
             "deviceId": "ZY22FXVMGG",
             "name": "com.FacundoBernardini.CeldApp",
             "processId": 17305,
+            "exited": false
+        },
+        {
+            "deviceId": "ZY22FXVMGG",
+            "name": "com.FacundoBernardini.CeldApp",
+            "processId": 6907,
+            "exited": false
+        },
+        {
+            "deviceId": "ZY22FXVMGG",
+            "name": "com.FacundoBernardini.CeldApp",
+            "processId": 7678,
+            "exited": false
+        },
+        {
+            "deviceId": "ZY22FXVMGG",
+            "name": "com.FacundoBernardini.CeldApp",
+            "processId": 9204,
+            "exited": false
+        },
+        {
+            "deviceId": "ZY22FXVMGG",
+            "name": "com.FacundoBernardini.CeldApp",
+            "processId": 12200,
             "exited": false
         }
     ],

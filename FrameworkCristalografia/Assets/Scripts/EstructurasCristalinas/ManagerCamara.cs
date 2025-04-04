@@ -17,13 +17,13 @@ public class ManagerCamara : MonoBehaviour
         // Rotacion
         isRotating = false;
         permitirRotacionCamara = false;
-        rotationSpeed = 22f; // Velocidad de rotacion de la camara
+        rotationSpeed = 20f; // Velocidad de rotacion de la camara
         currentYAngle = 0f;
         distance = 5.5f; // Distancia entre la camara y el centro de la celda unitaria
         transform.LookAt(target);
 
         // Zoom
-        zoomSpeed = 0.06f;
+        zoomSpeed = 5f;
         minFOV = 23f;
         maxFOV = 58f;
 
@@ -111,7 +111,7 @@ public class ManagerCamara : MonoBehaviour
             float distanceDelta = previousDistance - currentDistance;
 
             // Ajustar el Field of View de la cámara
-            camaraPrincipal.fieldOfView += distanceDelta * zoomSpeed;
+            camaraPrincipal.fieldOfView += distanceDelta * zoomSpeed * Time.deltaTime;
 
             // Restringir el Field of View dentro de los límites establecidos
             camaraPrincipal.fieldOfView = Mathf.Clamp(camaraPrincipal.fieldOfView, minFOV, maxFOV);
