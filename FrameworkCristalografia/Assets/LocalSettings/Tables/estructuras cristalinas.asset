@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
+  m_Name: estructuras cristalinas
+  m_EditorClassIdentifier: 
+  m_SharedTableData: {fileID: 11400000, guid: 21c33127046d8674891182ef0133c40e, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: 2c4be60e6800a7c4cb58c13d1c531056, type: 2}
+  - {fileID: 11400000, guid: ab4aa6c85abe80c4d9e92fea14220aef, type: 2}
+  - {fileID: 11400000, guid: 44911d6aabe67084ba35b9f5d43ed2ee, type: 2}
+  - {fileID: 11400000, guid: 764a55005c9ea56409c2e4ba1ff6b006, type: 2}
+  m_Extensions: []
+  m_Group: String Table
+  references:
+    version: 2
+    RefIds: []

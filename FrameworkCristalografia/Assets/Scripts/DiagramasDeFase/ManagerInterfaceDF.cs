@@ -17,12 +17,17 @@ public class ManagerInterfaceDF : MonoBehaviour
     public Button restablecer;
     private GameObject puntoL, puntoC, puntoS;
     private bool modoCuNi, modoPbSn, modoFeC;
+    private int idioma;
 
     void Start()
     {
+        idioma = PlayerPrefs.GetInt("LocaleKey");
+
         modoCuNi = true;
         modoPbSn = false;
         modoFeC = false;
+
+        ModoCobreNiquel();
 
         restablecer.interactable = false;
     }
@@ -36,9 +41,27 @@ public class ManagerInterfaceDF : MonoBehaviour
 
         textoTempMin.text = "1000°C";
         textoTempMax.text = "1500°C";
-        textoPorcentajeMat1.text = "Porcentaje Ni:";
-        textoPorcentajeMat2.text = "Porcentaje Cu:";
         textoPorcentajeMax.text = "100%";
+
+        switch(idioma) 
+        {   
+        case 0: // Ingles
+            textoPorcentajeMat1.text = "Percentage Ni:";
+            textoPorcentajeMat2.text = "Percentage Cu:";
+            break;
+        case 1: // Frances
+            textoPorcentajeMat1.text = "Pourcentage Ni:";
+            textoPorcentajeMat2.text = "Pourcentage Cu:";
+            break;
+        case 2: // Aleman
+            textoPorcentajeMat1.text = "Prozentsatz Ni:";
+            textoPorcentajeMat2.text = "Prozentsatz Cu:";
+            break;
+        case 3: // Español
+            textoPorcentajeMat1.text = "Porcentaje Ni:";
+            textoPorcentajeMat2.text = "Porcentaje Cu:";
+            break;
+        }
 
         modoCuNi = true;
         modoPbSn = false;
@@ -54,9 +77,27 @@ public class ManagerInterfaceDF : MonoBehaviour
 
         textoTempMin.text = "0°C";
         textoTempMax.text = "400°C";
-        textoPorcentajeMat1.text = "Porcentaje Sn:";
-        textoPorcentajeMat2.text = "Porcentaje Pb:";
         textoPorcentajeMax.text = "100%";
+
+        switch (idioma) 
+        {   
+        case 0: // Ingles
+            textoPorcentajeMat1.text = "Percentage Sn:";
+            textoPorcentajeMat2.text = "Percentage Pb:";
+            break;
+        case 1: // Frances
+            textoPorcentajeMat1.text = "Pourcentage Sn:";
+            textoPorcentajeMat2.text = "Pourcentage Pb:";
+            break;
+        case 2: // Aleman
+            textoPorcentajeMat1.text = "Prozentsatz Sn:";
+            textoPorcentajeMat2.text = "Prozentsatz Pb:";
+            break;
+        case 3: // Español
+            textoPorcentajeMat1.text = "Porcentaje Sn:";
+            textoPorcentajeMat2.text = "Porcentaje Pb:";
+            break;
+        }
 
         modoCuNi = false;
         modoPbSn = true;
@@ -72,9 +113,27 @@ public class ManagerInterfaceDF : MonoBehaviour
 
         textoTempMin.text = "400°C";
         textoTempMax.text = "1400°C";
-        textoPorcentajeMat1.text = "Porcentaje C:";
-        textoPorcentajeMat2.text = "Porcentaje Fe:";
         textoPorcentajeMax.text = "6.7%";
+
+        switch(idioma) 
+        {   
+        case 0: // Ingles
+            textoPorcentajeMat1.text = "Percentage C:";
+            textoPorcentajeMat2.text = "Percentage Fe:";
+            break;
+        case 1: // Frances
+            textoPorcentajeMat1.text = "Pourcentage C:";
+            textoPorcentajeMat2.text = "Pourcentage Fe:";
+            break;
+        case 2: // Aleman
+            textoPorcentajeMat1.text = "Prozentsatz C:";
+            textoPorcentajeMat2.text = "Prozentsatz Fe:";
+            break;
+        case 3: // Español
+            textoPorcentajeMat1.text = "Porcentaje C:";
+            textoPorcentajeMat2.text = "Porcentaje Fe:";
+            break;
+        }
 
         modoCuNi = false;
         modoPbSn = false;

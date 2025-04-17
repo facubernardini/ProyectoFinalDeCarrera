@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Diagramas de fase_de
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: de
+  m_SharedData: {fileID: 11400000, guid: dbbce688ea1341a4e948a1a28db7aca9, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 5234941952
+    m_Localized: 'Temperatur:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10687537152
+    m_Localized: 'Zone:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13212508160
+    m_Localized: "Werte l\xF6schen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15871696896
+    m_Localized: Ergebnisse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18593800192
+    m_Localized: Phase
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152698281984
+    m_Localized: Massenanteil
+    m_Metadata:
+      m_Items: []
+  - m_Id: 167814553600
+    m_Localized: "Fl\xFCssig"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 191541731328
+    m_Localized: Hebelgesetz
+    m_Metadata:
+      m_Items: []
+  - m_Id: 209124253696
+    m_Localized: Formel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 233224724480
+    m_Localized: Gesamt
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

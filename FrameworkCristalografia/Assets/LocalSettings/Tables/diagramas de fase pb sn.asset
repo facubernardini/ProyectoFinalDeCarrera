@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4db626ad063b13545924a9839ac5fa83, type: 3}
+  m_Name: diagramas de fase pb sn
+  m_EditorClassIdentifier: 
+  m_SharedTableData: {fileID: 11400000, guid: 27e8d87d9f0a93e40b45407c9f40dc45, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: f1cd1566adb175340a99588077689679, type: 2}
+  - {fileID: 11400000, guid: 5d23e55deacce0a4da9292c10abf6164, type: 2}
+  - {fileID: 11400000, guid: c95c8e2764e081c44bd3c9a30aa39839, type: 2}
+  - {fileID: 11400000, guid: 22e1adbe0377f90429636d7fa3cb59b3, type: 2}
+  m_Extensions: []
+  m_Group: Asset Table
+  references:
+    version: 2
+    RefIds: []

@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: InicioApp_de
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: de
+  m_SharedData: {fileID: 11400000, guid: 58a824a8e44f01b49881c0775222e8a3, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 16437927936
+    m_Localized: eine neue art, materialwissenschaften zu lernen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9268678287360
+    m_Localized: kristallisationsprozesse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10006133399552
+    m_Localized: "Generieren Sie eine Simulation \r\nmit realistischer Physik, um
+      zu beobachten, wie verschiedene Materialien kristallisieren"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10271490236416
+    m_Localized: kristallstrukturen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10965781766144
+    m_Localized: Visualisieren Sie die Verschiedenen Elementarzellen und interagieren
+      Sie mit den Miller-Indizes, um Schnittebenen zu erhalten
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11208443224064
+    m_Localized: phasendiagramme
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11337300631552
+    m_Localized: "Beachten Sie die verschiedenen Diagramme, die die Phasen und Gleichgewichtspunkte
+      f\xFCr verschiedene Legierungen beschreiben"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11703509508096
+    m_Localized: augmented reality
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11801928851456
+    m_Localized: Entdecken Sie Augmented Reality und lernen Sie interessante Themen
+      auf lehrreiche und interaktive Weise
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

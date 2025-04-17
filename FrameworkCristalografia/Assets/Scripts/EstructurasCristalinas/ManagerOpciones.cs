@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class ManagerOpciones : MonoBehaviour
 {
-    public GameObject panelInferior, panelOpciones, panelCeldaHexagonal;
+    public GameObject panelOpciones, panelCeldaHexagonal;
     public GameObject CeldaCentradaCuerpo, CeldaCentradaCaras, CeldaHexagonalCompacta;
     public GameObject CeldaCentradaCuerpoExpandida, CeldaCentradaCarasExpandida, CeldaHexagonalExpandida;
     public Camera camaraPrincipal;
@@ -22,7 +22,6 @@ public class ManagerOpciones : MonoBehaviour
         menuOpcionesAbierto = false;
         sistemaDeslizamientoActivo = false;
 
-        panelInferior.SetActive(true);
         panelOpciones.SetActive(false);
         panelCeldaHexagonal.SetActive(false);
 
@@ -44,12 +43,10 @@ public class ManagerOpciones : MonoBehaviour
         if (!menuOpcionesAbierto)
         {
             panelOpciones.SetActive(true);
-            panelInferior.SetActive(false);
         }
         else
         {
             panelOpciones.SetActive(false);
-            panelInferior.SetActive(true);
         }
 
         menuOpcionesAbierto = !menuOpcionesAbierto;

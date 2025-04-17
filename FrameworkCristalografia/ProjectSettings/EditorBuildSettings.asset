@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ClaveInicio.unity
     guid: fe0553024e5d2c044902951b69920e56
   - enabled: 1
@@ -25,5 +25,7 @@ EditorBuildSettings:
     guid: d9d9ff2139c3e804ebd6d73dfedf9238
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: c8767d832aad8154ab21370a2d75096a, type: 2}
+    com.unity.addressableassets: {fileID: 11400000, guid: 2a6dbf3998f2b1a4a9a63b6d008b42b7, type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: 76b6dc60922e67544ac654ee30eda839, type: 2}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 5670d16383714734aa477bf29a55b90b, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 5b8102ac665d5b44b9fb6b4139167e0b, type: 2}

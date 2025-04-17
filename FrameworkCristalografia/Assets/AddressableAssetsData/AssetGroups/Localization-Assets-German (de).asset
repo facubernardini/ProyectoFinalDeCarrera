@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-Assets-German (de)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-Assets-German (de)
+  m_Data:
+    m_SerializedData: []
+  m_GUID: e6696e284e0ad1c42981609a743656c0
+  m_SerializeEntries:
+  - m_GUID: 209090bf4f28696409a7c496ef608490
+    m_Address: DE-Diagrama Cu-Ni
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6208ce771cbedce439da3a2e6fa34c3e
+    m_Address: DE-Diagrama Pb-Sn
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6f7954f2809de1546a0770a3994cd272
+    m_Address: DE-Diagrama Fe-C
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 411bcda25208b1f4089c3b6405c510a1, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 5bd7e0346cf3c664981fb01ebf14c66e, type: 2}
+    - {fileID: 11400000, guid: 572d160abe0545e49add3d0334d342ff, type: 2}

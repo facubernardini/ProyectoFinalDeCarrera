@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: estructuras cristalinas_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 21c33127046d8674891182ef0133c40e, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 18061123584
+    m_Localized: Miller indices
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44451684352
+    m_Localized: Cut points
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60067078144
+    m_Localized: Cut view
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77733486592
+    m_Localized: Generate plane
+    m_Metadata:
+      m_Items: []
+  - m_Id: 174487691264
+    m_Localized: Generate cut
+    m_Metadata:
+      m_Items: []
+  - m_Id: 188052070400
+    m_Localized: Normalize plane
+    m_Metadata:
+      m_Items: []
+  - m_Id: 208952287232
+    m_Localized: Continuous mode
+    m_Metadata:
+      m_Items: []
+  - m_Id: 228573241344
+    m_Localized: Fraction mode
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5381036630016
+    m_Localized: Cuts
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6400105701376
+    m_Localized: Top layer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6791325212672
+    m_Localized: Middle layer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6867162423296
+    m_Localized: Delete plane
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8032168108032
+    m_Localized: Options
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8095132999680
+    m_Localized: Body-centered cubic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8303959007232
+    m_Localized: Face-centered cubic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8413480673280
+    m_Localized: "Hexagonal \nclose-packed"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8544594616320
+    m_Localized: Expand structure
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8561703182336
+    m_Localized: Show cutting plane
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8563271852032
+    m_Localized: Show axes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8564609835008
+    m_Localized: Slip system
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

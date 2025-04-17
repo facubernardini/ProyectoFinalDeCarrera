@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Diagramas de fase Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Diagramas de fase
+  m_TableCollectionNameGuidString: dbbce688ea1341a4e948a1a28db7aca9
+  m_Entries:
+  - m_Id: 5234941952
+    m_Key: temperatura
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10687537152
+    m_Key: zona
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13212508160
+    m_Key: borrar valores
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15871696896
+    m_Key: resultados
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18593800192
+    m_Key: fase
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152698281984
+    m_Key: fraccion en peso
+    m_Metadata:
+      m_Items: []
+  - m_Id: 167814553600
+    m_Key: liquida
+    m_Metadata:
+      m_Items: []
+  - m_Id: 191541731328
+    m_Key: regla de la palanca
+    m_Metadata:
+      m_Items: []
+  - m_Id: 209124253696
+    m_Key: formula
+    m_Metadata:
+      m_Items: []
+  - m_Id: 233224724480
+    m_Key: total
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 8320898794003628050
+  references:
+    version: 2
+    RefIds:
+    - rid: 8320898794003628050
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1744919749571

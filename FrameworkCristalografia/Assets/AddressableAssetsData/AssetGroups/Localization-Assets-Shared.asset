@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-Assets-Shared
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-Assets-Shared
+  m_Data:
+    m_SerializedData: []
+  m_GUID: ac01d0c76d374c5489f2784288d17bcb
+  m_SerializeEntries:
+  - m_GUID: 58a824a8e44f01b49881c0775222e8a3
+    m_Address: Assets/LocalSettings/Tables/InicioApp Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: df2df3e41d181454db8d6c132abc76f5
+    m_Address: Assets/LocalSettings/Tables/ProcesoCristalizacion Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 21c33127046d8674891182ef0133c40e
+    m_Address: Assets/LocalSettings/Tables/estructuras cristalinas Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fcfb6d0d430cc7145821f28e53c62742
+    m_Address: Assets/LocalSettings/Tables/Realidad Aumentada Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dbbce688ea1341a4e948a1a28db7aca9
+    m_Address: Assets/LocalSettings/Tables/Diagramas de fase Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4dc4f8c9236a49c40876e32736b90aa2
+    m_Address: Assets/LocalSettings/Tables/diagramas de fase cu ni Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 27e8d87d9f0a93e40b45407c9f40dc45
+    m_Address: Assets/LocalSettings/Tables/diagramas de fase pb sn Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b9fe45592f496fd43b03553a70a3ff1e
+    m_Address: EN-Diagrama Pb-Sn
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f43d2d74f3cb05845bbc7fedade18d3c
+    m_Address: Assets/LocalSettings/Tables/diagramas de fase fe c Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 411bcda25208b1f4089c3b6405c510a1, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: a51423beccfe3dc4cae7455ab97ed7d2, type: 2}
+    - {fileID: 11400000, guid: 1d5a2e2a3eea4a9469dba0c714a45275, type: 2}

@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: ProcesoCristalizacion Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: ProcesoCristalizacion
+  m_TableCollectionNameGuidString: df2df3e41d181454db8d6c132abc76f5
+  m_Entries:
+  - m_Id: 1336884518912
+    m_Key: proporciones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1544963940352
+    m_Key: cantidades
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1706700496896
+    m_Key: carbono
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3216612188160
+    m_Key: niquel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3235113263104
+    m_Key: cromo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3251794010112
+    m_Key: molibdeno
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3271951835136
+    m_Key: vanadio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3286099222528
+    m_Key: hierro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3757983588352
+    m_Key: generar simulacion
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 8320898788495720450
+  references:
+    version: 2
+    RefIds:
+    - rid: 8320898788495720450
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1744899193475

@@ -6,6 +6,7 @@ public class LogicaDiagramas : MonoBehaviour
     public Camera camara;
     public ManagerInterfaceDF managerInterface;
     private bool modoCuNi, modoPbSn, modoFeC, interaccionGrafico, puntoColocado;
+    private int idioma;
 
     void Start()
     {
@@ -15,6 +16,8 @@ public class LogicaDiagramas : MonoBehaviour
 
         interaccionGrafico = false;
         puntoColocado = false;
+
+        idioma = PlayerPrefs.GetInt("LocaleKey");
     }
 
     void Update()
@@ -157,7 +160,22 @@ public class LogicaDiagramas : MonoBehaviour
                 porcentajeFaseLiquida = 100f;
 
                 managerInterface.ColocarPuntoC(new Vector3(origen.x, 0f, origen.z));
-                managerInterface.ActualizarZona("Líquida");
+
+                switch (idioma) 
+                {   
+                case 0: // Ingles
+                    managerInterface.ActualizarZona("Liquid");
+                    break;
+                case 1: // Frances
+                    managerInterface.ActualizarZona("Liquide");
+                    break;
+                case 2: // Aleman
+                    managerInterface.ActualizarZona("Flüssig");
+                    break;
+                case 3: // Español
+                    managerInterface.ActualizarZona("Líquida");
+                    break;
+                }
             }
             else if (hit.collider.CompareTag("SolidusLine")) // Estoy en zona liquida + alpha
             {
@@ -175,7 +193,22 @@ public class LogicaDiagramas : MonoBehaviour
                 porcentajeFaseLiquida = (S-C) / (S-L) * 100;
                 
                 managerInterface.ColocarPuntos(new Vector3(L, 0f, origen.z), new Vector3(origen.x, 0f, origen.z), new Vector3(S, 0f, origen.z));
-                managerInterface.ActualizarZona("Líquida + α");
+
+                switch (idioma) 
+                {   
+                case 0: // Ingles
+                    managerInterface.ActualizarZona("Liquid + α");
+                    break;
+                case 1: // Frances
+                    managerInterface.ActualizarZona("Liquide + α");
+                    break;
+                case 2: // Aleman
+                    managerInterface.ActualizarZona("Flüssig + α");
+                    break;
+                case 3: // Español
+                    managerInterface.ActualizarZona("Líquida + α");
+                    break;
+                }
             }
             else if (hit.collider.CompareTag("LimiteDelGrafico")) // Estoy en zona alpha
             {
@@ -215,7 +248,22 @@ public class LogicaDiagramas : MonoBehaviour
                 porcentajeFaseLiquida = 100f;
                 
                 managerInterface.ColocarPuntoC(new Vector3(origen.x, 0f, origen.z));
-                managerInterface.ActualizarZona("Líquida");
+
+                switch (idioma) 
+                {   
+                case 0: // Ingles
+                    managerInterface.ActualizarZona("Liquid");
+                    break;
+                case 1: // Frances
+                    managerInterface.ActualizarZona("Liquide");
+                    break;
+                case 2: // Aleman
+                    managerInterface.ActualizarZona("Flüssig");
+                    break;
+                case 3: // Español
+                    managerInterface.ActualizarZona("Líquida");
+                    break;
+                }
             }
             else if (hit.collider.CompareTag("AlphaLine")) // Zona Alpha
             {
@@ -239,7 +287,22 @@ public class LogicaDiagramas : MonoBehaviour
                 porcentajeFaseAlpha = (S-C) / (S-L) * 100;
             
                 managerInterface.ColocarPuntos(new Vector3(L, 0f, origen.z), new Vector3(origen.x, 0f, origen.z), new Vector3(S, 0f, origen.z));
-                managerInterface.ActualizarZona("α + Líquida");
+
+                switch (idioma) 
+                {   
+                case 0: // Ingles
+                    managerInterface.ActualizarZona("α + Liquid");
+                    break;
+                case 1: // Frances
+                    managerInterface.ActualizarZona("α + Liquide");
+                    break;
+                case 2: // Aleman
+                    managerInterface.ActualizarZona("α + Flüssig");
+                    break;
+                case 3: // Español
+                    managerInterface.ActualizarZona("α + Líquida");
+                    break;
+                }
             }
             else if (hit.collider.CompareTag("L+BetaLine")) // Zona Liquida+Beta
             {
@@ -256,7 +319,22 @@ public class LogicaDiagramas : MonoBehaviour
                 porcentajeFaseBeta = (C-L) / (S-L) * 100;
             
                 managerInterface.ColocarPuntos(new Vector3(L, 0f, origen.z), new Vector3(origen.x, 0f, origen.z), new Vector3(S, 0f, origen.z));
-                managerInterface.ActualizarZona("Líquida + β");
+
+                switch (idioma) 
+                {   
+                case 0: // Ingles
+                    managerInterface.ActualizarZona("Liquid + β");
+                    break;
+                case 1: // Frances
+                    managerInterface.ActualizarZona("Liquide + β");
+                    break;
+                case 2: // Aleman
+                    managerInterface.ActualizarZona("Flüssig + β");
+                    break;
+                case 3: // Español
+                    managerInterface.ActualizarZona("Líquida + β");
+                    break;
+                }
             }
             else if (hit.collider.CompareTag("BetaLine")) // Zona Beta
             {
@@ -329,7 +407,22 @@ public class LogicaDiagramas : MonoBehaviour
                 porcentajeFaseLiquida = 100;
 
                 managerInterface.ColocarPuntoC(new Vector3(origen.x, 0f, origen.z));
-                managerInterface.ActualizarZona("Líquida");
+
+                switch (idioma) 
+                {   
+                case 0: // Ingles
+                    managerInterface.ActualizarZona("Liquid");
+                    break;
+                case 1: // Frances
+                    managerInterface.ActualizarZona("Liquide");
+                    break;
+                case 2: // Aleman
+                    managerInterface.ActualizarZona("Flüssig");
+                    break;
+                case 3: // Español
+                    managerInterface.ActualizarZona("Líquida");
+                    break;
+                }
             }
             else if (hit.collider.CompareTag("L+Gamma")) // Zona L+Gamma
             {
@@ -347,7 +440,22 @@ public class LogicaDiagramas : MonoBehaviour
                 porcentajeFaseGamma = (S-C) / (S-L) * 100;
             
                 managerInterface.ColocarPuntos(new Vector3(L, 0f, origen.z), new Vector3(origen.x, 0f, origen.z), new Vector3(S, 0f, origen.z));
-                managerInterface.ActualizarZona("ɣ + Líquida");
+
+                switch (idioma) 
+                {   
+                case 0: // Ingles
+                    managerInterface.ActualizarZona("ɣ + Liquid");
+                    break;
+                case 1: // Frances
+                    managerInterface.ActualizarZona("ɣ + Liquide");
+                    break;
+                case 2: // Aleman
+                    managerInterface.ActualizarZona("ɣ + Flüssig");
+                    break;
+                case 3: // Español
+                    managerInterface.ActualizarZona("ɣ + Líquida");
+                    break;
+                }
             }
             else if (hit.collider.CompareTag("L+Fe3C")) // Zona L+Fe3C
             {
@@ -362,7 +470,22 @@ public class LogicaDiagramas : MonoBehaviour
                 porcentajeFaseFe3C = (C-L) / (S-L) * 100;
 
                 managerInterface.ColocarPuntos(new Vector3(L, 0f, origen.z), new Vector3(origen.x, 0f, origen.z), new Vector3(S, 0f, origen.z));
-                managerInterface.ActualizarZona("Líquida + Fe3C");
+
+                switch (idioma) 
+                {   
+                case 0: // Ingles
+                    managerInterface.ActualizarZona("Liquid + Fe3C");
+                    break;
+                case 1: // Frances
+                    managerInterface.ActualizarZona("Liquide + Fe3C");
+                    break;
+                case 2: // Aleman
+                    managerInterface.ActualizarZona("Flüssig + Fe3C");
+                    break;
+                case 3: // Español
+                    managerInterface.ActualizarZona("Líquida + Fe3C");
+                    break;
+                }
             }
             else if (hit.collider.CompareTag("Gamma")) // Zona Gamma
             {

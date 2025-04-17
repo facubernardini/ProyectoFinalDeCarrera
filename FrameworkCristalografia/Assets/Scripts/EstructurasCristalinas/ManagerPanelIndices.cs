@@ -7,7 +7,7 @@ public class ManagerPanelIndices : MonoBehaviour
 {
     public Slider sliderX, sliderZ, sliderY;
     public TextMeshProUGUI valorX, valorY, valorZ;
-    public Button botonNormalizarPlano;
+    public Button botonNormalizarPlano, botonGenerarPlano;
     public Toggle toggleModoContinuo;
     public TMP_InputField inputIndiceX, inputIndiceY, inputIndiceZ;
     private bool modoContinuo, modoFraccion;
@@ -25,6 +25,7 @@ public class ManagerPanelIndices : MonoBehaviour
         valorZ.text = sliderZ.value + "";
 
         botonNormalizarPlano.interactable = false;
+        botonGenerarPlano.interactable = true;
     }
     
     public void ActivarModoContinuo()
@@ -55,10 +56,12 @@ public class ManagerPanelIndices : MonoBehaviour
         {
             toggleModoContinuo.isOn = false;
             toggleModoContinuo.interactable = false;
+            botonGenerarPlano.interactable = false;
         }
         else
         {
             toggleModoContinuo.interactable = true;
+            botonGenerarPlano.interactable = true;
         }
 
         modoFraccion = !modoFraccion;

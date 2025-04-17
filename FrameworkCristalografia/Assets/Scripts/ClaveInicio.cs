@@ -10,7 +10,7 @@ public class ClaveInicio : MonoBehaviour
     
     void Start()
     {
-        clave = "materiales_UNS";
+        clave = "materiales125";
         textoClaveIncorrecta.SetActive(false);
         inputClave.text = "";
     }

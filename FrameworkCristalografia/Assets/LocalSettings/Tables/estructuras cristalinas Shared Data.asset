@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: estructuras cristalinas Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: estructuras cristalinas
+  m_TableCollectionNameGuidString: 21c33127046d8674891182ef0133c40e
+  m_Entries:
+  - m_Id: 18061123584
+    m_Key: indices de miller
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44451684352
+    m_Key: puntos de corte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60067078144
+    m_Key: vista corte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77733486592
+    m_Key: generar plano
+    m_Metadata:
+      m_Items: []
+  - m_Id: 174487691264
+    m_Key: generar corte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 188052070400
+    m_Key: normalizar plano
+    m_Metadata:
+      m_Items: []
+  - m_Id: 208952287232
+    m_Key: modo continuo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 228573241344
+    m_Key: modo fraccion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5381036630016
+    m_Key: cortes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6400105701376
+    m_Key: capa superior
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6791325212672
+    m_Key: capa intermedia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6867162423296
+    m_Key: borrar plano
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8032168108032
+    m_Key: opciones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8095132999680
+    m_Key: cubica centrada cuerpo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8303959007232
+    m_Key: cubica centrada caras
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8413480673280
+    m_Key: hexagonal compacta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8544594616320
+    m_Key: expandir estructura
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8561703182336
+    m_Key: mostrar plano de corte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8563271852032
+    m_Key: mostrar ejes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8564609835008
+    m_Key: sistema de deslizamiento
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 8320898788495720455
+  references:
+    version: 2
+    RefIds:
+    - rid: 8320898788495720455
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1744901628532

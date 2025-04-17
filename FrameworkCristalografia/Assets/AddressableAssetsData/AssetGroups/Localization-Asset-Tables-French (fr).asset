@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-Asset-Tables-French (fr)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-Asset-Tables-French (fr)
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 0aaf270c90eeeb84f94b0d34c819b16a
+  m_SerializeEntries:
+  - m_GUID: 96ea60e4440239940aa9be607a01ab76
+    m_Address: diagramas de fase cu ni_fr
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fr
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5d23e55deacce0a4da9292c10abf6164
+    m_Address: diagramas de fase pb sn_fr
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fr
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bd7cf519195d1bb4c80b8762c5bdc2ba
+    m_Address: diagramas de fase fe c_fr
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fr
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 411bcda25208b1f4089c3b6405c510a1, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 50c9bdfbbc3a53448b8ebbab65920876, type: 2}
+    - {fileID: 11400000, guid: ce711e20c7476d044803b29a599b3601, type: 2}
