@@ -34,4 +34,14 @@ public class ManagerInicio : MonoBehaviour
         SceneManager.LoadScene("InicioApp");
     }
 
+    public void AbrirPaginaUNS()
+    {
+        Application.OpenURL("https://www.uns.edu.ar/");
+    }
+
+    public void AbrirPaginaDCIC()
+    {
+        Application.OpenURL("https://cs.uns.edu.ar/");
+    }
+
 }
