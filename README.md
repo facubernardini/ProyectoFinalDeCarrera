@@ -3,3 +3,9 @@ Framework de visualización desarrollado en Unity 3D, aplicado a ciencia de los 
 
 #### [Página web informativa](https://celdapp.site)
 #### [Video demostrativo de la app](https://youtu.be/NuQuaZgm1RM)
+
+### Capturas
+
+<div id="header" align="center">
+  <img src="https://github.com/facubernardini/ProyectoFinalDeCarrera/blob/main/Photoshop/Imagenes/Capturas.png" width="1000"/>
+</div>
