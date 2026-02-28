@@ -1,12 +1,11 @@
 {
   "dependencies": {
     "com.ptc.vuforia.engine": {
-      "version": "file:com.ptc.vuforia.engine-10.28.4.tgz",
+      "version": "file:com.ptc.vuforia.engine-10.22.5.tgz",
       "depth": 0,
       "source": "local-tarball",
       "dependencies": {
-        "com.unity.ugui": "1.0.0",
-        "com.unity.nuget.newtonsoft-json": "3.2.1"
+        "com.unity.ugui": "1.0.0"
       }
     },
     "com.unity.addressables": {
@@ -240,20 +239,20 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.arcore": {
-      "version": "5.1.5",
+      "version": "5.1.6",
       "depth": 0,
       "source": "registry",
       "dependencies": {
         "com.unity.xr.core-utils": "2.1.0",
         "com.unity.xr.management": "4.0.1",
-        "com.unity.xr.arfoundation": "5.1.5",
+        "com.unity.xr.arfoundation": "5.1.6",
         "com.unity.modules.androidjni": "1.0.0",
         "com.unity.modules.unitywebrequest": "1.0.0"
       },
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.arfoundation": {
-      "version": "5.1.5",
+      "version": "5.1.6",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -280,8 +279,8 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.legacyinputhelpers": {
-      "version": "2.1.10",
-      "depth": 2,
+      "version": "2.1.11",
+      "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.modules.vr": "1.0.0",
@@ -290,14 +289,14 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.management": {
-      "version": "4.4.0",
-      "depth": 1,
+      "version": "4.5.4",
+      "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.modules.vr": "1.0.0",
         "com.unity.modules.xr": "1.0.0",
+        "com.unity.xr.core-utils": "2.2.1",
         "com.unity.modules.subsystems": "1.0.0",
-        "com.unity.xr.legacyinputhelpers": "2.1.7"
+        "com.unity.xr.legacyinputhelpers": "2.1.11"
       },
       "url": "https://packages.unity.com"
     },
@@ -394,7 +393,7 @@
     },
     "com.unity.modules.subsystems": {
       "version": "1.0.0",
-      "depth": 2,
+      "depth": 1,
       "source": "builtin",
       "dependencies": {
         "com.unity.modules.jsonserialize": "1.0.0"
