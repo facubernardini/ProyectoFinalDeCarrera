@@ -1,29 +1,26 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ZoomCamara : MonoBehaviour
 {
     public GameObject botonRestablecerCamara;
-    private bool isMoving, permitirMovimientoCamara;
+    public Slider slider;
+    private Vector2 minPosition = new Vector2(15f, 15f);
+    private Vector2 maxPosition = new Vector2(80f, 80f);
+    private bool isDragging, permitirMovimientoCamara;
     private Camera camara;
     private float zoomSpeed, moveSpeed, minSize, maxSize;
-    private float minX, maxX, minY, maxY;
-    private Vector2 lastTouchPosition;
+    private Vector3 lastMousePosition;
 
     void Start()
     {
         permitirMovimientoCamara = false;
         camara = GetComponent<Camera>();
 
-        minX = 15f;
-        maxX = 80f;
+        zoomSpeed = 26f;
+        moveSpeed = 1f;
 
-        minY = 15f;
-        maxY = 80f;
-
-        zoomSpeed = 10f;
-        moveSpeed = 10f;
-
-        minSize = 40f;
+        minSize = 30f;
         maxSize = 100f;
 
         botonRestablecerCamara.SetActive(false);
@@ -32,65 +29,73 @@ public class ZoomCamara : MonoBehaviour
     void Update()
     {
         MovimientoCamara();
-        Zoom();
+        
+        float scroll = Input.GetAxis("Mouse ScrollWheel");
+
+        if (scroll != 0f)
+        {
+            camara.orthographicSize -= scroll * zoomSpeed;
+            camara.orthographicSize = Mathf.Clamp(camara.orthographicSize, minSize, maxSize);
+
+            slider.value = 100f - camara.orthographicSize;
+
+            botonRestablecerCamara.SetActive(true);
+        }
     }
 
     private void MovimientoCamara()
     {
-        if (permitirMovimientoCamara && Input.touchCount == 1)
+        if (permitirMovimientoCamara)
         {
-            Touch touch = Input.GetTouch(0);
-
-            if (touch.phase == TouchPhase.Began)
+            if (Input.GetMouseButtonDown(0))
             {
-                lastTouchPosition = touch.position;
-                isMoving = true;
+                lastMousePosition = GetMouseWorldPosition();
+                isDragging = true;
             }
-            else if (touch.phase == TouchPhase.Moved && isMoving)
+
+            if (Input.GetMouseButton(0) && isDragging)
             {
-                Vector2 touchDelta = touch.position - lastTouchPosition;
+                Vector3 currentMousePosition = GetMouseWorldPosition();
+                Vector3 delta = lastMousePosition - currentMousePosition;
 
-                Vector3 newPosition = transform.position + new Vector3(-touchDelta.x * moveSpeed * Time.deltaTime,
-                                                                       0f, -touchDelta.y * moveSpeed * Time.deltaTime);
+                // Solo mover en X y Z (mantener Y fijo)
+                Vector3 newPosition = camara.transform.position + new Vector3(delta.x, 0, delta.z) * moveSpeed;
 
-                newPosition.x = Mathf.Clamp(newPosition.x, minX, maxX);
-                newPosition.z = Mathf.Clamp(newPosition.z, minY, maxY);
+                // Limitar dentro del rango permitido
+                newPosition.x = Mathf.Clamp(newPosition.x, minPosition.x, maxPosition.x);
+                newPosition.z = Mathf.Clamp(newPosition.z, minPosition.y, maxPosition.y);
+                newPosition.y = camara.transform.position.y; // mantener altura fija
 
-                transform.position = newPosition;
-                
-                lastTouchPosition = touch.position;
+                camara.transform.position = newPosition;
 
-                botonRestablecerCamara.SetActive(true);
+                lastMousePosition = GetMouseWorldPosition();
             }
-            else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
+
+            if (Input.GetMouseButtonUp(0))
             {
-                isMoving = false;
+                isDragging = false;
             }
+
+            botonRestablecerCamara.SetActive(true);
         }
     }
 
-    private void Zoom()
+    // Obtiene la posición del mouse proyectada sobre el plano XZ
+    private Vector3 GetMouseWorldPosition()
     {
-        if (permitirMovimientoCamara && Input.touchCount == 2)
+        Plane plane = new Plane(Vector3.up, Vector3.zero); // plano horizontal Y=0
+        Ray ray = camara.ScreenPointToRay(Input.mousePosition);
+        if (plane.Raycast(ray, out float distance))
         {
-            Touch touch1 = Input.GetTouch(0);
-            Touch touch2 = Input.GetTouch(1);
+            return ray.GetPoint(distance);
+        }
+        return Vector3.zero;
+    }
 
-            float currentDistance = Vector2.Distance(touch1.position, touch2.position);
-
-            float previousDistance = Vector2.Distance(
-                touch1.position - touch1.deltaPosition,
-                touch2.position - touch2.deltaPosition
-            );
-
-            float distanceDelta = previousDistance - currentDistance;
-
-            camara.orthographicSize += distanceDelta * zoomSpeed * Time.deltaTime;
-
-            camara.orthographicSize = Mathf.Clamp(camara.orthographicSize, minSize, maxSize);
-
-            botonRestablecerCamara.SetActive(true);
-        } 
+    public void ZoomSlider()
+    {
+        camara.orthographicSize = 100f - slider.value;
+        botonRestablecerCamara.SetActive(true);
     }
 
     public void ActivarMovimientoCamara()
@@ -107,6 +112,7 @@ public class ZoomCamara : MonoBehaviour
     {
         camara.orthographicSize = 100f;
         transform.position = new Vector3(50f, 10f, 40f);
+        slider.value = 0f;
 
         botonRestablecerCamara.SetActive(false);
     }

@@ -24,33 +24,27 @@ public class LogicaDiagramas : MonoBehaviour
     {
         if (interaccionGrafico)
         {
-            if (Input.touchCount == 1 && !puntoColocado) 
+            if (Input.GetMouseButtonDown(0) && !puntoColocado) 
             {
-                Touch touch = Input.GetTouch(0); 
+                Ray ray = camara.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hit;
 
-                if (touch.phase == TouchPhase.Began) 
+                if (Physics.Raycast(ray, out hit))
                 {
-                    Ray ray = camara.ScreenPointToRay(touch.position);
-                    RaycastHit hit;
-
-                    if (Physics.Raycast(ray, out hit)) // Si no toca dentro del grafico, no entra a este if porque el rayo sigue al infinito
-                    {
-                        if (modoCuNi)
-                        { 
-                            ManagerCobreNiquel(hit.point);
-                        }
-                        else if (modoPbSn)
-                        {
-                            ManagerPlomoEstano(hit.point);
-                        }
-                        else if (modoFeC)
-                        {
-                            ManagerHierroCarbono(hit.point);
-                        }
-
-                        puntoColocado = true;
+                    if (modoCuNi)
+                    { 
+                        ManagerCobreNiquel(hit.point);
                     }
-                    
+                    else if (modoPbSn)
+                    {
+                        ManagerPlomoEstano(hit.point);
+                    }
+                    else if (modoFeC)
+                    {
+                        ManagerHierroCarbono(hit.point);
+                    }
+
+                    puntoColocado = true;
                 }
             }
         }
