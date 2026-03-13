@@ -35,7 +35,6 @@ public class ManagerInterfacePC : MonoBehaviour
         if (inputCarbono.text == "")
         {
             sliderCarbono.value = 0f;
-            inputCarbono.text = "0%";
         }
         else
         {
@@ -54,7 +53,6 @@ public class ManagerInterfacePC : MonoBehaviour
         if (inputNiquel.text == "")
         {
             sliderNiquel.value = 0f;
-            inputNiquel.text = "0%";
         }
         else
         {
@@ -73,7 +71,6 @@ public class ManagerInterfacePC : MonoBehaviour
         if (inputCromo.text == "")
         {
             sliderCromo.value = 0f;
-            inputCromo.text = "0%";
         }
         else
         {
@@ -92,7 +89,6 @@ public class ManagerInterfacePC : MonoBehaviour
         if (inputMolibdeno.text == "")
         {
             sliderMolibdeno.value = 0f;
-            inputMolibdeno.text = "0%";
         }
         else
         {
@@ -111,7 +107,6 @@ public class ManagerInterfacePC : MonoBehaviour
         if (inputVanadio.text == "")
         {
             sliderVanadio.value = 0f;
-            inputVanadio.text = "0%";
         }
         else
         {
